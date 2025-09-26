@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Header</title>
+
+    <!-- Tailwind and fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script> <!-- Tailwind CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Poppins for MBA section -->
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#800000",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ["Poppins", "sans-serif"], /* used by MBA section */
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        .icon {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+        }
+
+        /* Material Icons ligatures render via text like <span class="icon">search</span> [web:7] */
+
+        /* Header is fixed and always visible; no hover styles, no animations */
+        .minimalist-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: none;
+            /* no animation */
+        }
+
+        /* Fixed header requires top padding in content [web:3] */
+
+        .dark .minimalist-header {
+            background-color: rgba(18, 18, 18, 0.9);
+        }
+
+        .minimalist-header .logo img {
+            height: 40px;
+            /* fixed size */
+            transition: none;
+        }
+
+        .minimalist-header .contact-icons a,
+        .minimalist-header .search-icon {
+            opacity: 1;
+            /* always visible */
+            transform: none;
+            /* no slide */
+            margin-left: 1rem;
+            color: #333;
+            transition: none;
+            /* no animation */
+        }
+
+        .dark .minimalist-header .contact-icons a,
+        .dark .minimalist-header .search-icon {
+            color: white;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .hamburger-icon {
+            width: 24px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+            transition: none;
+            /* no animation */
+        }
+
+        .dark .hamburger-icon {
+            background-color: white;
+        }
+
+        /* Specializations helpers */
+        .enquire-now {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content.active {
+            max-height: 1000px;
+            /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark">
+    <header id="main-header" class="minimalist-header">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img alt="University Logo" src="" />
+            </div>
+            <div class="flex items-center">
+                <div class="hidden md:flex contact-icons space-x-4">
+                    <a href="#"><span class="icon text-2xl">whatsapp</span></a>
+                    <a href="#"><span class="icon text-2xl">call</span></a>
+                    <a href="#"><span class="icon text-2xl">email</span></a>
+                </div>
+                <div class="search-icon ml-6">
+                    <span class="icon text-2xl">search</span>
+                </div>
+                <div class="md:hidden ml-4 hamburger-menu">
+                    <div class="hamburger-icon"></div>
+                    <div class="hamburger-icon"></div>
+                    <div class="hamburger-icon"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Existing main content -->
+    <main class="pt-24 w-full min-h-screen bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-8">
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Main Content Area</h1>
+            <p class="text-gray-700 dark:text-gray-300">
+                This is where the main content of the page would go. The header is fixed and always visible without
+                hover effects or animations.
+            </p>
+        </div>
+    </main>
+
+    <!-- Inserted MBA Programme section -->
+    <section class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+        <div class="min-h-screen flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 relative">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFAS4oZtCGYDig3Tm3FZj--JVcgCEgUdQ__GxLNVhk-ESnMWS-oXoM6ADrj-1csyf4o0acSYUe4Jp76fhJr-LJlI7k2QUC8KEsY8BUW_JSNZ8rY9YnNpN3rliprExnDVtP_O0q2rmHfniZ5z_HWDz5RAkdI90KmAt4vu7PbZImpGf7Q6U9KdbZ0URcC11jGA3kNLN3wYX6WM0iLn5k_QjmJtvH0ZZ13WG46bpJyMjHCkEvnKk7vblCiPvd13uuxL8NB6jLYi9du2fp"
+                    alt="MBA Programme Image" class="w-full h-96 lg:h-screen object-cover object-center">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-50 dark:bg-opacity-60 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">MBA Programme</h1>
+                        <p class="text-base sm:text-lg lg:text-xl">
+                            Your gateway to transformative business leadership.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Unlock Your Potential</h2>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia esse et nam, aperiam veritatis
+                        ullam vitae tempore atque? Quos quam consectetur, optio non expedita dolores officia explicabo
+                        eum dolorum vitae est voluptatibus quasi autem harum molestiae ratione vel at magni! </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-3">Expert Faculty</h3>
+                            <p class="text-sm">Learn from acclaimed experts, renowned academicians, and established
+                                professionals from the industry.</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-3">Strategic Skills</h3>
+                            <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, natus
+                                corrupti! Aspernatur soluta animi alias, aperiam temporibus, magni ex maiores natus quae
+                                maxime dolorum perspiciatis rerum labore debitis, voluptate beatae.</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-3">Industry Exposure</h3>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam mollitia
+                                provident accusamus, perferendis aspernatur voluptate officiis optio nemo ex, vero enim
+                                non sapiente nesciunt voluptatum cupiditate. Alias sunt vel magni!.</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-semibold mb-3">Global Perspective</h3>
+                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus
+                                asperiores non pariatur numquam amet ipsa sed eius, quas ex vel esse excepturi nam,
+                                suscipit voluptas ratione nobis doloribus tenetur..</p>
+                        </div>
+                    </div>
+
+                    <!-- <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-none text-lg">
+            Apply Now
+          </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merged Specializations section directly below -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <h1 class="text-4xl md:text-6xl font-bold mb-12 text-gray-900 dark:text-white">Specializations</h1>
+
+        <div class="border-b border-gray-200 dark:border-gray-700 mb-8">
+            <nav class="flex overflow-x-auto space-x-4 pb-2">
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Marketing</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Digital Marketing</a>
+                <a class="px-6 py-3 text-lg font-medium text-primary dark:text-primary border-b-2 border-primary dark:border-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Business Analytics</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Operations And Supply Chain Management</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Human Resource Management</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Finance</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Banking And Financial Services</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA International Business</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Dual</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Healthcare Management</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">MBA Entrepreneurship And Family Business Management</a>
+            </nav>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-primary mb-6">MBA Business Analytics</h2>
+            <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-4">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, amet quos ullam et maiores itaque enim
+                culpa dignissimos harum corporis rem repudiandae. Laudantium cum, officia doloremque earum voluptates
+                mollitia magni dolores soluta ab, assumenda quia reiciendis corporis quidem culpa nostrum iure, animi
+                suscipit recusandae eius perferendis. Sequi veniam, autem tempore delectus harum saepe ut commodi,
+                obcaecati exercitationem itaque impedit rem dolorum quia dicta voluptatum vel nihil et minus ipsam!
+                Blanditiis accusamus voluptatem quisquam in ipsam, suscipit dolor porro numquam omnis modi non explicabo
+                totam animi magni, incidunt perspiciatis. Aliquid cumque, unde sunt quibusdam quae explicabo doloribus
+                placeat quas adipisci nobis eius iste eveniet, aut dolore. Harum laborum odit inventore. Eveniet
+                voluptate dolores, optio minus eaque consequatur repellat reiciendis voluptas consequuntur.
+            </p>
+            <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea repudiandae inventore expedita eveniet
+                minima, officiis nam, nulla error neque ut voluptas illo voluptatem, delectus labore! Quo non, officia
+                ipsum, quaerat ex itaque inventore dolor harum necessitatibus voluptatum culpa deserunt natus ipsa
+                accusantium aliquam quos perferendis similique doloribus praesentium ipsam illum.
+            </p>
+            <button class="text-primary font-semibold hover:underline mb-8" onclick="toggleReadMore(this)">Read
+                More</button>
+
+            <div id="careerOutcomesAccordion" class="mt-6">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 cursor-pointer flex justify-between items-center"
+                    onclick="toggleAccordion(this)">
+                    Career outcomes
+                    <span class="material-icons">expand_more</span>
+                </h3>
+                <div class="accordion-content active p-4 pt-0">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Business analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Marketing analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Financial analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Operations and supply chain analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Data analyst</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- No JS needed for header -->
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            content.classList.toggle('active');
+            const icon = element.querySelector('.material-icons');
+            if (content.classList.contains('active')) {
+                icon.textContent = 'expand_less';
+            } else {
+                icon.textContent = 'expand_more';
+            }
+        }
+
+        function toggleReadMore(button) {
+            const parentDiv = button.parentElement;
+            const paragraphs = parentDiv.querySelectorAll('p:not(:first-of-type)');
+            const isExpanded = button.textContent === 'Read Less';
+
+            paragraphs.forEach(p => {
+                p.classList.toggle('hidden');
+            });
+
+            if (isExpanded) {
+                button.textContent = 'Read More';
+            } else {
+                button.textContent = 'Read Less';
+            }
+        }
+    </script>
+
+
+
+    <!-- Inserted Programme Highlights block (merged directly below the existing one) -->
+    <section class="relative min-h-screen flex items-center justify-center py-16">
+        <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+
+            <div class="lg:w-1/2 z-10 text-center lg:text-left">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 text-primary tracking-tight">Programme</h1>
+                <h2 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight">Highlights</h2>
+                <p class="text-lg mb-12 text-gray-1000 leading-relaxed">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ducimus ad, sunt exercitationem, accusamus quae ut id nostrum reprehenderit odit quo nam eos officiis aspernatur ipsam alias eaque accusantium expedita.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="card-hover p-6 rounded-lg bg-secondary-dark shadow-lg transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Curriculum Excellence</h3>
+                        <p class="text-sm text-gray-1000">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta neque facere dolorum modi hic ea et tempore, minus, quod quis eos voluptates nihil optio maiores possimus a architecto veniam numquam.</p>
+                    </div>
+                    <div
+                        class="card-hover p-6 rounded-lg bg-secondary-dark shadow-lg transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Immersive Experiences</h3>
+                        <p class="text-sm text-gray-1000">Engage in diverse rural, national, and international immersion
+                            programmes for a holistic learning journey.</p>
+                    </div>
+                    <div
+                        class="card-hover p-6 rounded-lg bg-secondary-dark shadow-lg transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Career Support</h3>
+                        <p class="text-sm text-gray-1000">Benefit from competency mapping and dedicated support for
+                            enhanced career progression and success.</p>
+                    </div>
+                    <div
+                        class="card-hover p-6 rounded-lg bg-secondary-dark shadow-lg transition duration-300 ease-in-out">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Expert Guidance</h3>
+                        <p class="text-sm text-gray-1000">Learn from a distinguished Advisory Board and guest lecturers
+                            comprising eminent national and international experts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end">
+                <img alt="Professional working on a modern digital interface on a tablet"
+                    class="max-w-full h-auto rounded-lg shadow-2xl"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW__l9Gu-CohRwRsQcb3Bba_3JhPDxzmUM_WfdGIkZPYpLe-RHJ1kxtpKVNmYBGtm-g_gHpqREpTTvJYEtLefpA5f-b9zPQtM2VDMAqCETnyZY2ZQgntaFd2nqxW1c4asNDTw7pQ67DeGAotcofSXjXdz0EoCiGAxS9Bn_TwWN5nUvz330BH_j4eaW9zOGDcd-QCPCDH9u5JhwME1eNTlKVvOXCE3t3FGE4NBTZhMRedf1Sh08mjSEwGwmp8z7eAHltgZu3s1xPxM" />
+            </div>
+
+        </div>
+<!-- 
+        <div
+            class="absolute bottom-8 right-8 bg-primary text-white p-4 rounded-full shadow-lg cursor-pointer hover:scale-105 transition duration-300">
+            <span class="font-bold tracking-wider text-lg">ENQUIRE</span>
+        </div> -->
+    </section>
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <h1 class="text-4xl md:text-6xl font-bold mb-12 text-gray-900 dark:text-white">Admission details </h1>
+
+        <div class="border-b border-gray-200 dark:border-gray-700 mb-8">
+            <nav class="flex overflow-x-auto space-x-4 pb-2">
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">Eligibilty Criteria</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">Selection Criteria</a>
+                <a class="px-6 py-3 text-lg font-medium text-primary dark:text-primary border-b-2 border-primary dark:border-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">Fees</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">Duration</a>
+                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
+                    href="#">Scholarships</a>
+            </nav>
+        </div>
+
+        <div class="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <!-- <h2 class="text-3xl font-bold text-primary mb-6">MBA Business Analytics</h2> -->
+            <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-4">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit aliquam, harum est, rem eius ut facilis possimus quod perferendis recusandae dolor provident magni autem! Ullam sint, consectetur excepturi incidunt omnis blanditiis molestias, velit hic id fugiat aliquam distinctio minus quis temporibus ea beatae quisquam in nobis. Autem incidunt odio enim, voluptatum dignissimos sapiente possimus nisi sint officiis cum. Quo tempora delectus fugit esse ipsa accusamus sint similique necessitatibus quam optio? Odit eos omnis, necessitatibus nulla neque iste recusandae perspiciatis. Voluptas molestias neque assumenda voluptatum. Eius officia eveniet assumenda provident, beatae, et suscipit nobis quibusdam in exercitationem sunt magni harum recusandae dicta nam repudiandae cupiditate odit, ut officiis ducimus nesciunt corporis? Similique commodi molestiae nulla nostrum vel quas quisquam consectetur consequuntur culpa officia? Qui distinctio facere provident dolorem ipsam. Dignissimos a eveniet pariatur deleniti alias ad illo eius maxime temporibus ipsum!
+            </p>
+            <!-- <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea repudiandae inventore expedita eveniet
+                minima, officiis nam, nulla error neque ut voluptas illo voluptatem, delectus labore! Quo non, officia
+                ipsum, quaerat ex itaque inventore dolor harum necessitatibus voluptatum culpa deserunt natus ipsa
+                accusantium aliquam quos perferendis similique doloribus praesentium ipsam illum.
+            </p>
+            <button class="text-primary font-semibold hover:underline mb-8" onclick="toggleReadMore(this)">Read
+                More</button> -->
+
+            <!-- <div id="careerOutcomesAccordion" class="mt-6">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 cursor-pointer flex justify-between items-center"
+                    onclick="toggleAccordion(this)">
+                    Career outcomes
+                    <span class="material-icons">expand_more</span>
+                </h3>
+                <div class="accordion-content active p-4 pt-0">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Business analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Marketing analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Financial analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Operations and supply chain analyst</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="material-icons text-primary">check_circle_outline</span>
+                            <span class="text-gray-800 dark:text-gray-200">Data analyst</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+</body>
+
+</html>
