@@ -41,12 +41,24 @@
                         "background-dark": "#111827",
                         "card-light": "#FFFFFF",
                         "card-dark": "#1F2937",
+                        primary: "#84cc16", // Lime-500 from Tailwind's palette
+                        "background-light": "#ffffff", // white
+                        "background-dark": "#18181b", // zinc-900
+                        "section-light": "#f8fafc", // slate-50
+                        "section-dark": "#27272a", // zinc-800
+                        "text-light": "#18181b", // zinc-900
+                        "text-dark": "#f4f4f5", // zinc-100
+                        "subtext-light": "#52525b", // zinc-600
+                        "subtext-dark": "#a1a1aa", // zinc-400
+                        "line-dark": "#3f3f46", // zinc-700
                     },
                     fontFamily: {
+                        display: ["Montserrat", "sans-serif"],
                         sans: ["Roboto", "sans-serif"],
                         display: ["Montserrat", "sans-serif"],
                         body: ["Poppins", "sans-serif"],
                         inter: ["Inter", "sans-serif"],
+
                     },
                     borderRadius: {
                         DEFAULT: "0.5rem",
@@ -321,174 +333,380 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark ">
-    <header id="main-header" class="minimalist-header">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl">University Logo</h1>
-            <div class="flex items-center">
-                <div class="hidden md:flex contact-icons space-x-4">
-                    <a href="#"><span class="icon text-2xl">whatsapp</span></a>
-                    <a href="#"><span class="icon text-2xl">call</span></a>
-                    <a href="#"><span class="icon text-2xl">email</span></a>
-                </div>
-                <div class="search-icon ml-6">
-                    <span class="icon text-2xl">search</span>
-                </div>
-                <div class="md:hidden ml-4 hamburger-menu">
-                    <div class="hamburger-icon"></div>
-                    <div class="hamburger-icon"></div>
-                    <div class="hamburger-icon"></div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Existing main content -->
-<div class="w-full p-0 m-0">
-    <img src="WhatsApp Image 2025-09-27 at 11.04.01 AM.jpeg" alt="Descriptive Alt Text"
-        class="w-full h-97 object-cover mt-6 rounded" />
+<div class="min-h-screen flex flex-col">
+<header class="bg-white dark:bg-gray-900/50 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex-shrink-0">
+<img alt="MBA logo" class="h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK1Us7jLwR2LCfXOHvgKPk8uKWgr8G7BYF6lr8rDl1k_3EcXaNcQVe_7APLSYaFYhsHxAkdYgsXcbcCb-ljGUKn8JunZC64KSH9UdYFkz4fd1wonb2VNL3Ud9kuFY1WX6Sc_aZsgM4yi4jVY3vB-T011Oj1k6x1jb01jjPOAoj3zQ_336be-0oXnDkY7_zc7qM4DpMp7OEbwGOhj-bqodb98Q6AetryyqHOP5qHKt7REFArp-vmnOl6DDNN02ddzoauFuU_uXeJmE"/>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center" href="#">
+              WHY MBA <span class="material-icons text-base ml-1">expand_more</span>
+</a>
+<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center" href="#">
+              PROGRAMS <span class="material-icons text-base ml-1">expand_more</span>
+</a>
+<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center" href="#">
+              HOW TO APPLY <span class="material-icons text-base ml-1">expand_more</span>
+</a>
+<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">FAQS</a>
+<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">CONTACT US</a>
+</nav>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 relative">
+<div class="lg:pr-12">
+<h1 class="text-6xl md:text-7xl lg:text-8xl font-black uppercase text-gray-900 dark:text-white">India's Premier <span class="text-primary">Scholarship</span></h1>
+<h2 class="font-serif italic text-4xl md:text-5xl text-gray-700 dark:text-gray-300 mt-4">Unlocking a World of Opportunities</h2>
+<p class="mt-8 text-base text-gray-600 dark:text-gray-400 max-w-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellendus non fugit, eos exercitationem facilis iure animi veniam ducimus maxime, quidem repudiandae vero praesentium, aspernatur reiciendis itaque adipisci labore doloribus!
+              </p>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-end relative">
+<div class="text-center md:text-left">
+<p class="font-serif text-3xl text-gray-700 dark:text-gray-400">Scholarships Worth</p>
+<div class="relative inline-flex items-start">
+<span class="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mr-2 mt-8">₹</span>
+<span class="text-9xl lg:text-[180px] font-black text-primary leading-none">250</span>
+<span class="absolute top-0 right-[-1rem] text-primary text-4xl font-bold">*</span>
+</div>
+<p class="text-3xl font-bold text-gray-800 dark:text-gray-200 uppercase tracking-widest -mt-4">Crores</p>
+</div>
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="relative">
+<p class="text-gray-700 dark:text-gray-400">Earn up to</p>
+<p class="text-8xl font-black text-primary leading-none">100%</p>
+<p class="text-2xl font-serif text-gray-700 dark:text-gray-400">Scholarship</p>
+</div>
+<p class="mt-6 text-gray-600 dark:text-gray-400 max-w-xs">
+                        to unlock your scholarly potential and pave the way for your bright future at Chandigarh University.
+                    </p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-[-100px] right-0 hidden lg:block">
+<img alt="A female student with a backpack looking down." class="max-w-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3jskQJF1oLwAoizlarLH9cYFVcOAE5HfilxuwTYJW9qt2TJUoM1toCGd20Cfvke00GTDz8riPpUCNhFV9G5sjcR9GLazVtyfEbjkNLeezJq1UN9nL7LJkWvoEb556aDQ2mIZymrxxsbcgFzIR2gJQPbViWQ5UkGVRCwZXsX_ZfY2Fv69KBrBg5tfovHCpF3_LRpWeVVizy4KOxZVzN9jSRPBHeq6qYfl-hwg-qTxaXIvh7sMIHbn9nZUQjeDh46fRULJ-n9qVpU"/>
+</div>
+</div>
+<div class="lg:col-span-4 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-2xl">
+<div class="text-center">
+<h3 class="text-xl font-bold uppercase text-gray-900 dark:text-white">MBA Application Form <span class="text-primary">2026</span></h3>
+<p class="text-gray-600 dark:text-gray-400 mt-1">Apply for MBA</p>
+</div>
+<div class="bg-primary text-white text-center py-2 px-4 rounded mt-6">
+<p class="text-sm font-semibold">Registration End Date (Phase - 1): 1<sup>st</sup> May 2026</p>
+</div>
+<form class="mt-6 space-y-4">
+<div>
+<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="campus" name="campus">
+<option>SELECT CAMPUS</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<input class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="student-name" name="student-name" placeholder="STUDENT NAME" type="text"/>
+</div>
+<div>
+<input class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="student-email" name="student-email" placeholder="STUDENT EMAIL ID" type="email"/>
+</div>
+</div>
+<div>
+<div class="flex">
+<div class="relative">
+<select class="absolute inset-y-0 left-0 pl-3 pr-8 border-r bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-l text-gray-500 dark:text-gray-400 focus:ring-primary focus:border-primary h-full">
+<option>+91</option>
+</select>
+</div>
+<input class="w-full pl-24 bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="student-mobile" name="student-mobile" placeholder="STUDENT MOBILE NO" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<input class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="dob" name="dob" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="SELECT DOB" type="text"/>
+</div>
+<div>
+<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="city" name="city">
+<option>STUDENT CITY</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="discipline" name="discipline">
+<option>SELECT DISCIPLINE</option>
+</select>
+</div>
+<div>
+<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="program" name="program">
+<option>SELECT PROGRAM</option>
+</select>
+</div>
+</div>
+<div>
+<p class="text-xs text-gray-500 dark:text-gray-400">By submitting this form, I agree to receive notifications from the University in the form of SMS/E-mail/Call.</p>
+</div>
+<div>
+<button class="w-full bg-red-700 text-white font-bold py-3 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors" type="submit">
+                  APPLY NOW
+                </button>
+</div>
+</form>
+<div class="text-center mt-6">
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+                Already Registered? Click to Login
+              </a>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-5 right-5 z-40">
+<button class="bg-red-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-red-800 transition-transform hover:scale-110">
+<span class="material-icons text-4xl">sms</span>
+</button>
+</div>
+</main>
 </div>
 
+    <div class="min-h-full">
+        <div class="bg-background-light dark:bg-background-dark pt-14 pb-14 md:pt-18 md:pb-18">
+            <div class="container mx-auto px-6 py-16 md:py-30">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="flex flex-col">
+                        <h1
+                            class="text-5xl md:text-6xl font-extrabold leading-[1.2] text-text-light dark:text-text-dark">
+                            Our Mission &amp; <br /> Vision</h1>
+                        <div class="mt-6 space-y-2 w-40">
+                            <!-- <div class="h-1.5 bg-primary rounded-full"></div> -->
+                            <div class="h-1.5 bg-gray-300 dark:bg-line-dark rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="relative w-full">
+
+                        <!-- CARD -->
+                        <div
+                            class="bg-[#f5f5f5] max-w-[1100px] rounded-none shadow-[0_2px_6px_rgba(0,0,0,0.12)] h-auto w-full px-8 md:pl-40 py-10 relative overflow-visible">
+
+                            <!-- IMAGE OVERLAPPING LEFT SIDE -->
+                            <div class="absolute -left-20 top-1/2 -translate-y-1/2 hidden md:block">
+                                <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202306/dicarlo_900x600.jpg?itok=mCEPNnW-"
+                                    alt="Mission" class="w-48 h-48 object-cover rounded-full shadow-md" />
+                            </div>
+
+                            <!-- TEXT -->
+                            <div class="text-center md:text-left">
+                                <h2 class="text-3xl font-bold text-gray-900">Vision</h2>
+                                <p class="mt-2 text-base text-gray-700 text-justify">
+                                    TCET will excel in Technical, Professional and Research Education to become an
+                                    internationally renowned multidisciplinary premier institute of engineering,
+                                    technology, computer application, management studies and allied professional
+                                    education.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- BOTTOM SOFT LINE -->
 
 
+                    </div>
 
-    <!-- Inserted MBA Programme section -->
-    <section class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
-        <div class="min-h-screen flex flex-col lg:flex-row">
-            <div class="lg:w-1/2 relative">
-                <img src="freepik__the-style-is-candid-image-photography-with-natural__49906.jpeg"
-                    alt="MBA Programme Image" class="w-full h-96 lg:h-screen object-cover object-center">
+
+                </div>
+            </div>
+            <div class="container mx-auto px-6 py-16 md:py-30">
+
+                <!-- CARD (NOT FULL WIDTH) -->
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-50 dark:bg-opacity-60 flex items-center justify-center">
-                    <div class="text-center text-white px-4">
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white">MBA Programme</h1>
-                        <p class="text-base sm:text-lg lg:text-xl">
-                            Your gateway to transformative business leadership.
+                    class="relative max-w-[800px] bg-[#f5f5f5] rounded-none shadow-[0_2px_6px_rgba(0,0,0,0.12)]  pl-0 pr-6 md:pr-40 py-14 overflow-visible">
+
+
+
+                    <!-- IMAGE OVERLAPPING RIGHT SIDE -->
+                    <div class="absolute -right-20 top-1/2 -translate-y-1/2 hidden md:block">
+                        <img alt="Newspaper with crossword puzzles and glasses, symbolizing clarity and vision."
+                            src="https://media.istockphoto.com/id/823928832/photo/businessman-shows-the-word-mission.jpg?s=612x612&w=0&k=20&c=1hmJC8oDYIifhdUqzQUWNS6-NVhMwgpjo-fZYkWo0BI="
+                            class="w-48 h-48 object-cover rounded-full shadow-md" />
+                    </div>
+
+                    <!-- TEXT -->
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold text-text-light dark:text-text-dark text-right">Mission</h2>
+
+                        <p
+                            class="mt-2 text-base text-subtext-light dark:text-subtext-dark max-w-xl ml-auto text-justify">
+
+                            To provide state-of-the-art infrastructure and right academic ambience for UG, PG and Ph.D.
+                            programmes. To nurture technical competence and research aptitude amongst aspiring graduates
+                            by imparting agile, holistic and multidisciplinary education. To enhance career
+                            opportunities for students by collaborating with reputed industry, academic and research
+                            institutes. To make students ethical and responsible citizens, both locally and globally
+                            competent.
                         </p>
                     </div>
+
                 </div>
+
+                <!-- BOTTOM SOFT LINE (aligned to card width) -->
+
             </div>
 
-            <div class="lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
-                <div class="max-w-2xl">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-[#9D0A4F]">Unlock Your Potential</h2>
-                    <p class="text-lg mb-8 leading-relaxed">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia esse et nam, aperiam veritatis
-                        ullam vitae tempore atque? Quos quam consectetur, optio non expedita dolores officia explicabo
-                        eum dolorum vitae est voluptatibus quasi autem harum molestiae ratione vel at magni! </p>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Expert Faculty</h3>
-                            <p class="text-sm">Learn from acclaimed experts, renowned academicians, and established
-                                professionals from the industry.</p>
-                        </div>
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Strategic Skills</h3>
-                            <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, natus
-                                corrupti! Aspernatur soluta animi alias, aperiam temporibus, magni ex maiores natus quae
-                                maxime dolorum perspiciatis rerum labore debitis, voluptate beatae.</p>
-                        </div>
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Industry Exposure</h3>
-                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam mollitia
-                                provident accusamus, perferendis aspernatur voluptate officiis optio nemo ex, vero enim
-                                non sapiente nesciunt voluptatum cupiditate. Alias sunt vel magni!.</p>
-                        </div>
-                        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Global Perspective</h3>
-                            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem accusamus
-                                asperiores non pariatur numquam amet ipsa sed eius, quas ex vel esse excepturi nam,
-                                suscipit voluptas ratione nobis doloribus tenetur..</p>
+        </div>
+
+
+        <!-- Inserted MBA Programme section -->
+        <section class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+            <div class="min-h-screen flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 relative">
+                    <img src="freepik__the-style-is-candid-image-photography-with-natural__49906.jpeg"
+                        alt="MBA Programme Image" class="w-full h-96 lg:h-screen object-cover object-center">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 dark:bg-opacity-60 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white">MBA Programme</h1>
+                            <p class="text-base sm:text-lg lg:text-xl">
+                                Your gateway to transformative business leadership.
+                            </p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-none text-lg">
+                <div class="lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-[#9D0A4F]">Unlock Your Potential</h2>
+                        <p class="text-lg mb-8 leading-relaxed">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia esse et nam, aperiam
+                            veritatis
+                            ullam vitae tempore atque? Quos quam consectetur, optio non expedita dolores officia
+                            explicabo
+                            eum dolorum vitae est voluptatibus quasi autem harum molestiae ratione vel at magni! </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Expert Faculty</h3>
+                                <p class="text-sm">Learn from acclaimed experts, renowned academicians, and established
+                                    professionals from the industry.</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Strategic Skills</h3>
+                                <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam,
+                                    natus
+                                    corrupti! Aspernatur soluta animi alias, aperiam temporibus, magni ex maiores natus
+                                    quae
+                                    maxime dolorum perspiciatis rerum labore debitis, voluptate beatae.</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Industry Exposure</h3>
+                                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                                    mollitia
+                                    provident accusamus, perferendis aspernatur voluptate officiis optio nemo ex, vero
+                                    enim
+                                    non sapiente nesciunt voluptatum cupiditate. Alias sunt vel magni!.</p>
+                            </div>
+                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Global Perspective</h3>
+                                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                                    accusamus
+                                    asperiores non pariatur numquam amet ipsa sed eius, quas ex vel esse excepturi nam,
+                                    suscipit voluptas ratione nobis doloribus tenetur..</p>
+                            </div>
+                        </div>
+
+                        <!-- <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-none text-lg">
             Apply Now
           </a> -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Merged Specializations section directly below -->
-    <!-- Specializations -->
-    <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
-        <div class="container mx-auto px-4 py-16">
-            <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Specializations</h1>
+        <!-- Merged Specializations section directly below -->
+        <!-- Specializations -->
+        <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+            <div class="container mx-auto px-4 py-16">
+                <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Specializations</h1>
 
-            <div class="flex flex-col lg:flex-row gap-12">
-                <!-- Left rail -->
-                <nav class="lg:w-1/3">
-                    <ul class="space-y-2">
-                              <a href="#"
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Left rail -->
+                    <nav class="lg:w-1/3">
+                        <ul class="space-y-2">
+                            <a href="#"
                                 class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg">
                                 MBA Marketing
                                 <span class="material-icons">arrow_forward</span> </a>
-                        <!-- <li><a href="#"
+                            <!-- <li><a href="#"
                                 class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 "></a></li> -->
-                        <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Digital Marketing</a></li> -->
-                        <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Business Analytics</a></li> -->
-                        <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Operations And Supply Chain Management</a></li> -->
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                Human Resource Management</a></li>
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                Finance</a></li>
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                Operations</a></li>
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                Business Analytics</a></li>
-                        <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Dual</a></li> -->
+                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Digital Marketing</a></li> -->
+                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Business Analytics</a></li> -->
+                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Operations And Supply Chain Management</a></li> -->
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
+                                    Human Resource Management</a></li>
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
+                                    Finance</a></li>
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
+                                    Operations</a></li>
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
+                                    Business Analytics</a></li>
+                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Dual</a></li> -->
 
-                    </ul>
-                </nav>
+                        </ul>
+                    </nav>
 
-                <!-- Detail panel -->
-                <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
-                    <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
+                    <!-- Detail panel -->
+                    <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
+                        <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
 
-                    <p class="text-gray-600 dark:text-gray-400 mb-4">
-                        Marketing is the most important function for every business. TCET offers a two-year
-                        specialisation in Marketing for candidates interested in learning about Marketing Strategies,
-                        Brand Management, Retail Management, Consumer and Sales Management, Advertising, and Product
-                        Management, among other domains. The programme equips students with the knowledge, business
-                        acumen, research skills, and strategic outlook they need to outperform their competition in a
-                        dynamic marketing ecosystem.
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Marketing is the most important function for every business. TCET offers a two-year
+                            specialisation in Marketing for candidates interested in learning about Marketing
+                            Strategies,
+                            Brand Management, Retail Management, Consumer and Sales Management, Advertising, and Product
+                            Management, among other domains. The programme equips students with the knowledge, business
+                            acumen, research skills, and strategic outlook they need to outperform their competition in
+                            a
+                            dynamic marketing ecosystem.
 
-                        Besides this, the programme focuses on the holistic development of students, shaping them into
-                        thorough professionals and responsible individuals. Learning is driven by real-life cases,
-                        internships, industry visits, projects, and peer interactions, preparing students to climb the
-                        corporate ladder.
-                    </p>
+                            Besides this, the programme focuses on the holistic development of students, shaping them
+                            into
+                            thorough professionals and responsible individuals. Learning is driven by real-life cases,
+                            internships, industry visits, projects, and peer interactions, preparing students to climb
+                            the
+                            corporate ladder.
+                        </p>
 
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
 
-                    </p>
+                        </p>
 
-                    <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                        <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
 
-                    <h3 class="text-xl font-semibold mt-10 mb-6  text-[#9D0A4F]">Career outcomes</h3>
+                        <h3 class="text-xl font-semibold mt-10 mb-6  text-[#9D0A4F]">Career outcomes</h3>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Brand Managers </span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400 ">Sales Managers </span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Market Research Analysts </span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Business Development Managers </span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Public Relations Managers </span></div>
-                        <!-- <div class="flex items-center"><span
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                            <div class="flex items-center"><span
+                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                    class="text-gray-600 dark:text-gray-400">Brand Managers </span></div>
+                            <div class="flex items-center"><span
+                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                    class="text-gray-600 dark:text-gray-400 ">Sales Managers </span></div>
+                            <div class="flex items-center"><span
+                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                    class="text-gray-600 dark:text-gray-400">Market Research Analysts </span></div>
+                            <div class="flex items-center"><span
+                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                    class="text-gray-600 dark:text-gray-400">Business Development Managers </span></div>
+                            <div class="flex items-center"><span
+                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                    class="text-gray-600 dark:text-gray-400">Public Relations Managers </span></div>
+                            <!-- <div class="flex items-center"><span
                                 class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
                                 class="text-gray-600 dark:text-gray-400">Business Analyst</span></div>
                         <div class="flex items-center"><span
@@ -499,12 +717,12 @@
                                 class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
                                 class="text-gray-600 dark:text-gray-400">Public Health Sector Roles</span></div>
                     </div> -->
-                </article>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <!-- <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <h1 class="text-4xl md:text-6xl font-bold mb-12 text-gray-900 dark:text-white">Specializations</h1>
 
         <div class="border-b border-gray-200 dark:border-gray-700 mb-8">
@@ -590,149 +808,152 @@
         </div>
     </section> -->
 
-    <!-- No JS needed for header -->
-    <script>
-        function toggleAccordion(element) {
-            const content = element.nextElementSibling;
-            content.classList.toggle('active');
-            const icon = element.querySelector('.material-icons');
-            if (content.classList.contains('active')) {
-                icon.textContent = 'expand_less';
-            } else {
-                icon.textContent = 'expand_more';
+        <!-- No JS needed for header -->
+        <script>
+            function toggleAccordion(element) {
+                const content = element.nextElementSibling;
+                content.classList.toggle('active');
+                const icon = element.querySelector('.material-icons');
+                if (content.classList.contains('active')) {
+                    icon.textContent = 'expand_less';
+                } else {
+                    icon.textContent = 'expand_more';
+                }
             }
-        }
 
-        function toggleReadMore(button) {
-            const parentDiv = button.parentElement;
-            const paragraphs = parentDiv.querySelectorAll('p:not(:first-of-type)');
-            const isExpanded = button.textContent === 'Read Less';
+            function toggleReadMore(button) {
+                const parentDiv = button.parentElement;
+                const paragraphs = parentDiv.querySelectorAll('p:not(:first-of-type)');
+                const isExpanded = button.textContent === 'Read Less';
 
-            paragraphs.forEach(p => {
-                p.classList.toggle('hidden');
-            });
+                paragraphs.forEach(p => {
+                    p.classList.toggle('hidden');
+                });
 
-            if (isExpanded) {
-                button.textContent = 'Read More';
-            } else {
-                button.textContent = 'Read Less';
+                if (isExpanded) {
+                    button.textContent = 'Read More';
+                } else {
+                    button.textContent = 'Read Less';
+                }
             }
-        }
-    </script>
+        </script>
 
 
 
-    <!-- Inserted Programme Highlights block (merged directly below the existing one) -->
-    <!-- Programme Highlights (Dark) -->
-    <section id="programme-highlights" class="bg-[#1A1A1A] font-[Poppins] text-[#E0E0E0]">
-        <div class="relative min-h-screen flex items-center justify-center py-16">
-            <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 z-10 text-center lg:text-left">
-                    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#9D0A4F] tracking-tight">Programme</h1>
-                    <h2 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight">Highlights</h2>
-                    <p class="text-lg mb-12 text-gray-300 leading-relaxed">Discover the core elements that make our
-                        programme stand out, designed to foster growth and provide unparalleled opportunities.</p>
+        <!-- Inserted Programme Highlights block (merged directly below the existing one) -->
+        <!-- Programme Highlights (Dark) -->
+        <section id="programme-highlights" class="bg-[#1A1A1A] font-[Poppins] text-[#E0E0E0]">
+            <div class="relative min-h-screen flex items-center justify-center py-16">
+                <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 z-10 text-center lg:text-left">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#9D0A4F] tracking-tight">Programme</h1>
+                        <h2 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight">Highlights</h2>
+                        <p class="text-lg mb-12 text-gray-300 leading-relaxed">Discover the core elements that make our
+                            programme stand out, designed to foster growth and provide unparalleled opportunities.</p>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div
-                            class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Curriculum Excellence</h3>
-                            <p class="text-sm text-gray-300">Embedded ability enhancement courses aligned with industry
-                                needs and renowned pedagogical models.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div
+                                class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Curriculum Excellence</h3>
+                                <p class="text-sm text-gray-300">Embedded ability enhancement courses aligned with
+                                    industry
+                                    needs and renowned pedagogical models.</p>
+                            </div>
+                            <div
+                                class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Immersive Experiences</h3>
+                                <p class="text-sm text-gray-300">Engage in diverse rural, national, and international
+                                    immersion programmes for a holistic learning journey.</p>
+                            </div>
+                            <div
+                                class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Career Support</h3>
+                                <p class="text-sm text-gray-300">Benefit from competency mapping and dedicated support
+                                    for
+                                    enhanced career progression and success.</p>
+                            </div>
+                            <div
+                                class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
+                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Expert Guidance</h3>
+                                <p class="text-sm text-gray-300">Learn from a distinguished Advisory Board and guest
+                                    lecturers comprising eminent national and international experts.</p>
+                            </div>
                         </div>
-                        <div
-                            class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Immersive Experiences</h3>
-                            <p class="text-sm text-gray-300">Engage in diverse rural, national, and international
-                                immersion programmes for a holistic learning journey.</p>
-                        </div>
-                        <div
-                            class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Career Support</h3>
-                            <p class="text-sm text-gray-300">Benefit from competency mapping and dedicated support for
-                                enhanced career progression and success.</p>
-                        </div>
-                        <div
-                            class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
-                            <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Expert Guidance</h3>
-                            <p class="text-sm text-gray-300">Learn from a distinguished Advisory Board and guest
-                                lecturers comprising eminent national and international experts.</p>
-                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW__l9Gu-CohRwRsQcb3Bba_3JhPDxzmUM_WfdGIkZPYpLe-RHJ1kxtpKVNmYBGtm-g_gHpqREpTTvJYEtLefpA5f-b9zPQtM2VDMAqCETnyZY2ZQgntaFd2nqxW1c4asNDTw7pQ67DeGAotcofSXjXdz0EoCiGAxS9Bn_TwWN5nUvz330BH_j4eaW9zOGDcd-QCPCDH9u5JhwME1eNTlKVvOXCE3t3FGE4NBTZhMRedf1Sh08mjSEwGwmp8z7eAHltgZu3s1xPxM"
+                            alt="Professional working on a modern digital interface on a tablet"
+                            class="max-w-full h-auto rounded-lg shadow-2xl">
                     </div>
                 </div>
 
-                <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW__l9Gu-CohRwRsQcb3Bba_3JhPDxzmUM_WfdGIkZPYpLe-RHJ1kxtpKVNmYBGtm-g_gHpqREpTTvJYEtLefpA5f-b9zPQtM2VDMAqCETnyZY2ZQgntaFd2nqxW1c4asNDTw7pQ67DeGAotcofSXjXdz0EoCiGAxS9Bn_TwWN5nUvz330BH_j4eaW9zOGDcd-QCPCDH9u5JhwME1eNTlKVvOXCE3t3FGE4NBTZhMRedf1Sh08mjSEwGwmp8z7eAHltgZu3s1xPxM"
-                        alt="Professional working on a modern digital interface on a tablet"
-                        class="max-w-full h-auto rounded-lg shadow-2xl">
-                </div>
-            </div>
-
-            <!-- <button class="absolute bottom-8 right-8 bg-[#9D0A4F] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300">
+                <!-- <button class="absolute bottom-8 right-8 bg-[#9D0A4F] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300">
       <span class="font-bold tracking-wider text-lg">ENQUIRE</span>
     </button> -->
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <style>
-        /* animations + hover */
-        .card-hover:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+        <style>
+            /* animations + hover */
+            .card-hover:hover {
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+        </style>
 
-    <!-- Specializations -->
-    <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
-        <div class="container mx-auto px-4 py-16">
-            <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details </h1>
+        <!-- Specializations -->
+        <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+            <div class="container mx-auto px-4 py-16">
+                <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details </h1>
 
-            <div class="flex flex-col lg:flex-row gap-12">
-                <!-- Left rail -->
-                <nav class="lg:w-1/3">
-                    <ul class="space-y-2">
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Eligibility
-                                Criteria</a></li>
-                        <li>
-                            <a href="#"
-                                class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg">
-                                Selection Criteria
-                                <span class="material-icons">arrow_forward</span>
-                                <!-- </a><a href="#"
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Left rail -->
+                    <nav class="lg:w-1/3">
+                        <ul class="space-y-2">
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Eligibility
+                                    Criteria</a></li>
+                            <li>
+                                <a href="#"
+                                    class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg">
+                                    Selection Criteria
+                                    <span class="material-icons">arrow_forward</span>
+                                    <!-- </a><a href="#"
                                 class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Selection
                                 Criteria</a></li> -->
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Fees</a>
-                        </li>
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Duration</a>
-                        </li>
-                        <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"></a></li> -->
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Scholarships</a>
-                        </li>
-                        </li>
-                        <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                Entrepreneurship And Family Business Management</a></li>
-                    </ul>
-                </nav>
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Fees</a>
+                            </li>
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Duration</a>
+                            </li>
+                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"></a></li> -->
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Scholarships</a>
+                            </li>
+                            </li>
+                            <li><a href="#"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
+                                    Entrepreneurship And Family Business Management</a></li>
+                        </ul>
+                    </nav>
 
-                <!-- Detail panel -->
-                <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
-                    <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection
-                                Criteria</h2>
+                    <!-- Detail panel -->
+                    <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection
+                            Criteria</h2>
 
-<ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
-    <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from UGC-approved university; 55% for reserved Maharashtra category)</li>
-    <li>Minimum 50% in Class 12 and Class 10 (English as a subject)</li>
-    <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT</li>
-</ol>
+                        <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                            <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from
+                                UGC-approved university; 55% for reserved Maharashtra category)</li>
+                            <li>Minimum 50% in Class 12 and Class 10 (English as a subject)</li>
+                            <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT</li>
+                        </ol>
 
 
 
-                    <!-- <p class="text-gray-600 dark:text-gray-400 mb-6">
+                        <!-- <p class="text-gray-600 dark:text-gray-400 mb-6">
                         The curriculum is designed to provide students with both theoretical understanding and
                         real-world application, preparing them to address the unique challenges of healthcare
                         management. Post graduates of this programme are equipped to analyze complex data, make informed
@@ -742,7 +963,7 @@
 
                     <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a> -->
 
-                    <!-- <h3 class="text-xl font-semibold mt-10 mb-6 text-gray-800 dark:text-gray-200">Career outcomes</h3>
+                        <!-- <h3 class="text-xl font-semibold mt-10 mb-6 text-gray-800 dark:text-gray-200">Career outcomes</h3>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                         <div class="flex items-center"><span
@@ -771,427 +992,443 @@
                                 class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
                                 class="text-gray-600 dark:text-gray-400">Public Health Sector Roles</span></div>
                     </div> -->
-                </article>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="relative min-h-screen overflow-hidden">
-        <!-- Background Carousel -->
-        <div class="absolute inset-0 z-0">
-            <div class="carousel-item active"
-                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
-            </div>
-            <div class="carousel-item"
-                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATUt-CdIDTfEY7MLhEYL9xDz32qMpkXoQa-lGQ8JgVxWLqKJXcdowg3TKJg8Z7U3_H6MxVKrWfcSr_rTg7KlJCRK80sE0hC3RfowsD8A56IQTtxHdmQ1PrE5FVEm8_UEKZ-1PKR6dD7-n7qV9bxj_T-yrEJa8f4s3LzPvKT5UqDjCtXJGH4G1k2TgC6JXZGqh7l2_VRMsxvJrD1kHZ9UYPA2PaEQ96hn9hzX7V9cE7YKlPq3bvtR-Q5HjZ'); background-size: cover; background-position: center;">
-            </div>
-            <div class="carousel-item"
-                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
-            </div>
-            <div class="carousel-item"
-                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
-            </div>
-            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 dark:bg-opacity-80 z-1"></div>
-        </div>
-
-        <!-- Enquire Now Button -->
-        <div
-            class="w-16 h-40 bg-red-600 flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
-            <p class="text-white font-semibold tracking-widest text-lg enquire-now">ENQUIRE NOW</p>
-        </div>
-
-        <!-- Main Content -->
-        <div class="relative z-20 flex items-center justify-end h-screen p-8 md:p-20 text-white">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-                <div class="flex flex-col justify-center">
-                    <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-black ">Why TCET-MBA</h1>
-                    <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-black">
-                        Life at TCET University is about holistic growth academically, professionally and personally
-                        Global Alumni Network: 100,000+ alumni worldwide
-
-                        Industry Reach: 1600+ recruiters visiting campus
-
-                        Diverse Community: Students from across India and abroad
-
-                        Innovation & Research: State-of-the-art labs and research centres
-
-                        Student Life: Clubs, workshops, and global exposure programs
-
-
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                        <div class="bg-white p-3 rounded-lg shadow-md">
-                            <span class="material-icons text-blue-900 " style="font-size: 36px;">groups</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Global Alumni Network</h3>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white">100,000</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">Alumni Across Globe</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                        <div class="bg-white p-3 rounded-lg shadow-md">
-                            <span class="material-icons text-blue-900" style="font-size: 36px;">business_center</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Extensive Industry Reach</h3>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white">1600+</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">companies visited for placement</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                        <div class="bg-white p-3 rounded-lg shadow-md">
-                            <span class="material-icons text-blue-900" style="font-size: 36px;">location_on</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Nationwide Presence</h3>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white">20000+</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">students across states</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                        <div class="bg-white p-3 rounded-lg shadow-md">
-                            <span class="material-icons text-blue-900" style="font-size: 36px;">public</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Diverse Global Community</h3>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white">45+</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">countries represented on campus</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                        <div class="bg-white p-3 rounded-lg shadow-md">
-                            <span class="material-icons text-blue-900" style="font-size: 36px;">lightbulb</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Fueled by Innovation</h3>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white">100+</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">professional student clubs</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                        <div class="bg-white p-3 rounded-lg shadow-md">
-                            <span class="material-icons text-blue-900" style="font-size: 36px;">science</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Pioneering Research</h3>
-                            <p class="text-3xl font-bold text-gray-900 dark:text-white">Top 2%</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">most influential scientists</p>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Success Stories Section -->
-    <section class="bg-background text-text-dark font-display relative min-h-screen py-16">
-        <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-12">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col lg:flex-row gap-16 items-center">
-                    <div class="lg:w-1/3 text-center lg:text-left">
-                        <h2 class="text-5xl font-bold font-display  mb-4 animate-fade-in-up text-[#9D0A4F]">University
-                        </h2>
-                        <h1 class="text-7xl font-bold font-display text-text-dark mb-8 leading-tight animate-fade-in-up"
-                            style="animation-delay: 0.2s;">SUCCESS STORIES</h1>
-                        <p class="text-lg text-text-light mb-10 animate-fade-in-up" style="animation-delay: 0.4s;">
-                            Discover the inspiring journeys of our alumni and how their experiences at University have
-                            shaped their successful careers.
+
+        <section class="relative min-h-screen overflow-hidden">
+            <!-- Background Carousel -->
+            <div class="absolute inset-0 z-0">
+                <div class="carousel-item active"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATUt-CdIDTfEY7MLhEYL9xDz32qMpkXoQa-lGQ8JgVxWLqKJXcdowg3TKJg8Z7U3_H6MxVKrWfcSr_rTg7KlJCRK80sE0hC3RfowsD8A56IQTtxHdmQ1PrE5FVEm8_UEKZ-1PKR6dD7-n7qV9bxj_T-yrEJa8f4s3LzPvKT5UqDjCtXJGH4G1k2TgC6JXZGqh7l2_VRMsxvJrD1kHZ9UYPA2PaEQ96hn9hzX7V9cE7YKlPq3bvtR-Q5HjZ'); background-size: cover; background-position: center;">
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
+                </div>
+                <div class="absolute inset-0 bg-blue-900 bg-opacity-70 dark:bg-opacity-80 z-1"></div>
+            </div>
+
+            <!-- Enquire Now Button -->
+            <div
+                class="w-16 h-40 bg-red-600 flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
+                <p class="text-white font-semibold tracking-widest text-lg enquire-now">ENQUIRE NOW</p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="relative z-20 flex items-center justify-end h-screen p-8 md:p-20 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                    <div class="flex flex-col justify-center">
+                        <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-black ">Why TCET-MBA</h1>
+                        <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-black">
+                            Life at TCET University is about holistic growth academically, professionally and personally
+                            Global Alumni Network: 100,000+ alumni worldwide
+
+                            Industry Reach: 1600+ recruiters visiting campus
+
+                            Diverse Community: Students from across India and abroad
+
+                            Innovation & Research: State-of-the-art labs and research centres
+
+                            Student Life: Clubs, workshops, and global exposure programs
+
+
                         </p>
-                        <div class="flex gap-4 justify-center lg:justify-start animate-fade-in-up"
-                            style="animation-delay: 0.6s;">
-                            <button
-                                class="bg-secondary/50 text-text-dark shadow-soft-lg h-14 w-14 rounded-md flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300 border border-secondary/50">
-                                <span class="material-symbols-outlined text-3xl">arrow_back</span>
-                            </button>
-                            <button
-                                class="bg-secondary/50 text-text-dark shadow-soft-lg h-14 w-14 rounded-md flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300 border border-secondary/50">
-                                <span class="material-symbols-outlined text-3xl">arrow_forward</span>
-                            </button>
-                        </div>
                     </div>
-                    <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <div
-                            class="bg-secondary rounded-lg shadow-soft-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 card-glow">
-                            <img alt="Riddhi Santhalia"
-                                class="w-24 h-24 rounded-full mb-6 border-4 border-glow-primary object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
-                            <h3 class="font-bold font-display text-xl text-text-dark mb-3">Riddhi Santhalia</h3>
-                            <p class="text-text-light text-sm mb-6 flex-grow">
-                                My time at University as an MBA student was truly
-                                transformative. The rigorous curriculum, taught by experienced professionals, covered a
-                                wide range of business topics, giving me a solid understanding of the...
-                            </p>
-                            <a class="text-accent font-semibold text-base hover:underline" href="#">Read More</a>
-                        </div>
-                        <div
-                            class="bg-secondary rounded-lg shadow-soft-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 card-glow card-glow-secondary">
-                            <img alt="Ms. Vishakha Naik"
-                                class="w-24 h-24 rounded-full mb-6 border-4 border-glow-secondary object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
-                            <h3 class="font-bold font-display text-xl text-text-dark mb-3">Ms. Vishakha Naik</h3>
-                            <p class="text-text-light text-sm mb-6 flex-grow">
-                                University has always been motivating and supportive. The unique trimester pattern,
-                                holistic
-                                approach towards education, peace program, highly experienced and supportive teachers,
-                                high end technologies and laboratories, updated curriculum...
-                            </p>
-                            <a class="text-accent font-semibold text-base hover:underline" href="#">Read More</a>
-                        </div>
-                        <div
-                            class="bg-secondary rounded-lg shadow-soft-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 card-glow card-glow-accent">
-                            <img alt="Ritika" class="w-24 h-24 rounded-full mb-6 border-4 border-accent object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
-                            <h3 class="font-bold font-display text-xl text-text-dark mb-3">Ritika</h3>
-                            <p class="text-text-light text-sm mb-6 flex-grow">
-                                At University, I have honed my skills and enhanced my knowledge. The MBA program
-                                provides
-                                vast opportunities to grow and learn. is a vibrant place where aspirations flourish
-                                amid a tapestry of academic rigor, diverse perspectives...
-                            </p>
-                            <a class="text-accent font-semibold text-base hover:underline" href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admission Timeline Section -->
-    <section
-        class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark py-16 md:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">Application
-                    Process</h1>
-                <p class="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">A streamlined overview of
-                    your admission journey with .</p>
-            </div>
-            <div class="relative">
-                <div aria-hidden="true"
-                    class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-gray-700 rounded-full">
-                </div>
-                <div class="space-y-8 md:space-y-10">
-                    <!-- Step 1 - Completed -->
-                    <div class="relative timeline-item completed">
-                        <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
-                            <div
-                                class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
-                                <span class="material-symbols-outlined text-3xl">login</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900 " style="font-size: 36px;">groups</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Global Alumni Network</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100,000</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">Alumni Across Globe</p>
                             </div>
                         </div>
-                        <div class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1"></div>
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="w-full md:w-5/12"></div>
-                            <div class="hidden md:block w-2/12"></div>
-                            <div class="w-full md:w-5/12 md:pl-8">
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900"
+                                    style="font-size: 36px;">business_center</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Extensive Industry Reach
+                                </h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">1600+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">companies visited for placement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Nationwide Presence</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">20000+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">students across states</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">public</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Diverse Global Community
+                                </h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">45+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">countries represented on campus</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">lightbulb</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Fueled by Innovation</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">professional student clubs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">science</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Pioneering Research</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">Top 2%</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">most influential scientists</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="bg-background text-text-dark font-display relative min-h-screen py-16">
+            <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-12">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col lg:flex-row gap-16 items-center">
+                        <div class="lg:w-1/3 text-center lg:text-left">
+                            <h2 class="text-5xl font-bold font-display  mb-4 animate-fade-in-up text-[#9D0A4F]">
+                                University
+                            </h2>
+                            <h1 class="text-7xl font-bold font-display text-text-dark mb-8 leading-tight animate-fade-in-up"
+                                style="animation-delay: 0.2s;">SUCCESS STORIES</h1>
+                            <p class="text-lg text-text-light mb-10 animate-fade-in-up" style="animation-delay: 0.4s;">
+                                Discover the inspiring journeys of our alumni and how their experiences at University
+                                have
+                                shaped their successful careers.
+                            </p>
+                            <div class="flex gap-4 justify-center lg:justify-start animate-fade-in-up"
+                                style="animation-delay: 0.6s;">
+                                <button
+                                    class="bg-secondary/50 text-text-dark shadow-soft-lg h-14 w-14 rounded-md flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300 border border-secondary/50">
+                                    <span class="material-symbols-outlined text-3xl">arrow_back</span>
+                                </button>
+                                <button
+                                    class="bg-secondary/50 text-text-dark shadow-soft-lg h-14 w-14 rounded-md flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300 border border-secondary/50">
+                                    <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                            <div
+                                class="bg-secondary rounded-lg shadow-soft-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 card-glow">
+                                <img alt="Riddhi Santhalia"
+                                    class="w-24 h-24 rounded-full mb-6 border-4 border-glow-primary object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
+                                <h3 class="font-bold font-display text-xl text-text-dark mb-3">Riddhi Santhalia</h3>
+                                <p class="text-text-light text-sm mb-6 flex-grow">
+                                    My time at University as an MBA student was truly
+                                    transformative. The rigorous curriculum, taught by experienced professionals,
+                                    covered a
+                                    wide range of business topics, giving me a solid understanding of the...
+                                </p>
+                                <a class="text-accent font-semibold text-base hover:underline" href="#">Read More</a>
+                            </div>
+                            <div
+                                class="bg-secondary rounded-lg shadow-soft-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 card-glow card-glow-secondary">
+                                <img alt="Ms. Vishakha Naik"
+                                    class="w-24 h-24 rounded-full mb-6 border-4 border-glow-secondary object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
+                                <h3 class="font-bold font-display text-xl text-text-dark mb-3">Ms. Vishakha Naik</h3>
+                                <p class="text-text-light text-sm mb-6 flex-grow">
+                                    University has always been motivating and supportive. The unique trimester pattern,
+                                    holistic
+                                    approach towards education, peace program, highly experienced and supportive
+                                    teachers,
+                                    high end technologies and laboratories, updated curriculum...
+                                </p>
+                                <a class="text-accent font-semibold text-base hover:underline" href="#">Read More</a>
+                            </div>
+                            <div
+                                class="bg-secondary rounded-lg shadow-soft-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 card-glow card-glow-accent">
+                                <img alt="Ritika"
+                                    class="w-24 h-24 rounded-full mb-6 border-4 border-accent object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
+                                <h3 class="font-bold font-display text-xl text-text-dark mb-3">Ritika</h3>
+                                <p class="text-text-light text-sm mb-6 flex-grow">
+                                    At University, I have honed my skills and enhanced my knowledge. The MBA program
+                                    provides
+                                    vast opportunities to grow and learn. is a vibrant place where aspirations flourish
+                                    amid a tapestry of academic rigor, diverse perspectives...
+                                </p>
+                                <a class="text-accent font-semibold text-base hover:underline" href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission Timeline Section -->
+        <section
+            class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">Application
+                        Process</h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">A streamlined overview of
+                        your admission journey with .</p>
+                </div>
+                <div class="relative">
+                    <div aria-hidden="true"
+                        class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gray-200 dark:bg-gray-700 rounded-full">
+                    </div>
+                    <div class="space-y-8 md:space-y-10">
+                        <!-- Step 1 - Completed -->
+                        <div class="relative timeline-item completed">
+                            <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
                                 <div
-                                    class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-lg timeline-card completed-card transition-all duration-300">
-                                    <p class="text-sm text-primary-purple font-semibold tracking-wider">STEP 1</p>
-                                    <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Enquiry & Login
-                                    </h3>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Begin application & get login
-                                        details.</p>
+                                    class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
+                                    <span class="material-symbols-outlined text-3xl">login</span>
+                                </div>
+                            </div>
+                            <div class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1"></div>
+                            <div class="flex flex-col md:flex-row items-center">
+                                <div class="w-full md:w-5/12"></div>
+                                <div class="hidden md:block w-2/12"></div>
+                                <div class="w-full md:w-5/12 md:pl-8">
+                                    <div
+                                        class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-lg timeline-card completed-card transition-all duration-300">
+                                        <p class="text-sm text-primary-purple font-semibold tracking-wider">STEP 1</p>
+                                        <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Enquiry & Login
+                                        </h3>
+                                        <p class="mt-2 text-gray-600 dark:text-gray-400">Begin application & get login
+                                            details.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Step 2 - Active -->
-                    <div class="relative timeline-item active">
-                        <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
-                            <div
-                                class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
-                                <span class="material-symbols-outlined text-3xl">assignment</span>
-                            </div>
-                        </div>
-                        <div
-                            class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1 bg-gray-200 dark:bg-gray-700">
-                        </div>
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="w-full md:w-5/12 md:pr-8">
+                        <!-- Step 2 - Active -->
+                        <div class="relative timeline-item active">
+                            <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
                                 <div
-                                    class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-2xl timeline-card active-card transition-all duration-300 md:text-right">
-                                    <p class="text-sm text-primary-purple font-semibold tracking-wider">STEP 2 - CURRENT
-                                    </p>
-                                    <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Fill Application
-                                        Form</h3>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Complete form & pay entrance fee.
-                                    </p>
+                                    class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
+                                    <span class="material-symbols-outlined text-3xl">assignment</span>
                                 </div>
                             </div>
-                            <div class="hidden md:block w-2/12"></div>
-                            <div class="w-full md:w-5/12"></div>
-                        </div>
-                    </div>
-
-                    <!-- Steps 3-6 continue with similar structure -->
-                    <div class="relative timeline-item">
-                        <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
                             <div
-                                class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
-                                <span
-                                    class="material-symbols-outlined text-3xl text-gray-400 dark:text-gray-500">menu_book</span>
+                                class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1 bg-gray-200 dark:bg-gray-700">
+                            </div>
+                            <div class="flex flex-col md:flex-row items-center">
+                                <div class="w-full md:w-5/12 md:pr-8">
+                                    <div
+                                        class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-2xl timeline-card active-card transition-all duration-300 md:text-right">
+                                        <p class="text-sm text-primary-purple font-semibold tracking-wider">STEP 2 -
+                                            CURRENT
+                                        </p>
+                                        <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Fill
+                                            Application
+                                            Form</h3>
+                                        <p class="mt-2 text-gray-600 dark:text-gray-400">Complete form & pay entrance
+                                            fee.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:block w-2/12"></div>
+                                <div class="w-full md:w-5/12"></div>
                             </div>
                         </div>
-                        <div
-                            class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1 bg-gray-200 dark:bg-gray-700">
-                        </div>
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="w-full md:w-5/12"></div>
-                            <div class="hidden md:block w-2/12"></div>
-                            <div class="w-full md:w-5/12 md:pl-8">
+
+                        <!-- Steps 3-6 continue with similar structure -->
+                        <div class="relative timeline-item">
+                            <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
                                 <div
-                                    class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 timeline-card transition-all duration-300">
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 font-semibold tracking-wider">
-                                        STEP 3</p>
-                                    <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Submit Exam Scores
-                                    </h3>
-                                    <p class="mt-2 text-gray-600 dark:text-gray-400">Update application with exam
-                                        scores.</p>
+                                    class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
+                                    <span
+                                        class="material-symbols-outlined text-3xl text-gray-400 dark:text-gray-500">menu_book</span>
+                                </div>
+                            </div>
+                            <div
+                                class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1 bg-gray-200 dark:bg-gray-700">
+                            </div>
+                            <div class="flex flex-col md:flex-row items-center">
+                                <div class="w-full md:w-5/12"></div>
+                                <div class="hidden md:block w-2/12"></div>
+                                <div class="w-full md:w-5/12 md:pl-8">
+                                    <div
+                                        class="bg-card-light dark:bg-card-dark p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 timeline-card transition-all duration-300">
+                                        <p
+                                            class="text-sm text-gray-500 dark:text-gray-400 font-semibold tracking-wider">
+                                            STEP 3</p>
+                                        <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Submit Exam
+                                            Scores
+                                        </h3>
+                                        <p class="mt-2 text-gray-600 dark:text-gray-400">Update application with exam
+                                            scores.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Continue with remaining timeline steps... -->
+                        <!-- Continue with remaining timeline steps... -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Managerial Program Section -->
-    <section class="bg-primary-pink text-white py-12 md:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="md:w-1/2 flex flex-col items-center md:items-start">
-                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 w-full max-w-lg">
-                        <h2 class="text-3xl font-bold text-primary-pink dark:text-white mb-4">Join Our Program</h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-6">Enter your details below to receive exclusive
-                            updates and learn more about this life-changing opportunity.</p>
-                        <form>
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                    for="name">Full Name</label>
-                                <input
-                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-primary-pink focus:border-primary-pink dark:bg-gray-700 dark:text-white"
-                                    id="name" placeholder="Enter your full name" type="text">
-                            </div>
-                            <div class="mb-6">
-                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                    for="email">Email Address</label>
-                                <input
-                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-primary-pink focus:border-primary-pink dark:bg-gray-700 dark:text-white"
-                                    id="email" placeholder="Enter your email" type="email">
-                            </div>
+        <!-- Managerial Program Section -->
+        <section class="bg-primary-pink text-white py-12 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="md:w-1/2 flex flex-col items-center md:items-start">
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 w-full max-w-lg">
+                            <h2 class="text-3xl font-bold text-primary-pink dark:text-white mb-4">Join Our Program</h2>
+                            <p class="text-gray-700 dark:text-gray-300 mb-6">Enter your details below to receive
+                                exclusive
+                                updates and learn more about this life-changing opportunity.</p>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                        for="name">Full Name</label>
+                                    <input
+                                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-primary-pink focus:border-primary-pink dark:bg-gray-700 dark:text-white"
+                                        id="name" placeholder="Enter your full name" type="text">
+                                </div>
+                                <div class="mb-6">
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                        for="email">Email Address</label>
+                                    <input
+                                        class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-primary-pink focus:border-primary-pink dark:bg-gray-700 dark:text-white"
+                                        id="email" placeholder="Enter your email" type="email">
+                                </div>
+                                <button
+                                    class="w-full bg-primary-pink text-white font-bold py-3 px-8 rounded-md hover:bg-pink-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-pink focus:ring-opacity-50"
+                                    type="submit">
+                                    Apply Now
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-6">Aspiring to become a top-class
+                            manager
+                            with a world-class management degree?</h1>
+                        <p class="text-lg mb-8">Unlock your potential and gain the skills to lead with our distinguished
+                            managerial program. Our curriculum is designed by industry experts to provide you with the
+                            strategic thinking and leadership capabilities needed to excel in today's competitive
+                            business
+                            landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 dark:bg-gray-900 text-gray-400 dark:text-gray-500 text-sm">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="col-span-2">
+                        <h3 class="text-white text-lg font-bold mb-4">University</h3>
+                        <p class="text-gray-400 mb-4">Your gateway to transformative business leadership and world-class
+                            education.</p>
+                        <div class="flex space-x-4">
+                            <a class="hover:text-white transition-colors" href="#">Facebook</a>
+                            <a class="hover:text-white transition-colors" href="#">Twitter</a>
+                            <a class="hover:text-white transition-colors" href="#">LinkedIn</a>
+                            <a class="hover:text-white transition-colors" href="#">Instagram</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Programs</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Admissions</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Campus Life</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-4">Support</h4>
+                        <ul class="space-y-2">
+                            <li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                            <li><a class="hover:text-white transition-colors" href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p>© 2025 University. All rights reserved.</p>
+                        <div class="mt-4 md:mt-0">
                             <button
-                                class="w-full bg-primary-pink text-white font-bold py-3 px-8 rounded-md hover:bg-pink-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-pink focus:ring-opacity-50"
-                                type="submit">
-                                Apply Now
+                                class="bg-primary text-white text-lg font-bold py-3 px-6 rounded-md shadow-lg hover:bg-accent transition-colors duration-300 flex items-center gap-2 border border-primary/50">
+                                ENQUIRE NOW
+                                <span class="material-symbols-outlined">outgoing_call</span>
                             </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-4xl lg:text-5xl font-bold leading-tight mb-6">Aspiring to become a top-class manager
-                        with a world-class management degree?</h1>
-                    <p class="text-lg mb-8">Unlock your potential and gain the skills to lead with our distinguished
-                        managerial program. Our curriculum is designed by industry experts to provide you with the
-                        strategic thinking and leadership capabilities needed to excel in today's competitive business
-                        landscape.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 dark:bg-gray-900 text-gray-400 dark:text-gray-500 text-sm">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-2">
-                    <h3 class="text-white text-lg font-bold mb-4">University</h3>
-                    <p class="text-gray-400 mb-4">Your gateway to transformative business leadership and world-class
-                        education.</p>
-                    <div class="flex space-x-4">
-                        <a class="hover:text-white transition-colors" href="#">Facebook</a>
-                        <a class="hover:text-white transition-colors" href="#">Twitter</a>
-                        <a class="hover:text-white transition-colors" href="#">LinkedIn</a>
-                        <a class="hover:text-white transition-colors" href="#">Instagram</a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Programs</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Admissions</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Campus Life</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Support</h4>
-                    <ul class="space-y-2">
-                        <li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
-                        <li><a class="hover:text-white transition-colors" href="#">Help Center</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-4">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p>© 2025 University. All rights reserved.</p>
-                    <div class="mt-4 md:mt-0">
-                        <button
-                            class="bg-primary text-white text-lg font-bold py-3 px-6 rounded-md shadow-lg hover:bg-accent transition-colors duration-300 flex items-center gap-2 border border-primary/50">
-                            ENQUIRE NOW
-                            <span class="material-symbols-outlined">outgoing_call</span>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Carousel functionality
-        const carouselItems = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
+        <!-- JavaScript -->
+        <script>
+            // Carousel functionality
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
 
-        function showNextSlide() {
-            carouselItems[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % carouselItems.length;
-            carouselItems[currentIndex].classList.add('active');
-        }
+            function showNextSlide() {
+                carouselItems[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                carouselItems[currentIndex].classList.add('active');
+            }
 
-        setInterval(showNextSlide, 5000); // Change slide every 5 seconds
+            setInterval(showNextSlide, 5000); // Change slide every 5 seconds
 
-        // Smooth scrolling for navigation
-        document.addEventListener('DOMContentLoaded', function () {
-            // Add any additional JavaScript functionality here
+            // Smooth scrolling for navigation
+            document.addEventListener('DOMContentLoaded', function () {
+                // Add any additional JavaScript functionality here
 
-            // Dark mode toggle (if needed)
-            const toggleDarkMode = () => {
-                document.documentElement.classList.toggle('dark');
-            };
+                // Dark mode toggle (if needed)
+                const toggleDarkMode = () => {
+                    document.documentElement.classList.toggle('dark');
+                };
 
-            // Animation on scroll
-            const observeElements = document.querySelectorAll('.animate-fade-in-up');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                    }
+                // Animation on scroll
+                const observeElements = document.querySelectorAll('.animate-fade-in-up');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animationPlayState = 'running';
+                        }
+                    });
                 });
-            });
 
-            observeElements.forEach(el => observer.observe(el));
-        });
-    </script>
+                observeElements.forEach(el => observer.observe(el));
+            });
+        </script>
 </body>
 
 </html>
