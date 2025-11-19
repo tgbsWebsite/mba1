@@ -51,6 +51,7 @@
                         "subtext-light": "#52525b", // zinc-600
                         "subtext-dark": "#a1a1aa", // zinc-400
                         "line-dark": "#3f3f46", // zinc-700
+
                     },
                     fontFamily: {
                         display: ["Montserrat", "sans-serif"],
@@ -251,6 +252,7 @@
 
         .timeline-item.completed .timeline-dot .material-symbols-outlined {
             color: white;
+            ;
         }
 
         .timeline-item.completed .timeline-line {
@@ -333,146 +335,207 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark ">
-<div class="min-h-screen flex flex-col">
-<header class="bg-white dark:bg-gray-900/50 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<div class="flex-shrink-0">
-<img alt="MBA logo" class="h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK1Us7jLwR2LCfXOHvgKPk8uKWgr8G7BYF6lr8rDl1k_3EcXaNcQVe_7APLSYaFYhsHxAkdYgsXcbcCb-ljGUKn8JunZC64KSH9UdYFkz4fd1wonb2VNL3Ud9kuFY1WX6Sc_aZsgM4yi4jVY3vB-T011Oj1k6x1jb01jjPOAoj3zQ_336be-0oXnDkY7_zc7qM4DpMp7OEbwGOhj-bqodb98Q6AetryyqHOP5qHKt7REFArp-vmnOl6DDNN02ddzoauFuU_uXeJmE"/>
-</div>
-<nav class="hidden md:flex items-center space-x-8">
-<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center" href="#">
-              WHY MBA <span class="material-icons text-base ml-1">expand_more</span>
-</a>
-<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center" href="#">
-              PROGRAMS <span class="material-icons text-base ml-1">expand_more</span>
-</a>
-<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center" href="#">
-              HOW TO APPLY <span class="material-icons text-base ml-1">expand_more</span>
-</a>
-<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">FAQS</a>
-<a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">CONTACT US</a>
-</nav>
-</div>
-</div>
-</header>
-<main class="flex-grow">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-16">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<div class="lg:col-span-8 relative">
-<div class="lg:pr-12">
-<h1 class="text-6xl md:text-7xl lg:text-8xl font-black uppercase text-gray-900 dark:text-white">India's Premier <span class="text-primary">Scholarship</span></h1>
-<h2 class="font-serif italic text-4xl md:text-5xl text-gray-700 dark:text-gray-300 mt-4">Unlocking a World of Opportunities</h2>
-<p class="mt-8 text-base text-gray-600 dark:text-gray-400 max-w-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellendus non fugit, eos exercitationem facilis iure animi veniam ducimus maxime, quidem repudiandae vero praesentium, aspernatur reiciendis itaque adipisci labore doloribus!
-              </p>
-<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-end relative">
-<div class="text-center md:text-left">
-<p class="font-serif text-3xl text-gray-700 dark:text-gray-400">Scholarships Worth</p>
-<div class="relative inline-flex items-start">
-<span class="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mr-2 mt-8">₹</span>
-<span class="text-9xl lg:text-[180px] font-black text-primary leading-none">250</span>
-<span class="absolute top-0 right-[-1rem] text-primary text-4xl font-bold">*</span>
-</div>
-<p class="text-3xl font-bold text-gray-800 dark:text-gray-200 uppercase tracking-widest -mt-4">Crores</p>
-</div>
-<div class="flex flex-col items-center md:items-start text-center md:text-left">
-<div class="relative">
-<p class="text-gray-700 dark:text-gray-400">Earn up to</p>
-<p class="text-8xl font-black text-primary leading-none">100%</p>
-<p class="text-2xl font-serif text-gray-700 dark:text-gray-400">Scholarship</p>
-</div>
-<p class="mt-6 text-gray-600 dark:text-gray-400 max-w-xs">
-                        to unlock your scholarly potential and pave the way for your bright future at Chandigarh University.
-                    </p>
-</div>
-</div>
-</div>
-<div class="absolute bottom-[-100px] right-0 hidden lg:block">
-<img alt="A female student with a backpack looking down." class="max-w-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3jskQJF1oLwAoizlarLH9cYFVcOAE5HfilxuwTYJW9qt2TJUoM1toCGd20Cfvke00GTDz8riPpUCNhFV9G5sjcR9GLazVtyfEbjkNLeezJq1UN9nL7LJkWvoEb556aDQ2mIZymrxxsbcgFzIR2gJQPbViWQ5UkGVRCwZXsX_ZfY2Fv69KBrBg5tfovHCpF3_LRpWeVVizy4KOxZVzN9jSRPBHeq6qYfl-hwg-qTxaXIvh7sMIHbn9nZUQjeDh46fRULJ-n9qVpU"/>
-</div>
-</div>
-<div class="lg:col-span-4 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-2xl">
-<div class="text-center">
-<h3 class="text-xl font-bold uppercase text-gray-900 dark:text-white">MBA Application Form <span class="text-primary">2026</span></h3>
-<p class="text-gray-600 dark:text-gray-400 mt-1">Apply for MBA</p>
-</div>
-<div class="bg-primary text-white text-center py-2 px-4 rounded mt-6">
-<p class="text-sm font-semibold">Registration End Date (Phase - 1): 1<sup>st</sup> May 2026</p>
-</div>
-<form class="mt-6 space-y-4">
-<div>
-<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="campus" name="campus">
-<option>SELECT CAMPUS</option>
-</select>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<input class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="student-name" name="student-name" placeholder="STUDENT NAME" type="text"/>
-</div>
-<div>
-<input class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="student-email" name="student-email" placeholder="STUDENT EMAIL ID" type="email"/>
-</div>
-</div>
-<div>
-<div class="flex">
-<div class="relative">
-<select class="absolute inset-y-0 left-0 pl-3 pr-8 border-r bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-l text-gray-500 dark:text-gray-400 focus:ring-primary focus:border-primary h-full">
-<option>+91</option>
-</select>
-</div>
-<input class="w-full pl-24 bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="student-mobile" name="student-mobile" placeholder="STUDENT MOBILE NO" type="tel"/>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<input class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary" id="dob" name="dob" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="SELECT DOB" type="text"/>
-</div>
-<div>
-<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="city" name="city">
-<option>STUDENT CITY</option>
-</select>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="discipline" name="discipline">
-<option>SELECT DISCIPLINE</option>
-</select>
-</div>
-<div>
-<select class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary" id="program" name="program">
-<option>SELECT PROGRAM</option>
-</select>
-</div>
-</div>
-<div>
-<p class="text-xs text-gray-500 dark:text-gray-400">By submitting this form, I agree to receive notifications from the University in the form of SMS/E-mail/Call.</p>
-</div>
-<div>
-<button class="w-full bg-red-700 text-white font-bold py-3 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors" type="submit">
-                  APPLY NOW
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white dark:bg-gray-900/50 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex-shrink-0">
+                        <img alt="MBA logo" class="h-12" src="" />
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center"
+                            href="#">
+                            WHY MBA <span class="material-icons text-base ml-1">expand_more</span>
+                        </a>
+                        <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center"
+                            href="#">
+                            PROGRAMS <span class="material-icons text-base ml-1">expand_more</span>
+                        </a>
+                        <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center"
+                            href="#">
+                            HOW TO APPLY <span class="material-icons text-base ml-1">expand_more</span>
+                        </a>
+                        <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="#">FAQS</a>
+                        <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="#">CONTACT US</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-8 relative">
+                        <div class="lg:pr-12">
+                            <h1
+                                class="text-6xl md:text-7xl lg:text-8xl font-black uppercase text-gray-900 dark:text-white">
+                                Indis Pr <span class="text-primary">Sch</span></h1>
+                            <h2 class="font-serif italic text-4xl md:text-5xl text-gray-700 dark:text-gray-300 mt-4">
+                                Unlocking a World of Opportunities</h2>
+                            <p class="mt-8 text-base text-gray-600 dark:text-gray-400 max-w-lg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellendus non fugit,
+                                eos exercitationem facilis iure animi veniam ducimus maxime, quidem repudiandae vero
+                                praesentium, aspernatur reiciendis itaque adipisci labore doloribus!
+                            </p>
+                            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-end relative">
+                                <div class="text-center md:text-left">
+                                    <p class="font-serif text-3xl text-gray-700 dark:text-gray-400">Scholarships Worth
+                                    </p>
+                                    <div class="relative inline-flex items-start">
+                                        <span
+                                            class="text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mr-2 mt-8">₹</span>
+                                        <span
+                                            class="text-9xl lg:text-[180px] font-black text-primary leading-none">0</span>
+                                        <span
+                                            class="absolute top-0 right-[-1rem] text-primary text-4xl font-bold">*</span>
+                                    </div>
+                                    <p
+                                        class="text-3xl font-bold text-gray-800 dark:text-gray-200 uppercase tracking-widest -mt-4">
+                                        Lakhs</p>
+                                </div>
+                                <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                                    <div class="relative">
+                                        <p class="text-gray-700 dark:text-gray-400">Earn up to</p>
+                                        <p class="text-8xl font-black text-primary leading-none">100%</p>
+                                        <p class="text-2xl font-serif text-gray-700 dark:text-gray-400">Scholarship</p>
+                                    </div>
+                                    <p class="mt-6 text-gray-600 dark:text-gray-400 max-w-xs">
+                                        to unlock your scholarly potential and pave the way for your bright future at
+                                        Chandigarh University.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-[-100px] right-0  hidden lg:block">
+                            <img alt="A female student with a backpack looking down." class="max-w-sm"
+                                src="./image-removebg-preview.png" />
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-lg shadow-2xl">
+                        <div class="text-center">
+                            <h3 class="text-xl font-bold uppercase text-gray-900 dark:text-white">MBA Application Form
+                                <span class="text-primary">2026</span>
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1">Apply for MBA</p>
+                        </div>
+                        <div class="bg-primary text-white text-center py-2 px-4 rounded mt-6">
+                            <p class="text-sm font-semibold">Registration End Date (Phase - 1): 1<sup>st</sup> May 2026
+                            </p>
+                        </div>
+                        <form class="mt-6 space-y-4">
+                            <div>
+                                <select
+                                    class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary"
+                                    id="campus" name="campus">
+                                    <option>SELECT CAMPUS</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <input
+                                        class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary"
+                                        id="student-name" name="student-name" placeholder="STUDENT NAME" type="text" />
+                                </div>
+                                <div>
+                                    <input
+                                        class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary"
+                                        id="student-email" name="student-email" placeholder="STUDENT EMAIL ID"
+                                        type="email" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex">
+                                    <div class="relative">
+                                        <select
+                                            class="absolute inset-y-0 left-0 pl-3 pr-8 border-r bg-gray-100 dark:bg-gray-700 border-gray-200 dark:border-gray-600 rounded-l text-gray-500 dark:text-gray-400 focus:ring-primary focus:border-primary h-full">
+                                            <option>+91</option>
+                                        </select>
+                                    </div>
+                                    <input
+                                        class="w-full pl-24 bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary"
+                                        id="student-mobile" name="student-mobile" placeholder="STUDENT MOBILE NO"
+                                        type="tel" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <input
+                                        class="w-full bg-gray-100 dark:bg-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 rounded placeholder-gray-500 dark:placeholder-gray-400 focus:ring-primary focus:border-primary"
+                                        id="dob" name="dob" onblur="(this.type='text')" onfocus="(this.type='date')"
+                                        placeholder="SELECT DOB" type="text" />
+                                </div>
+                                <div>
+                                    <select
+                                        class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary"
+                                        id="city" name="city">
+                                        <option>STUDENT CITY</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <select
+                                        class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary"
+                                        id="discipline" name="discipline">
+                                        <option>SELECT DISCIPLINE</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select
+                                        class="w-full text-gray-500 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-600 rounded focus:ring-primary focus:border-primary"
+                                        id="program" name="program">
+                                        <option>SELECT PROGRAM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">By submitting this form, I agree to
+                                    receive notifications from the University in the form of SMS/E-mail/Call.</p>
+                            </div>
+                            <div>
+                                <button
+                                    class="w-full bg-red-700 text-white font-bold py-3 px-4 rounded hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+                                    type="submit">
+                                    APPLY NOW
+                                </button>
+                            </div>
+                        </form>
+                        <div class="text-center mt-6">
+                            <a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">
+                                Already Registered? Click to Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed bottom-5 right-5 z-40">
+                <button
+                    class="bg-red-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-red-800 transition-transform hover:scale-110">
+                    <span class="material-icons text-4xl">sms</span>
                 </button>
-</div>
-</form>
-<div class="text-center mt-6">
-<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
-                Already Registered? Click to Login
-              </a>
-</div>
-</div>
-</div>
-</div>
-<div class="fixed bottom-5 right-5 z-40">
-<button class="bg-red-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-red-800 transition-transform hover:scale-110">
-<span class="material-icons text-4xl">sms</span>
-</button>
-</div>
-</main>
-</div>
+            </div>
+        </main>
+    </div>
+    <section
+        class="relative pt-20 pb-0 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background-light dark:bg-background-dark font-display">
+        <div class="absolute inset-0 geometric-bg"></div>
+        <div class="relative max-w-4xl mx-auto text-center z-10">
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-primary dark:text-gray-100">WELCOME TO</h1>
+            <h2 class="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-primary dark:text-gray-100">TITLE</h2>
+            <div class="mt-6 mx-auto w-24 h-[3px] bg-[#9D0A4F] rounded-full"></div>
 
+            <p class="mt-8 text-lg leading-8 text-text-paragraph-light dark:text-text-paragraph-dark">
+                Thakur Global Business School (TGBS), managed by Zagdusingh Charitable Trust. Post Graduate Diploma in
+                Management (PGDM) is TGBS's 2-year flagship program approved by AICTE, DTE &amp; Govt. of Maharashtra.
+                It is designed to impart learners from diverse backgrounds to mould them into mindful leaders ready to
+                take on the challenges in the VUCA world and manage in a global dimension.
+            </p>
+        </div>
+    </section>
     <div class="min-h-full">
-        <div class="bg-background-light dark:bg-background-dark pt-14 pb-14 md:pt-18 md:pb-18">
+        <div class="bg-background-light dark:bg-background-dark pt-14 pb-14  md:pb-18">
             <div class="container mx-auto px-6 py-16 md:py-30">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="flex flex-col">
@@ -517,7 +580,7 @@
 
                 </div>
             </div>
-            <div class="container mx-auto px-6 py-16 md:py-30">
+            <div class="container mx-auto px-4 py-16 md:py-30">
 
                 <!-- CARD (NOT FULL WIDTH) -->
                 <div
@@ -634,92 +697,205 @@
                     <!-- Left rail -->
                     <nav class="lg:w-1/3">
                         <ul class="space-y-2">
-                            <a href="#"
+                            <!-- Marketing (default active) -->
+                            <a href="#" data-tab="marketing"
                                 class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg">
                                 MBA Marketing
-                                <span class="material-icons">arrow_forward</span> </a>
-                            <!-- <li><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 "></a></li> -->
-                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Digital Marketing</a></li> -->
-                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Business Analytics</a></li> -->
-                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Operations And Supply Chain Management</a></li> -->
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                    Human Resource Management</a></li>
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                    Finance</a></li>
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                    Operations</a></li>
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                    Business Analytics</a></li>
-                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA Dual</a></li> -->
+                                <!-- <span class="material-icons">arrow_forward</span> -->
+                            </a>
 
+                            <li>
+                                <a href="#" data-tab="hr"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    MBA Human Resource Management
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-tab="finance"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    MBA Finance
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-tab="operations"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    MBA Operations
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-tab="analytics"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    MBA Business Analytics
+                                </a>
+                            </li>
                         </ul>
                     </nav>
 
                     <!-- Detail panel -->
                     <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
-                        <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
 
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Marketing is the most important function for every business. TCET offers a two-year
-                            specialisation in Marketing for candidates interested in learning about Marketing
-                            Strategies,
-                            Brand Management, Retail Management, Consumer and Sales Management, Advertising, and Product
-                            Management, among other domains. The programme equips students with the knowledge, business
-                            acumen, research skills, and strategic outlook they need to outperform their competition in
-                            a
-                            dynamic marketing ecosystem.
+                        <!-- MARKETING (visible by default) -->
+                        <div id="panel-marketing" class="tab-panel">
+                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
 
-                            Besides this, the programme focuses on the holistic development of students, shaping them
-                            into
-                            thorough professionals and responsible individuals. Learning is driven by real-life cases,
-                            internships, industry visits, projects, and peer interactions, preparing students to climb
-                            the
-                            corporate ladder.
-                        </p>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Marketing is the most important function for every business. TCET offers a two-year
+                                specialisation in Marketing for candidates interested in learning about Marketing
+                                Strategies, Brand Management, Retail Management, Consumer and Sales Management,
+                                Advertising, and Product Management, among other domains. The programme equips students
+                                with the
+                                knowledge, business acumen, research skills, and strategic outlook they need to
+                                outperform their
+                                competition in a dynamic marketing ecosystem.
+                            </p>
 
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                Besides this, the programme focuses on the holistic development of students, shaping
+                                them into
+                                thorough professionals and responsible individuals. Learning is driven by real-life
+                                cases,
+                                internships, industry visits, projects, and peer interactions, preparing students to
+                                climb the
+                                corporate ladder.
+                            </p>
 
-                        </p>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
 
-                        <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                            <h3 class="text-xl font-semibold mt-10 mb-6 text-[#9D0A4F]">Career outcomes</h3>
 
-                        <h3 class="text-xl font-semibold mt-10 mb-6  text-[#9D0A4F]">Career outcomes</h3>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                            <div class="flex items-center"><span
-                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                    class="text-gray-600 dark:text-gray-400">Brand Managers </span></div>
-                            <div class="flex items-center"><span
-                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                    class="text-gray-600 dark:text-gray-400 ">Sales Managers </span></div>
-                            <div class="flex items-center"><span
-                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                    class="text-gray-600 dark:text-gray-400">Market Research Analysts </span></div>
-                            <div class="flex items-center"><span
-                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                    class="text-gray-600 dark:text-gray-400">Business Development Managers </span></div>
-                            <div class="flex items-center"><span
-                                    class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                    class="text-gray-600 dark:text-gray-400">Public Relations Managers </span></div>
-                            <!-- <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Business Analyst</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Medical Device and Diagnostics Manager</span>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                                <div class="flex items-center"><span
+                                        class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                        class="text-gray-600 dark:text-gray-400">Brand Managers</span></div>
+                                <div class="flex items-center"><span
+                                        class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                        class="text-gray-600 dark:text-gray-400">Sales Managers</span></div>
+                                <div class="flex items-center"><span
+                                        class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                        class="text-gray-600 dark:text-gray-400">Market Research Analysts</span></div>
+                                <div class="flex items-center"><span
+                                        class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                        class="text-gray-600 dark:text-gray-400">Business Development Managers</span>
+                                </div>
+                                <div class="flex items-center"><span
+                                        class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
+                                        class="text-gray-600 dark:text-gray-400">Public Relations Managers</span></div>
+                            </div>
                         </div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Public Health Sector Roles</span></div>
-                    </div> -->
+
+                        <!-- HR (hidden by default) -->
+                        <div id="panel-hr" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Human Resource Management</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Dummy content for HR. The HR specialization covers talent acquisition, organisational
+                                behaviour,
+                                performance management, compensation & benefits, learning and development, labour laws
+                                and HR analytics.
+                                Designed for those who want to shape people strategy and build high-performance teams.
+                            </p>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                        </div>
+
+                        <!-- FINANCE (hidden) -->
+                        <div id="panel-finance" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Finance</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Dummy content for Finance. Focused on corporate finance, investment analysis, financial
+                                modelling,
+                                banking and risk management. The Finance specialisation blends theory with hands-on
+                                valuation,
+                                portfolio and treasury projects.
+                            </p>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                        </div>
+
+                        <!-- OPERATIONS (hidden) -->
+                        <div id="panel-operations" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Operations</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Dummy content for Operations. Covers supply chain, logistics, procurement, operations
+                                strategy and
+                                process optimisation, with an emphasis on industry projects and internships.
+                            </p>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                        </div>
+
+                        <!-- ANALYTICS (hidden) -->
+                        <div id="panel-analytics" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Business Analytics</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Dummy content for Business Analytics. Teaches statistics, predictive modelling, data
+                                visualisation and
+                                business decision-making using analytics tools. Includes industry live projects,
+                                internships and
+                                placement support for analytics roles.
+                            </p>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                        </div>
+
                     </article>
                 </div>
             </div>
+
+            <!-- script: toggles panels and active tab styling -->
+       <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = Array.from(document.querySelectorAll('[data-tab]'));
+  const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+  const ACTIVE = ['flex','justify-between','items-center','bg-[#D19A9A]','text-gray-800','dark:text-gray-900','rounded-lg'];
+  const INACTIVE = ['block','py-3','px-4','border-b','border-gray-200','dark:border-gray-700','hover:bg-gray-100','dark:hover:bg-gray-800'];
+
+  function makeInactive(tabEl) {
+    tabEl.classList.remove(...ACTIVE);
+    tabEl.classList.add(...INACTIVE);
+  }
+
+  function makeActive(tabEl) {
+    tabEl.classList.remove(...INACTIVE);
+    tabEl.classList.add(...ACTIVE);
+    // ensure padding classes exist for active state
+    if (!tabEl.classList.contains('py-3')) tabEl.classList.add('py-3');
+    if (!tabEl.classList.contains('px-4')) tabEl.classList.add('px-4');
+  }
+
+  function showPanel(name) {
+    panels.forEach(p => p.classList.add('hidden'));
+    const panel = document.getElementById('panel-' + name);
+    if (panel) panel.classList.remove('hidden');
+  }
+
+  // pick the default tab: marketing if present, otherwise first tab
+  const defaultTab = document.querySelector('[data-tab="marketing"]') || tabs[0];
+
+  // initialize: show correct panel and style tabs
+  if (defaultTab) {
+    showPanel(defaultTab.getAttribute('data-tab'));
+    tabs.forEach(t => t === defaultTab ? makeActive(t) : makeInactive(t));
+  }
+
+  // attach handlers
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = tab.getAttribute('data-tab');
+      showPanel(name);
+      tabs.forEach(t => t === tab ? makeActive(t) : makeInactive(t));
+
+      if (window.innerWidth < 1024) {
+        // center the clicked tab on small screens
+        setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+      }
+    });
+  });
+});
+</script>
+
+
+
         </section>
 
         <!-- <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
@@ -911,90 +1087,207 @@
                     <!-- Left rail -->
                     <nav class="lg:w-1/3">
                         <ul class="space-y-2">
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Eligibility
-                                    Criteria</a></li>
                             <li>
-                                <a href="#"
+                                <a href="#" data-tab="eligibility"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    Eligibility Criteria
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-tab="selection"
                                     class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg">
                                     Selection Criteria
-                                    <span class="material-icons">arrow_forward</span>
-                                    <!-- </a><a href="#"
-                                class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Selection
-                                Criteria</a></li> -->
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Fees</a>
+                                    <!-- <span class="material-icons">arrow_forward</span> -->
+                                </a>
                             </li>
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Duration</a>
+
+                            <li>
+                                <a href="#" data-tab="fees"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    Fees
+                                </a>
                             </li>
-                            <!-- <li><a href="#" class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"></a></li> -->
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Scholarships</a>
+
+                            <li>
+                                <a href="#" data-tab="duration"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    Duration
+                                </a>
                             </li>
+
+                            <li>
+                                <a href="#" data-tab="scholarships"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    Scholarships
+                                </a>
                             </li>
-                            <li><a href="#"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">MBA
-                                    Entrepreneurship And Family Business Management</a></li>
+
+                            <li>
+                                <a href="#" data-tab="entrepreneurship"
+                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
+                                    MBA Entrepreneurship And Family Business Management
+                                </a>
+                            </li>
                         </ul>
                     </nav>
 
                     <!-- Detail panel -->
                     <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection
-                            Criteria</h2>
-
-                        <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
-                            <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from
-                                UGC-approved university; 55% for reserved Maharashtra category)</li>
-                            <li>Minimum 50% in Class 12 and Class 10 (English as a subject)</li>
-                            <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT</li>
-                        </ol>
-
-
-
-                        <!-- <p class="text-gray-600 dark:text-gray-400 mb-6">
-                        The curriculum is designed to provide students with both theoretical understanding and
-                        real-world application, preparing them to address the unique challenges of healthcare
-                        management. Post graduates of this programme are equipped to analyze complex data, make informed
-                        decisions, and lead with confidence, ultimately shaping the future of healthcare through
-                        effective and sustainable management.
-                    </p>
-
-                    <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a> -->
-
-                        <!-- <h3 class="text-xl font-semibold mt-10 mb-6 text-gray-800 dark:text-gray-200">Career outcomes</h3>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Hospital Operations Manager</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Healthcare IT Manager</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Health Insurance Manager</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Pharmaceutical Manager</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Healthcare Consultant</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Business Analyst</span></div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Medical Device and Diagnostics Manager</span>
+                        <!-- ELIGIBILITY -->
+                        <div id="panel-eligibility" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Eligibility Criteria
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Candidates must hold a 3- or 4-year undergraduate degree from a UGC-recognized
+                                university. Minimum
+                                aggregate marks of 50% (45% for reserved categories where applicable). Final year
+                                students awaiting results
+                                are eligible to apply subject to meeting the minimum criteria at the time of admission.
+                            </p>
+                            <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                                <li>UG degree (3/4 years) from a recognized university.</li>
+                                <li>Minimum aggregate 50% (relaxation as per category rules).</li>
+                                <li>English as a subject in Class 10 or 12 preferred.</li>
+                            </ol>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
                         </div>
-                        <div class="flex items-center"><span
-                                class="material-icons text-[#D19A9A] mr-3">check_circle_outline</span><span
-                                class="text-gray-600 dark:text-gray-400">Public Health Sector Roles</span></div>
-                    </div> -->
+
+                        <!-- SELECTION (visible by default) -->
+                        <div id="panel-selection" class="tab-panel">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection Criteria</h2>
+
+                            <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                                <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from
+                                    UGC-approved university; 55% for reserved Maharashtra category).</li>
+                                <li>Minimum 50% in Class 12 and Class 10 (English as a subject).</li>
+                                <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT.</li>
+                                <li>Shortlisted candidates may be called for GD/PI as per programme rules.</li>
+                            </ol>
+
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                Admissions are merit-driven using standardized test scores; additional weightage may be
+                                given for academic
+                                performance, relevant work experience and performance in subsequent rounds where
+                                applicable.
+                            </p>
+                        </div>
+
+                        <!-- FEES -->
+                        <div id="panel-fees" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Fees</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Tuition and fees vary by campus and specialization. Typical full-time MBA tuition ranges
+                                are provided on the
+                                official fee schedule. Fees can be paid semester-wise; scholarship awards will be
+                                reflected in the invoice.
+                            </p>
+                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                <li>Application fee: as published for the intake.</li>
+                                <li>Tuition: Refer to campus-specific fee schedule.</li>
+                                <li>Payment plans and instalments available.</li>
+                            </ul>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">View fee schedule</a>
+                        </div>
+
+                        <!-- DURATION -->
+                        <div id="panel-duration" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Duration</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                The standard MBA programme duration is two academic years (four semesters) for full-time
+                                students. Certain
+                                executive or part-time variants have different durations; please check the specific
+                                programme page.
+                            </p>
+                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                <li>Full-time MBA: 2 years (4 semesters).</li>
+                                <li>Executive/Part-time MBA: programme-specific durations.</li>
+                            </ul>
+                        </div>
+
+                        <!-- SCHOLARSHIPS -->
+                        <div id="panel-scholarships" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Scholarships</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Scholarships are merit- and need-based. CUCET scholarships cover a range of awards
+                                including partial tuition
+                                waivers and full scholarships for exceptional candidates. Scholarship decisions are made
+                                after assessing
+                                academic records and qualifying scores.
+                            </p>
+                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                <li>Merit-based scholarships up to 100% for top performers.</li>
+                                <li>Special awards for candidate profiles matching industry needs.</li>
+                            </ul>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Scholarship details</a>
+                        </div>
+
+                        <!-- ENTREPRENEURSHIP -->
+                        <div id="panel-entrepreneurship" class="tab-panel hidden">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">MBA Entrepreneurship
+                                And Family Business Management</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                This specialisation focuses on venture creation, family business governance, scaling,
+                                fundraising and
+                                entrepreneurial finance. Practical learning through incubator projects, mentorship and
+                                industry connect
+                                prepares students to start or lead family-owned and entrepreneurial ventures.
+                            </p>
+                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                        </div>
                     </article>
                 </div>
             </div>
+
+            <!-- script: toggles panels and active tab styling (keeps visual classes as in original design) -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = Array.from(document.querySelectorAll('[data-tab]'));
+  const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+  const ACTIVE = ['flex','justify-between','items-center','bg-[#D19A9A]','text-gray-800','dark:text-gray-900','rounded-lg','py-3','px-4'];
+  const INACTIVE = ['block','py-3','px-4','border-b','border-gray-200','dark:border-gray-700','hover:bg-gray-100','dark:hover:bg-gray-800'];
+
+  function makeInactive(tabEl) {
+    tabEl.classList.remove(...ACTIVE);
+    tabEl.classList.add(...INACTIVE);
+  }
+
+  function makeActive(tabEl) {
+    tabEl.classList.remove(...INACTIVE);
+    tabEl.classList.add(...ACTIVE);
+  }
+
+  function showPanel(name) {
+    panels.forEach(p => p.classList.add('hidden'));
+    const panel = document.getElementById('panel-' + name);
+    if (panel) panel.classList.remove('hidden');
+  }
+
+  // choose default: eligibility if present, otherwise first tab
+  const defaultTab = document.querySelector('[data-tab="eligibility"]') || tabs[0];
+
+  if (defaultTab) {
+    showPanel(defaultTab.getAttribute('data-tab'));
+    tabs.forEach(t => t === defaultTab ? makeActive(t) : makeInactive(t));
+  }
+
+  // click handling
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const name = tab.getAttribute('data-tab');
+      showPanel(name);
+      tabs.forEach(t => t === tab ? makeActive(t) : makeInactive(t));
+
+      if (window.innerWidth < 1024) {
+        setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+      }
+    });
+  });
+});
+</script>
+
         </section>
 
 
@@ -1146,7 +1439,7 @@
                                     class="w-24 h-24 rounded-full mb-6 border-4 border-glow-primary object-cover"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
                                 <h3 class="font-bold font-display text-xl text-text-dark mb-3">Riddhi Santhalia</h3>
-                                <p class="text-text-light text-sm mb-6 flex-grow">
+                                <p class="text-text-light text-sm mb-6 flex-grow text-white">
                                     My time at University as an MBA student was truly
                                     transformative. The rigorous curriculum, taught by experienced professionals,
                                     covered a
@@ -1160,7 +1453,7 @@
                                     class="w-24 h-24 rounded-full mb-6 border-4 border-glow-secondary object-cover"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
                                 <h3 class="font-bold font-display text-xl text-text-dark mb-3">Ms. Vishakha Naik</h3>
-                                <p class="text-text-light text-sm mb-6 flex-grow">
+                                <p class="text-text-light text-sm mb-6 flex-grow text-white">
                                     University has always been motivating and supportive. The unique trimester pattern,
                                     holistic
                                     approach towards education, peace program, highly experienced and supportive
@@ -1175,7 +1468,7 @@
                                     class="w-24 h-24 rounded-full mb-6 border-4 border-accent object-cover"
                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ISt8wLzTDWdHtMkWs2u5JhkxsEYeYJIan3QHLIwN6sM_3745JzKxwAqio4DqySyQyvcgU7Q8or0XK9B9smDM1qHL9dFwehcV_7m1HXv9QQPFILXGrTFL_RfcuseuGVs7iD9Jqq4PWs9YYLU79eYYj4scsoXCQ7JAi7nml9ZetUjg5b6-N14-uLyEShOJvig5epGaZ_qqbe0yzgqFgx9fcKWKbqBCb6GxRPoQ33T-RUwWfWSZi39qeHdFeY_5_NdFzforO9JG9Q8" />
                                 <h3 class="font-bold font-display text-xl text-text-dark mb-3">Ritika</h3>
-                                <p class="text-text-light text-sm mb-6 flex-grow">
+                                <p class="text-text-light text-sm mb-6 flex-grow text-white">
                                     At University, I have honed my skills and enhanced my knowledge. The MBA program
                                     provides
                                     vast opportunities to grow and learn. is a vibrant place where aspirations flourish
