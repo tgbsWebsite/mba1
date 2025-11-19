@@ -1010,215 +1010,212 @@ window.addEventListener('load', () => {
             }
         </style>
 
-        <!-- Specializations -->
-        <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
-            <div class="container mx-auto px-4 py-16">
-                <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details </h1>
+     <!-- Admission details -->
+<section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+  <div class="container mx-auto px-4 py-16">
+    <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details</h1>
 
-                <div class="flex flex-col lg:flex-row gap-12">
-                    <!-- Left rail -->
-                    <nav class="lg:w-1/3">
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="#" data-tab="eligibility"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
-                                    Eligibility Criteria
-                                </a>
-                            </li>
+    <div class="flex flex-col lg:flex-row gap-12">
+      <!-- Left rail -->
+      <nav class="lg:w-1/3" aria-label="Admission tabs">
+        <ul class="space-y-2">
 
-                            <li>
-                                <a href="#" data-tab="selection"
-                                    class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg">
-                                    Selection Criteria
-                                    <!-- <span class="material-icons">arrow_forward</span> -->
-                                </a>
-                            </li>
+          <li>
+            <a href="#" data-tab="eligibility"
+               class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
+               role="tab" aria-selected="true">Eligibility Criteria</a>
+          </li>
 
-                            <li>
-                                <a href="#" data-tab="fees"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
-                                    Fees
-                                </a>
-                            </li>
+          <li>
+            <a href="#" data-tab="selection"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false">Selection Criteria</a>
+          </li>
 
-                            <li>
-                                <a href="#" data-tab="duration"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
-                                    Duration
-                                </a>
-                            </li>
+          <li>
+            <a href="#" data-tab="fees"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false">Fees</a>
+          </li>
 
-                            <li>
-                                <a href="#" data-tab="scholarships"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
-                                    Scholarships
-                                </a>
-                            </li>
+          <li>
+            <a href="#" data-tab="duration"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false">Duration</a>
+          </li>
 
-                            <li>
-                                <a href="#" data-tab="entrepreneurship"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">
-                                    MBA Entrepreneurship And Family Business Management
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+          <li>
+            <a href="#" data-tab="scholarships"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false">Scholarships</a>
+          </li>
 
-                    <!-- Detail panel -->
-                    <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
-                        <!-- ELIGIBILITY -->
-                        <div id="panel-eligibility" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Eligibility Criteria
-                            </h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Candidates must hold a 3- or 4-year undergraduate degree from a UGC-recognized
-                                university. Minimum
-                                aggregate marks of 50% (45% for reserved categories where applicable). Final year
-                                students awaiting results
-                                are eligible to apply subject to meeting the minimum criteria at the time of admission.
-                            </p>
-                            <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
-                                <li>UG degree (3/4 years) from a recognized university.</li>
-                                <li>Minimum aggregate 50% (relaxation as per category rules).</li>
-                                <li>English as a subject in Class 10 or 12 preferred.</li>
-                            </ol>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div>
+          <li>
+            <a href="#" data-tab="entrepreneurship"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false">MBA Entrepreneurship And Family Business Management</a>
+          </li>
 
-                        <!-- SELECTION (visible by default) -->
-                        <div id="panel-selection" class="tab-panel">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection Criteria</h2>
+        </ul>
+      </nav>
 
-                            <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
-                                <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from
-                                    UGC-approved university; 55% for reserved Maharashtra category).</li>
-                                <li>Minimum 50% in Class 12 and Class 10 (English as a subject).</li>
-                                <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT.</li>
-                                <li>Shortlisted candidates may be called for GD/PI as per programme rules.</li>
-                            </ol>
+      <!-- Detail panel -->
+      <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700" role="tabpanel">
+        <!-- ELIGIBILITY (default visible) -->
+        <div id="panel-eligibility" class="tab-panel">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Eligibility Criteria</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Candidates must hold a 3- or 4-year undergraduate degree from a UGC-recognized university. Minimum
+            aggregate marks of 50% (45% for reserved categories where applicable). Final year students awaiting results
+            are eligible to apply subject to meeting the minimum criteria at the time of admission.
+          </p>
+          <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+            <li>UG degree (3/4 years) from a recognized university.</li>
+            <li>Minimum aggregate 50% (relaxation as per category rules).</li>
+            <li>English as a subject in Class 10 or 12 preferred.</li>
+          </ol>
+          <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+        </div>
 
-                            <p class="text-gray-600 dark:text-gray-400 mb-6">
-                                Admissions are merit-driven using standardized test scores; additional weightage may be
-                                given for academic
-                                performance, relevant work experience and performance in subsequent rounds where
-                                applicable.
-                            </p>
-                        </div>
+        <!-- SELECTION -->
+        <div id="panel-selection" class="tab-panel hidden">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection Criteria</h2>
+          <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+            <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from UGC-approved university; 55% for reserved Maharashtra category).</li>
+            <li>Minimum 50% in Class 12 and Class 10 (English as a subject).</li>
+            <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT.</li>
+            <li>Shortlisted candidates may be called for GD/PI as per programme rules.</li>
+          </ol>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            Admissions are merit-driven using standardized test scores; additional weightage may be given for academic
+            performance, relevant work experience and performance in subsequent rounds where applicable.
+          </p>
+        </div>
 
-                        <!-- FEES -->
-                        <div id="panel-fees" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Fees</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Tuition and fees vary by campus and specialization. Typical full-time MBA tuition ranges
-                                are provided on the
-                                official fee schedule. Fees can be paid semester-wise; scholarship awards will be
-                                reflected in the invoice.
-                            </p>
-                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
-                                <li>Application fee: as published for the intake.</li>
-                                <li>Tuition: Refer to campus-specific fee schedule.</li>
-                                <li>Payment plans and instalments available.</li>
-                            </ul>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">View fee schedule</a>
-                        </div>
+        <!-- FEES -->
+        <div id="panel-fees" class="tab-panel hidden">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Fees</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Tuition and fees vary by campus and specialization. Typical full-time MBA tuition ranges are provided on the
+            official fee schedule. Fees can be paid semester-wise; scholarship awards will be reflected in the invoice.
+          </p>
+          <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+            <li>Application fee: as published for the intake.</li>
+            <li>Tuition: Refer to campus-specific fee schedule.</li>
+            <li>Payment plans and instalments available.</li>
+          </ul>
+          <a href="#" class="text-[#D19A9A] font-medium hover:underline">View fee schedule</a>
+        </div>
 
-                        <!-- DURATION -->
-                        <div id="panel-duration" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Duration</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                The standard MBA programme duration is two academic years (four semesters) for full-time
-                                students. Certain
-                                executive or part-time variants have different durations; please check the specific
-                                programme page.
-                            </p>
-                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
-                                <li>Full-time MBA: 2 years (4 semesters).</li>
-                                <li>Executive/Part-time MBA: programme-specific durations.</li>
-                            </ul>
-                        </div>
+        <!-- DURATION -->
+        <div id="panel-duration" class="tab-panel hidden">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Duration</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            The standard MBA programme duration is two academic years (four semesters) for full-time students. Certain
+            executive or part-time variants have different durations; please check the specific programme page.
+          </p>
+          <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+            <li>Full-time MBA: 2 years (4 semesters).</li>
+            <li>Executive/Part-time MBA: programme-specific durations.</li>
+          </ul>
+        </div>
 
-                        <!-- SCHOLARSHIPS -->
-                        <div id="panel-scholarships" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Scholarships</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Scholarships are merit- and need-based. CUCET scholarships cover a range of awards
-                                including partial tuition
-                                waivers and full scholarships for exceptional candidates. Scholarship decisions are made
-                                after assessing
-                                academic records and qualifying scores.
-                            </p>
-                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
-                                <li>Merit-based scholarships up to 100% for top performers.</li>
-                                <li>Special awards for candidate profiles matching industry needs.</li>
-                            </ul>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Scholarship details</a>
-                        </div>
+        <!-- SCHOLARSHIPS -->
+        <div id="panel-scholarships" class="tab-panel hidden">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Scholarships</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Scholarships are merit- and need-based. CUCET scholarships cover a range of awards including partial tuition
+            waivers and full scholarships for exceptional candidates. Scholarship decisions are made after assessing
+            academic records and qualifying scores.
+          </p>
+          <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+            <li>Merit-based scholarships up to 100% for top performers.</li>
+            <li>Special awards for candidate profiles matching industry needs.</li>
+          </ul>
+          <a href="#" class="text-[#D19A9A] font-medium hover:underline">Scholarship details</a>
+        </div>
 
-                        <!-- ENTREPRENEURSHIP -->
-                        <div id="panel-entrepreneurship" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">MBA Entrepreneurship
-                                And Family Business Management</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                This specialisation focuses on venture creation, family business governance, scaling,
-                                fundraising and
-                                entrepreneurial finance. Practical learning through incubator projects, mentorship and
-                                industry connect
-                                prepares students to start or lead family-owned and entrepreneurial ventures.
-                            </p>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
+        <!-- ENTREPRENEURSHIP -->
+        <div id="panel-entrepreneurship" class="tab-panel hidden">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">MBA Entrepreneurship And Family Business Management</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            This specialisation focuses on venture creation, family business governance, scaling, fundraising and
+            entrepreneurial finance. Practical learning through incubator projects, mentorship and industry connect
+            prepares students to start or lead family-owned and entrepreneurial ventures.
+          </p>
+          <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+        </div>
+      </article>
+    </div>
+  </div>
 
-            <!-- script: toggles panels and active tab styling (keeps visual classes as in original design) -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const tabs = Array.from(document.querySelectorAll('[data-tab]'));
-  const panels = Array.from(document.querySelectorAll('.tab-panel'));
+  <!-- script: toggles panels and active tab styling (default: eligibility) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // scope tabs to the left rail to avoid unrelated matches elsewhere on page
+      const tabs = Array.from(document.querySelectorAll('nav [data-tab]'));
+      const panels = Array.from(document.querySelectorAll('.tab-panel'));
 
-  const ACTIVE = ['flex','justify-between','items-center','bg-[#D19A9A]','text-gray-800','dark:text-gray-900','rounded-lg','py-3','px-4'];
-  const INACTIVE = ['block','py-3','px-4','border-b','border-gray-200','dark:border-gray-700','hover:bg-gray-100','dark:hover:bg-gray-800'];
+      if (!tabs.length || !panels.length) return;
 
-  function makeInactive(tabEl) {
-    tabEl.classList.remove(...ACTIVE);
-    tabEl.classList.add(...INACTIVE);
-  }
+      const ACTIVE = ['flex','justify-between','items-center','bg-[#D19A9A]','text-gray-800','dark:text-gray-900','rounded-lg','py-3','px-4'];
+      const INACTIVE = ['block','py-3','px-4','border-b','border-gray-200','dark:border-gray-700','hover:bg-gray-100','dark:hover:bg-gray-800'];
 
-  function makeActive(tabEl) {
-    tabEl.classList.remove(...INACTIVE);
-    tabEl.classList.add(...ACTIVE);
-  }
-
-  function showPanel(name) {
-    panels.forEach(p => p.classList.add('hidden'));
-    const panel = document.getElementById('panel-' + name);
-    if (panel) panel.classList.remove('hidden');
-  }
-
-  // choose default: eligibility if present, otherwise first tab
-  const defaultTab = document.querySelector('[data-tab="eligibility"]') || tabs[0];
-
-  if (defaultTab) {
-    showPanel(defaultTab.getAttribute('data-tab'));
-    tabs.forEach(t => t === defaultTab ? makeActive(t) : makeInactive(t));
-  }
-
-  // click handling
-  tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      e.preventDefault();
-      const name = tab.getAttribute('data-tab');
-      showPanel(name);
-      tabs.forEach(t => t === tab ? makeActive(t) : makeInactive(t));
-
-      if (window.innerWidth < 1024) {
-        setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+      function setActive(tabEl) {
+        tabs.forEach(t => {
+          t.classList.remove(...ACTIVE);
+          t.classList.add(...INACTIVE);
+          t.setAttribute('aria-selected','false');
+        });
+        tabEl.classList.remove(...INACTIVE);
+        tabEl.classList.add(...ACTIVE);
+        tabEl.setAttribute('aria-selected','true');
       }
+
+      function showPanel(name) {
+        panels.forEach(p => {
+          p.classList.add('hidden');
+          p.setAttribute('aria-hidden','true');
+        });
+        const el = document.getElementById('panel-' + name);
+        if (el) {
+          el.classList.remove('hidden');
+          el.setAttribute('aria-hidden','false');
+        }
+      }
+
+      // explicit default: eligibility
+      const defaultTab = tabs.find(t => t.getAttribute('data-tab') === 'eligibility') || tabs[0];
+      const defaultName = defaultTab.getAttribute('data-tab');
+
+      // initialize UI (runs after DOM ready)
+      setActive(defaultTab);
+      showPanel(defaultName);
+
+      // click handlers
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          const name = tab.getAttribute('data-tab');
+          setActive(tab);
+          showPanel(name);
+
+          if (window.innerWidth < 1024) {
+            setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+          }
+        });
+      });
+
+      // defensive re-apply after a short delay to win over other scripts that may run later
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          setActive(defaultTab);
+          showPanel(defaultName);
+        }, 120);
+      });
     });
-  });
-});
-</script>
+  </script>
+</section>
 
         </section>
 
