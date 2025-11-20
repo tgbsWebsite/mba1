@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 143.57 143.57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.67px;
+      }
+
+      .cls-4 {
+        font-family: Montserrat-Black, Montserrat;
+        font-size: 14.5px;
+        font-weight: 800;
+        letter-spacing: .1em;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="71.79" y1="143.57" x2="71.79" y2="0" gradientTransform="translate(123.8 -15.4) rotate(75.82)" gradientUnits="userSpaceOnUse">
+      <stop offset=".45" stop-color="#8f2a51"/>
+      <stop offset="1" stop-color="#bc5d8b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="71.79" y1="16.46" x2="71.79" y2="127.11" gradientUnits="userSpaceOnUse">
+      <stop offset=".39" stop-color="#8f2a51"/>
+      <stop offset="1" stop-color="#bc5d8b"/>
+    </linearGradient>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <g>
+        <circle class="cls-2" cx="71.79" cy="71.79" r="71.79" transform="translate(-15.4 123.8) rotate(-75.82)"/>
+        <circle class="cls-1" cx="71.79" cy="71.79" r="55.32"/>
+      </g>
+      <g>
+        <line class="cls-5" x1="59.11" y1="74.65" x2="59.11" y2="35.66"/>
+        <polygon class="cls-3" points="59.11 35.66 59.11 53.59 84.4 44.62 59.11 35.66"/>
+      </g>
+      <text class="cls-4" transform="translate(33.91 98.02)"><tspan x="0" y="0">MISSION</tspan></text>
+    </g>
+  </g>
+</svg>
