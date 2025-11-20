@@ -349,14 +349,18 @@
                         </a>
                         <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center"
                             href="#">
-                            PROGRAMS <span class="material-icons text-base ml-1">expand_more</span>
+                            ABOUT US <span class="material-icons text-base ml-1">expand_more</span>
+                        </a>
+                        <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center"
+                            href="#">
+                            SPECIALIZATIONS <span class="material-icons text-base ml-1">expand_more</span>
                         </a>
                         <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors flex items-center"
                             href="#">
                             HOW TO APPLY <span class="material-icons text-base ml-1">expand_more</span>
                         </a>
                         <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                            href="#">FAQS</a>
+                            href="#">ADMISSIONS DETAILS</a>
                         <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
                             href="#">CONTACT US</a>
                     </nav>
@@ -523,7 +527,7 @@
         class="relative pt-20 pb-0 px-4 sm:px-6 lg:px-8 overflow-hidden bg-background-light dark:bg-background-dark font-display">
         <div class="absolute inset-0 geometric-bg"></div>
         <div class="relative max-w-4xl mx-auto text-center z-10">
-            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-primary dark:text-gray-100">WELCOME TO</h1>
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-black dark:text-gray-100">WELCOME TO</h1>
             <h2 class="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-primary dark:text-gray-100">TITLE</h2>
             <div class="mt-6 mx-auto w-24 h-[3px] bg-[#9D0A4F] rounded-full"></div>
 
@@ -556,8 +560,8 @@
 
                             <!-- IMAGE OVERLAPPING LEFT SIDE -->
                             <div class="absolute -left-20 top-1/2 -translate-y-1/2 hidden md:block">
-                                <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202306/dicarlo_900x600.jpg?itok=mCEPNnW-"
-                                    alt="Mission" class="w-48 h-48 object-cover rounded-full shadow-md" />
+                                <img src="./Vision.svg" alt="Vision"
+                                    class="w-48 h-48 object-cover rounded-full shadow-md" />
                             </div>
 
                             <!-- TEXT -->
@@ -592,8 +596,7 @@
                     <!-- IMAGE OVERLAPPING RIGHT SIDE -->
                     <div class="absolute -right-20 top-1/2 -translate-y-1/2 hidden md:block">
                         <img alt="Newspaper with crossword puzzles and glasses, symbolizing clarity and vision."
-                            src="https://media.istockphoto.com/id/823928832/photo/businessman-shows-the-word-mission.jpg?s=612x612&w=0&k=20&c=1hmJC8oDYIifhdUqzQUWNS6-NVhMwgpjo-fZYkWo0BI="
-                            class="w-48 h-48 object-cover rounded-full shadow-md" />
+                            src="./Mission.svg" class="w-48 h-48 object-cover rounded-full shadow-md" />
                     </div>
 
                     <!-- TEXT -->
@@ -624,70 +627,190 @@
 
         <!-- Inserted MBA Programme section -->
         <section class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
-            <div class="min-h-screen flex flex-col lg:flex-row">
-                <div class="lg:w-1/2 relative">
-                    <img src="freepik__the-style-is-candid-image-photography-with-natural__49906.jpeg"
-                        alt="MBA Programme Image" class="w-full h-96 lg:h-screen object-cover object-center">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-50 dark:bg-opacity-60 flex items-center justify-center">
-                        <div class="text-center text-white px-4">
-                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 text-white">MBA Programme</h1>
+            <!-- force exact viewport height and stretch children -->
+            <div class="h-screen flex flex-col lg:flex-row">
+
+                <!-- LEFT: image / overlay / text (fills viewport) -->
+                <div class="lg:w-1/2 relative h-full">
+                    <div class="absolute inset-0">
+                        <img src="./Girl in pink suit.png" alt="MBA Programme Image"
+                            class="w-full h-full object-cover object-center">
+                    </div>
+
+                    <div class="absolute inset-0 bg-black bg-opacity-40 dark:bg-opacity-60"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center text-white px-4 max-w-xl">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">MBA Programme</h1>
                             <p class="text-base sm:text-lg lg:text-xl">
                                 Your gateway to transformative business leadership.
                             </p>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
-                    <div class="max-w-2xl">
-                        <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-[#9D0A4F]">Unlock Your Potential</h2>
-                        <p class="text-lg mb-8 leading-relaxed">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia esse et nam, aperiam
-                            veritatis
-                            ullam vitae tempore atque? Quos quam consectetur, optio non expedita dolores officia
-                            explicabo
-                            eum dolorum vitae est voluptatibus quasi autem harum molestiae ratione vel at magni! </p>
+                <!-- RIGHT: content. make this exactly viewport height and allow internal scroll -->
+                <div class="lg:w-1/2 h-full flex items-stretch">
+                    <!-- inner wrapper controls padding and becomes scrollable if content overflows -->
+                    <div class="w-full overflow-y-auto px-6 py-6 lg:px-16 lg:py-10">
+                        <div class="max-w-2xl mx-auto">
+                            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-[#9D0A4F]">Unlock Your Potential</h2>
+                            <p class="text-lg mb-8 leading-relaxed">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia esse et nam, aperiam
+                                veritatis
+                                ullam vitae tempore atque? Quos quam consectetur, optio non expedita dolores officia
+                                explicabo
+                                eum dolorum vitae est voluptatibus quasi autem harum molestiae ratione vel at magni!
+                            </p>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Expert Faculty</h3>
-                                <p class="text-sm">Learn from acclaimed experts, renowned academicians, and established
-                                    professionals from the industry.</p>
-                            </div>
-                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Strategic Skills</h3>
-                                <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam,
-                                    natus
-                                    corrupti! Aspernatur soluta animi alias, aperiam temporibus, magni ex maiores natus
-                                    quae
-                                    maxime dolorum perspiciatis rerum labore debitis, voluptate beatae.</p>
-                            </div>
-                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Industry Exposure</h3>
-                                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                                    mollitia
-                                    provident accusamus, perferendis aspernatur voluptate officiis optio nemo ex, vero
-                                    enim
-                                    non sapiente nesciunt voluptatum cupiditate. Alias sunt vel magni!.</p>
-                            </div>
-                            <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                                <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Global Perspective</h3>
-                                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-                                    accusamus
-                                    asperiores non pariatur numquam amet ipsa sed eius, quas ex vel esse excepturi nam,
-                                    suscipit voluptas ratione nobis doloribus tenetur..</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <!-- cards -->
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Expert Faculty</h3>
+                                    <p class="text-sm">Learn from acclaimed experts, renowned academicians, and
+                                        established professionals from the industry.</p>
+                                </div>
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Strategic Skills</h3>
+                                    <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam,
+                                        natus corrupti!</p>
+                                </div>
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Industry Exposure</h3>
+                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                                        mollitia provident accusamus.</p>
+                                </div>
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Global Perspective</h3>
+                                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                                        accusamus asperiores.</p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- <a href="#" class="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-lg transition-none text-lg">
-            Apply Now
-          </a> -->
+            </div>
+        </section>
+
+
+        <section class="relative min-h-screen overflow-hidden">
+            <!-- Background Carousel -->
+            <div class="absolute inset-0 z-0">
+                <div class="carousel-item active"
+                    style="background-image: url('./freepik__the-style-is-candid-image-photography-with-natural__16517.png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('./freepik__four-people-average-age-22-average-race-indian-sit__80472.png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('./Student\ Group.png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('./Student\ Group\ \(A\).png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+
+            </div>
+
+            <!-- Enquire Now Button -->
+            <a href="#mba-form">
+                <div
+                    class="w-16 h-40 bg-red-600 flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
+                    <p class="text-white font-semibold tracking-widest text-lg enquire-now">ENQUIRE NOW</p>
+                </div>
+            </a>
+
+            <!-- Main Content -->
+            <div class="relative z-20 flex items-center justify-end h-screen p-8 md:p-20 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                    <div class="flex flex-col justify-center">
+                        <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-primary ">Why TCET-MBA
+                        </h1>
+                        <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-white">
+                            Life at TCET University is about holistic growth academically, professionally and personally
+                            Global Alumni Network: 100,000+ alumni worldwide
+
+                            Industry Reach: 1600+ recruiters visiting campus
+
+                            Diverse Community: Students from across India and abroad
+
+                            Innovation & Research: State-of-the-art labs and research centres
+
+                            Student Life: Clubs, workshops, and global exposure programs
+
+
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900 " style="font-size: 36px;">groups</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Global Alumni Network</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100,000</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">Alumni Across Globe</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900"
+                                    style="font-size: 36px;">business_center</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Extensive Industry Reach
+                                </h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">1600+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">companies visited for placement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Nationwide Presence</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">20000+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">students across states</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">public</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Diverse Global Community
+                                </h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">45+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">countries represented on campus</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">lightbulb</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Fueled by Innovation</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100+</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">professional student clubs</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
+                            <div class="bg-white p-3 rounded-lg shadow-md">
+                                <span class="material-icons text-blue-900" style="font-size: 36px;">science</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Pioneering Research</h3>
+                                <p class="text-3xl font-bold text-gray-900 dark:text-white">Top 2%</p>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">most influential scientists</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Merged Specializations section directly below -->
         <!-- Specializations -->
         <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
@@ -805,78 +928,78 @@
             <!-- TAB SCRIPT: sets Marketing as default and defends against late scripts -->
             <script>
                 (function () {
-                    // helper: scope to this nav only so other page tabs don't interfere
-                    function queryTabs() {
-                        return Array.from(document.querySelectorAll('nav [data-tab]'));
-                    }
-                    function queryPanels() {
-                        return Array.from(document.querySelectorAll('.tab-panel'));
+                    const navSelector = 'nav [data-tab]';
+                    const panelSelector = '.tab-panel';
+
+                    function queryTabs() { return Array.from(document.querySelectorAll(navSelector)); }
+                    function queryPanels() { return Array.from(document.querySelectorAll(panelSelector)); }
+
+                    function setInactive(tab) {
+                        tab.classList.remove('flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg');
+                        tab.classList.add('block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
+                        tab.setAttribute('aria-selected', 'false');
                     }
 
-                    function applyState(activeTabEl) {
-                        const tabs = queryTabs();
+                    function setActive(tab) {
+                        tab.classList.remove('block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
+                        tab.classList.add('flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4');
+                        tab.setAttribute('aria-selected', 'true');
+                    }
+
+                    function showPanel(name) {
                         const panels = queryPanels();
-                        if (!tabs.length || !panels.length) return;
-
-                        tabs.forEach(t => {
-                            // inactive base
-                            t.classList.remove('flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4');
-                            t.classList.add('block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
-                            t.setAttribute('aria-selected', 'false');
-                        });
-
-                        // active
-                        activeTabEl.classList.remove('block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
-                        activeTabEl.classList.add('flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4');
-                        activeTabEl.setAttribute('aria-selected', 'true');
-
                         panels.forEach(p => {
                             p.classList.add('hidden');
                             p.setAttribute('aria-hidden', 'true');
                         });
-
-                        const name = activeTabEl.getAttribute('data-tab');
-                        const activePanel = document.getElementById('panel-' + name);
-                        if (activePanel) {
-                            activePanel.classList.remove('hidden');
-                            activePanel.setAttribute('aria-hidden', 'false');
+                        const panel = document.getElementById('panel-' + name);
+                        if (panel) {
+                            panel.classList.remove('hidden');
+                            panel.setAttribute('aria-hidden', 'false');
                         }
+                    }
+
+                    function applyState(activeTabEl) {
+                        const tabs = queryTabs();
+                        if (!tabs.length || !activeTabEl) return;
+                        tabs.forEach(setInactive);
+                        setActive(activeTabEl);
+                        const name = activeTabEl.getAttribute('data-tab');
+                        showPanel(name);
                     }
 
                     function initTabs() {
                         const tabs = queryTabs();
                         if (!tabs.length) return;
 
-                        // prefer marketing
+                        // Force Marketing as default if present, else fallback to first tab
                         const marketing = tabs.find(t => t.getAttribute('data-tab') === 'marketing') || tabs[0];
                         applyState(marketing);
 
-                        // click handlers
+                        // attach handlers (idempotent guard)
                         tabs.forEach(tab => {
-                            tab.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                applyState(this);
-
-                                if (window.innerWidth < 1024) {
-                                    setTimeout(() => this.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
-                                }
-                            });
+                            if (!tab._tabInit) {
+                                tab.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    applyState(this);
+                                    if (window.innerWidth < 1024) {
+                                        setTimeout(() => this.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+                                    }
+                                });
+                                tab._tabInit = true;
+                            }
                         });
                     }
 
-                    // run on DOM ready
+                    // Run once when DOM is ready
                     if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', initTabs);
+                        document.addEventListener('DOMContentLoaded', initTabs, { once: true });
                     } else {
                         initTabs();
                     }
-
-                    // defensive re-apply after load to beat any other scripts that run late
-                    window.addEventListener('load', () => {
-                        setTimeout(initTabs, 120);
-                    });
                 })();
             </script>
+
         </section>
 
 
@@ -1287,120 +1410,6 @@
         </section>
 
 
-        <section class="relative min-h-screen overflow-hidden">
-            <!-- Background Carousel -->
-            <div class="absolute inset-0 z-0">
-                <div class="carousel-item active"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
-                </div>
-                <div class="carousel-item"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATUt-CdIDTfEY7MLhEYL9xDz32qMpkXoQa-lGQ8JgVxWLqKJXcdowg3TKJg8Z7U3_H6MxVKrWfcSr_rTg7KlJCRK80sE0hC3RfowsD8A56IQTtxHdmQ1PrE5FVEm8_UEKZ-1PKR6dD7-n7qV9bxj_T-yrEJa8f4s3LzPvKT5UqDjCtXJGH4G1k2TgC6JXZGqh7l2_VRMsxvJrD1kHZ9UYPA2PaEQ96hn9hzX7V9cE7YKlPq3bvtR-Q5HjZ'); background-size: cover; background-position: center;">
-                </div>
-                <div class="carousel-item"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
-                </div>
-                <div class="carousel-item"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ak5T7Lgj_CyasghM0CeOy_CkVZ5SnRQpLJPJ1INjy7eOOj2nnswk_MgQRSmKTaWi7SJC_95J2fjjBh2R8GPZz7cYZE8XWupjUQhwjeLGhDUzcZ5wEpI4UG40BJITIwVB2gfOIqyBPuuIK-3rps1n5a0MqzPMh5nEC9KfGpAIKVNcaApVMa4Qj5hNttWUv0_HsSLLLKhQx40i6TUj3SzJui_49v7VWSIf0rxFiqyfiiM66yFyJWCLDNiPCF6O2vxD0IeKMKwgHaib'); background-size: cover; background-position: center;">
-                </div>
-                <div class="absolute inset-0 bg-blue-900 bg-opacity-70 dark:bg-opacity-80 z-1"></div>
-            </div>
-
-            <!-- Enquire Now Button -->
-            <a href="#mba-form">
-                <div
-                    class="w-16 h-40 bg-red-600 flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
-                    <p class="text-white font-semibold tracking-widest text-lg enquire-now">ENQUIRE NOW</p>
-                </div>
-            </a>
-
-            <!-- Main Content -->
-            <div class="relative z-20 flex items-center justify-end h-screen p-8 md:p-20 text-white">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-                    <div class="flex flex-col justify-center">
-                        <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-black ">Why TCET-MBA</h1>
-                        <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-black">
-                            Life at TCET University is about holistic growth academically, professionally and personally
-                            Global Alumni Network: 100,000+ alumni worldwide
-
-                            Industry Reach: 1600+ recruiters visiting campus
-
-                            Diverse Community: Students from across India and abroad
-
-                            Innovation & Research: State-of-the-art labs and research centres
-
-                            Student Life: Clubs, workshops, and global exposure programs
-
-
-                        </p>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900 " style="font-size: 36px;">groups</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Global Alumni Network</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100,000</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">Alumni Across Globe</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900"
-                                    style="font-size: 36px;">business_center</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Extensive Industry Reach
-                                </h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">1600+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">companies visited for placement</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">location_on</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Nationwide Presence</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">20000+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">students across states</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">public</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Diverse Global Community
-                                </h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">45+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">countries represented on campus</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">lightbulb</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Fueled by Innovation</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">professional student clubs</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">science</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Pioneering Research</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">Top 2%</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">most influential scientists</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <div class="container mx-auto px-4 py-16 sm:py-24">
             <div class="text-center max-w-2xl mx-auto">
                 <!-- <div class="flex items-center justify-center gap-2 mb-4">
@@ -1423,11 +1432,13 @@
                     <div class="col-span-12 md:col-span-4 space-y-4">
 
                         <div class="overflow-hidden rounded-2xl h-44 md:h-56">
-                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=900" />
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=900" />
                         </div>
 
                         <div class="overflow-hidden rounded-2xl h-56 md:h-64"> <!-- UPDATED -->
-                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/3182764/pexels-photo-3182764.jpeg?auto=compress&cs=tinysrgb&w=900" />
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/3182764/pexels-photo-3182764.jpeg?auto=compress&cs=tinysrgb&w=900" />
                         </div>
                     </div>
 
@@ -1436,11 +1447,13 @@
                     <div class="col-span-12 md:col-span-5 space-y-4">
 
                         <div class="overflow-hidden rounded-2xl h-64 md:h-72">
-                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/2422293/pexels-photo-2422293.jpeg?auto=compress&cs=tinysrgb&w=800" />
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/2422293/pexels-photo-2422293.jpeg?auto=compress&cs=tinysrgb&w=800" />
                         </div>
 
                         <div class="overflow-hidden rounded-2xl h-40 md:h-44">
-                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=900" />
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=900" />
                         </div>
                     </div>
 
@@ -1449,11 +1462,13 @@
                     <div class="col-span-12 md:col-span-3 space-y-4">
 
                         <div class="overflow-hidden rounded-2xl h-48 md:h-56">
-                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=900" />
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=900" />
                         </div>
 
                         <div class="overflow-hidden rounded-2xl h-56 md:h-64"> <!-- UPDATED -->
-                            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/3194524/pexels-photo-3194524.jpeg?auto=compress&cs=tinysrgb&w=900" />
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/3194524/pexels-photo-3194524.jpeg?auto=compress&cs=tinysrgb&w=900" />
                         </div>
                     </div>
 
