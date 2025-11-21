@@ -516,10 +516,7 @@
                 </div>
             </div>
             <div class="fixed bottom-5 right-5 z-40">
-                <button
-                    class="bg-red-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-red-800 transition-transform hover:scale-110">
-                    <span class="material-icons text-4xl">sms</span>
-                </button>
+           
             </div>
         </main>
     </div>
@@ -529,13 +526,10 @@
         <div class="relative max-w-4xl mx-auto text-center z-10">
             <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-black dark:text-gray-100">WELCOME TO</h1>
             <h2 class="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-primary dark:text-gray-100">TITLE</h2>
-            <div class="mt-6 mx-auto w-24 h-[3px] bg-[#9D0A4F] rounded-full"></div>
+            <div class="mt-6 mx-auto w-24 h-1.5  bg-[#9D0A4F] rounded-full"></div>
 
             <p class="mt-8 text-lg leading-8 text-text-paragraph-light dark:text-text-paragraph-dark">
-                Thakur Global Business School (TGBS), managed by Zagdusingh Charitable Trust. Post Graduate Diploma in
-                Management (PGDM) is TGBS's 2-year flagship program approved by AICTE, DTE &amp; Govt. of Maharashtra.
-                It is designed to impart learners from diverse backgrounds to mould them into mindful leaders ready to
-                take on the challenges in the VUCA world and manage in a global dimension.
+               Thakur Global Business School (TGBS) is a premier business education institute under Thakur College of Engineering and Technology (TCET), a deemed-to-be university and is managed by Zagdusingh Charitable Trust. TGBS offers a 2-year MBA programme that develops future business leaders through experiential learning and real-world projects. TCET is recognised for quality education. It has Autonomous Status from the University Grants Commission (UGC) for 10 years from 2019–20, is accredited by NAAC, Bangalore, is ISO certified for quality, environment, and energy management, and offers programmes accredited by the National Board of Accreditation (NBA), New Delhi.
             </p>
         </div>
     </section>
@@ -549,7 +543,7 @@
                             Our Mission &amp; <br /> <span class="text-primary">Vision</span> </h1>
                         <div class="mt-6 space-y-2 w-40">
                             <!-- <div class="h-1.5 bg-primary rounded-full"></div> -->
-                            <div class="h-1.5 bg-gray-300 dark:bg-line-dark rounded-full"></div>
+                            <div class="h-1.5 bg-[#9D0A4F] dark:bg-line-dark rounded-full"></div>
                         </div>
                     </div>
                     <div class="relative w-full">
@@ -626,26 +620,32 @@
 
 
         <!-- Inserted MBA Programme section -->
-        <section class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+      <section class="bg-white font-display text-gray-800">
+
+
+
             <!-- force exact viewport height and stretch children -->
             <div class="h-screen flex flex-col lg:flex-row">
 
                 <!-- LEFT: image / overlay / text (fills viewport) -->
                 <div class="lg:w-1/2 relative h-full">
                     <div class="absolute inset-0">
-                        <img src="./Girl in pink suit.png" alt="MBA Programme Image"
+                        <img src="./Girl in pink suit (1).png" alt="MBA Programme Image"
                             class="w-full h-full object-cover object-center">
                     </div>
 
-                    <div class="absolute inset-0 bg-black bg-opacity-40 dark:bg-opacity-60"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="text-center text-white px-4 max-w-xl">
-                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">MBA Programme</h1>
-                            <p class="text-base sm:text-lg lg:text-xl">
-                                Your gateway to transformative business leadership.
-                            </p>
-                        </div>
-                    </div>
+        <div class="absolute inset-0 flex items-center">
+    <div class="text-left text-white px-6 py-8 
+        bg-black/40 backdrop-blur-sm rounded-r-2xl max-w-xl">
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">MBA Programme</h1>
+        <p class="text-base sm:text-lg lg:text-xl">
+            Your gateway to transformative business leadership.
+        </p>
+    </div>
+</div>
+
+
 
                 </div>
 
@@ -718,7 +718,7 @@
             <a href="#mba-form">
                 <div
                     class="w-16 h-40 bg-[#9D0A4F] flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
-                    <p class="text-white font-semibold tracking-widest text-lg enquire-now">ENQUIRE NOW</p>
+                    <p class="text-white font-semibold tracking-widest text-lg enquire-now">APPLY NOW</p>
                 </div>
             </a>
 
@@ -813,194 +813,257 @@
         </section>
         <!-- Merged Specializations section directly below -->
         <!-- Specializations -->
-        <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
-            <div class="container mx-auto px-4 py-16">
-                <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Specializations</h1>
+   <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+  <div class="container mx-auto px-4 py-16">
+    <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Specializations</h1>
 
-                <div class="flex flex-col lg:flex-row gap-12">
+    <div class="flex flex-col lg:flex-row gap-12">
 
-                    <!-- LEFT RAIL -->
-                    <nav class="lg:w-1/3" aria-label="Specializations">
-                        <ul class="space-y-2" role="tablist" aria-orientation="vertical">
+      <!-- LEFT RAIL -->
+      <nav class="lg:w-1/3" aria-label="Specializations">
+        <ul class="space-y-2" role="tablist" aria-orientation="vertical">
+          <li>
+            <a id="tab-marketing" href="#" data-tab="marketing"
+               class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
+               role="tab" aria-selected="true" aria-controls="panel-marketing" tabindex="0">
+              MBA Marketing
+            </a>
+          </li>
 
-                            <li>
-                                <a id="tab-marketing" href="#" data-tab="marketing"
-                                    class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
-                                    role="tab" aria-selected="true" aria-controls="panel-marketing">
-                                    MBA Marketing
-                                </a>
-                            </li>
+          <li>
+            <a id="tab-hr" href="#" data-tab="hr"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false" aria-controls="panel-hr" tabindex="-1">
+              MBA Human Resource Management
+            </a>
+          </li>
 
-                            <li>
-                                <a id="tab-hr" href="#" data-tab="hr"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-hr">
-                                    MBA Human Resource Management
-                                </a>
-                            </li>
+          <li>
+            <a id="tab-finance" href="#" data-tab="finance"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false" aria-controls="panel-finance" tabindex="-1">
+              MBA Finance
+            </a>
+          </li>
 
-                            <li>
-                                <a id="tab-finance" href="#" data-tab="finance"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-finance">
-                                    MBA Finance
-                                </a>
-                            </li>
+          <li>
+            <a id="tab-operations" href="#" data-tab="operations"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false" aria-controls="panel-operations" tabindex="-1">
+              MBA Operations
+            </a>
+          </li>
 
-                            <li>
-                                <a id="tab-operations" href="#" data-tab="operations"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-operations">
-                                    MBA Operations
-                                </a>
-                            </li>
+          <li>
+            <a id="tab-analytics" href="#" data-tab="analytics"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false" aria-controls="panel-analytics" tabindex="-1">
+              MBA Business Analytics
+            </a>
+          </li>
+          
+          <li>
+            <a id="tab-entrepreneurship" href="#" data-tab="entrepreneurship"
+               class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+               role="tab" aria-selected="false" aria-controls="panel-entrepreneurship" tabindex="-1">
+              MBA Entrepreneurship And Family Business Management
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-                            <li>
-                                <a id="tab-analytics" href="#" data-tab="analytics"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-analytics">
-                                    MBA Business Analytics
-                                </a>
-                            </li>
+      <!-- RIGHT PANEL -->
+      <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
 
-                        </ul>
-                    </nav>
+        <!-- MARKETING PANEL (default visible) -->
+        <div id="panel-marketing" class="tab-panel" role="tabpanel" aria-labelledby="tab-marketing" aria-hidden="false">
+          <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Marketing is the most important function for every business. TCET offers a two-year
+            specialisation in Marketing for candidates interested in learning about Marketing
+            Strategies, Brand Management, Retail Management, Consumer and Sales Management,
+            Advertising, and Product Management.
+          </p>
+          <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+        </div>
 
-                    <!-- RIGHT PANEL -->
-                    <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
+        <!-- HR -->
+        <div id="panel-hr" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-hr" aria-hidden="true">
+          <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Human Resource Management</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            HR specialization covers talent acquisition, organisational behaviour, performance
+            management, and HR analytics.
+          </p>
+        </div>
 
-                        <!-- MARKETING PANEL (default visible) -->
-                        <div id="panel-marketing" class="tab-panel" role="tabpanel" aria-labelledby="tab-marketing">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Marketing is the most important function for every business. TCET offers a two-year
-                                specialisation in Marketing for candidates interested in learning about Marketing
-                                Strategies,
-                                Brand Management, Retail Management, Consumer and Sales Management, Advertising, and
-                                Product
-                                Management.
-                            </p>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div>
+        <!-- FINANCE -->
+        <div id="panel-finance" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-finance" aria-hidden="true">
+          <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Finance</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Corporate finance, valuation, investments, banking and risk management.
+          </p>
+        </div>
 
-                        <!-- HR -->
-                        <div id="panel-hr" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-hr"
-                            aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Human Resource Management</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                HR specialization covers talent acquisition, organisational behaviour, performance
-                                management,
-                                and HR analytics.
-                            </p>
-                        </div>
+        <!-- OPERATIONS -->
+        <div id="panel-operations" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-operations" aria-hidden="true">
+          <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Operations</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Supply chain, logistics, procurement and operations strategy.
+          </p>
+        </div>
 
-                        <!-- FINANCE -->
-                        <div id="panel-finance" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-finance"
-                            aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Finance</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Corporate finance, valuation, investments, banking and risk management.
-                            </p>
-                        </div>
+        <!-- ANALYTICS -->
+        <div id="panel-analytics" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-analytics" aria-hidden="true">
+          <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Business Analytics</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            Predictive modelling, statistics, data visualisation, and business analytics tools.
+          </p>
+        </div>
+        
+        <!-- ENTREPRENEURSHIP -->
+        <div id="panel-entrepreneurship" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-entrepreneurship" aria-hidden="true">
+          <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Entrepreneurship And Family Business Management</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            This specialisation focuses on venture creation, family business governance, scaling, fundraising and entrepreneurial finance. Practical learning through incubator projects, mentorship and industry connect prepares students to start or lead family-owned and entrepreneurial ventures.
+          </p>
+          <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+        </div>
 
-                        <!-- OPERATIONS -->
-                        <div id="panel-operations" class="tab-panel hidden" role="tabpanel"
-                            aria-labelledby="tab-operations" aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Operations</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Supply chain, logistics, procurement and operations strategy.
-                            </p>
-                        </div>
+      </article>
+    </div>
+  </div>
 
-                        <!-- ANALYTICS -->
-                        <div id="panel-analytics" class="tab-panel hidden" role="tabpanel"
-                            aria-labelledby="tab-analytics" aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Business Analytics</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Predictive modelling, statistics, data visualisation, and business analytics tools.
-                            </p>
-                        </div>
+  <!-- Single authoritative tab script -->
+  <script>
+  (function () {
+    const TABS_SELECTOR = '#specializations nav [data-tab]';
+    const PANEL_PREFIX = 'panel-';
+    const CONTAINER_ATTR = 'data-tabs-initialized';
+    const ACTIVE_TAB_CLASSES = [
+      'flex','justify-between','items-center','bg-[#D19A9A]',
+      'text-gray-800','dark:text-gray-900','rounded-lg','py-3','px-4'
+    ];
+    const INACTIVE_TAB_CLASSES = [
+      'block','py-3','px-4','border-b','border-gray-200','dark:border-gray-700',
+      'hover:bg-gray-100','dark:hover:bg-gray-800'
+    ];
 
-                    </article>
-                </div>
-            </div>
+    function queryTabs() { return Array.from(document.querySelectorAll(TABS_SELECTOR)); }
+    function queryPanels() { return Array.from(document.querySelectorAll('#specializations .tab-panel')); }
 
-            <!-- TAB SCRIPT: sets Marketing as default and defends against late scripts -->
-            <script>
-                (function () {
-                    const navSelector = 'nav [data-tab]';
-                    const panelSelector = '.tab-panel';
+    function setActiveTabEl(tabEl) {
+      tabEl.classList.remove(...INACTIVE_TAB_CLASSES);
+      tabEl.classList.add(...ACTIVE_TAB_CLASSES);
+      tabEl.setAttribute('aria-selected', 'true');
+      tabEl.setAttribute('tabindex', '0');
 
-                    function queryTabs() { return Array.from(document.querySelectorAll(navSelector)); }
-                    function queryPanels() { return Array.from(document.querySelectorAll(panelSelector)); }
+      const name = tabEl.getAttribute('data-tab');
+      const panel = document.getElementById(PANEL_PREFIX + name);
+      if (panel) {
+        panel.classList.remove('hidden');
+        panel.setAttribute('aria-hidden', 'false');
+      }
+    }
 
-                    function setInactive(tab) {
-                        tab.classList.remove('flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg');
-                        tab.classList.add('block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
-                        tab.setAttribute('aria-selected', 'false');
-                    }
+    function setInactiveTabEl(tabEl) {
+      tabEl.classList.remove(...ACTIVE_TAB_CLASSES);
+      tabEl.classList.add(...INACTIVE_TAB_CLASSES);
+      tabEl.setAttribute('aria-selected', 'false');
+      tabEl.setAttribute('tabindex', '-1');
 
-                    function setActive(tab) {
-                        tab.classList.remove('block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800');
-                        tab.classList.add('flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4');
-                        tab.setAttribute('aria-selected', 'true');
-                    }
+      const name = tabEl.getAttribute('data-tab');
+      const panel = document.getElementById(PANEL_PREFIX + name);
+      if (panel) {
+        panel.classList.add('hidden');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    }
 
-                    function showPanel(name) {
-                        const panels = queryPanels();
-                        panels.forEach(p => {
-                            p.classList.add('hidden');
-                            p.setAttribute('aria-hidden', 'true');
-                        });
-                        const panel = document.getElementById('panel-' + name);
-                        if (panel) {
-                            panel.classList.remove('hidden');
-                            panel.setAttribute('aria-hidden', 'false');
-                        }
-                    }
+    function applyStateTo(tabEl) {
+      const tabs = queryTabs();
+      tabs.forEach(setInactiveTabEl);
+      setActiveTabEl(tabEl);
+    }
 
-                    function applyState(activeTabEl) {
-                        const tabs = queryTabs();
-                        if (!tabs.length || !activeTabEl) return;
-                        tabs.forEach(setInactive);
-                        setActive(activeTabEl);
-                        const name = activeTabEl.getAttribute('data-tab');
-                        showPanel(name);
-                    }
+    function findInitialTab(tabs) {
+      if (location.hash) {
+        const hashName = location.hash.replace('#', '');
+        const fromHash = tabs.find(t => t.getAttribute('data-tab') === hashName);
+        if (fromHash) return fromHash;
+      }
+      // Always default to marketing
+      const marketing = tabs.find(t => t.getAttribute('data-tab') === 'marketing');
+      if (marketing) return marketing;
+      return tabs[0];
+    }
 
-                    function initTabs() {
-                        const tabs = queryTabs();
-                        if (!tabs.length) return;
+    function onTabClick(e) {
+      e.preventDefault();
+      applyStateTo(this);
+      if (window.innerWidth < 1024) {
+        setTimeout(() => this.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+      }
+      const name = this.getAttribute('data-tab');
+      history.replaceState(null, '', '#' + name);
+    }
 
-                        // Force Marketing as default if present, else fallback to first tab
-                        const marketing = tabs.find(t => t.getAttribute('data-tab') === 'marketing') || tabs[0];
-                        applyState(marketing);
+    function onTabKeydown(e) {
+      const tabs = queryTabs();
+      const idx = tabs.indexOf(this);
+      if (idx === -1) return;
 
-                        // attach handlers (idempotent guard)
-                        tabs.forEach(tab => {
-                            if (!tab._tabInit) {
-                                tab.addEventListener('click', function (e) {
-                                    e.preventDefault();
-                                    applyState(this);
-                                    if (window.innerWidth < 1024) {
-                                        setTimeout(() => this.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
-                                    }
-                                });
-                                tab._tabInit = true;
-                            }
-                        });
-                    }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = tabs[(idx - 1 + tabs.length) % tabs.length];
+        prev.focus();
+        applyStateTo(prev);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = tabs[(idx + 1) % tabs.length];
+        next.focus();
+        applyStateTo(next);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        tabs[0].focus();
+        applyStateTo(tabs[0]);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        tabs[tabs.length - 1].focus();
+        applyStateTo(tabs[tabs.length - 1]);
+      }
+    }
 
-                    // Run once when DOM is ready
-                    if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', initTabs, { once: true });
-                    } else {
-                        initTabs();
-                    }
-                })();
-            </script>
+    function initTabsOnce() {
+      const container = document.querySelector('section#specializations');
+      if (!container || container.getAttribute(CONTAINER_ATTR) === 'true') return;
+      container.setAttribute(CONTAINER_ATTR, 'true');
 
-        </section>
+      const tabs = queryTabs();
+      if (!tabs.length) return;
+
+      tabs.forEach(tab => {
+        tab.setAttribute('role', 'tab');
+        tab.addEventListener('click', onTabClick);
+        tab.addEventListener('keydown', onTabKeydown);
+      });
+
+      const panels = queryPanels();
+      panels.forEach(p => {
+        p.setAttribute('role', 'tabpanel');
+      });
+
+      const initial = findInitialTab(tabs);
+      applyStateTo(initial);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTabsOnce, { once: true });
+    } else {
+      initTabsOnce();
+    }
+  })();
+  </script>
+</section>
 
 
 
@@ -1164,7 +1227,7 @@
                     </div>
 
                     <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW__l9Gu-CohRwRsQcb3Bba_3JhPDxzmUM_WfdGIkZPYpLe-RHJ1kxtpKVNmYBGtm-g_gHpqREpTTvJYEtLefpA5f-b9zPQtM2VDMAqCETnyZY2ZQgntaFd2nqxW1c4asNDTw7pQ67DeGAotcofSXjXdz0EoCiGAxS9Bn_TwWN5nUvz330BH_j4eaW9zOGDcd-QCPCDH9u5JhwME1eNTlKVvOXCE3t3FGE4NBTZhMRedf1Sh08mjSEwGwmp8z7eAHltgZu3s1xPxM"
+                        <img src="/student working.png "
                             alt="Professional working on a modern digital interface on a tablet"
                             class="max-w-full h-auto rounded-lg shadow-2xl">
                     </div>
@@ -1479,7 +1542,7 @@
 
         </div>
         <!-- Success Stories Section -->
-        <section class="bg-background text-text-dark font-display relative min-h-screen py-16">
+        <section class="bg-[#1f2937] text-text-dark font-display relative min-h-screen py-16">
             <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-12">
                 <div class="max-w-7xl mx-auto">
                     <div class="flex flex-col lg:flex-row gap-16 items-center">
