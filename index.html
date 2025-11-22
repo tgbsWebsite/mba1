@@ -25,34 +25,43 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#1E3A8A",
-                        secondary: "#1F2937",
+                        // Brand Base
+                        primary: "#84cc16",                // lime-500
+                        secondary: "#1F2937",              // gray-800
                         accent: "#D4AF37",
-                        background: "#111827",
-                        "text-dark": "#FFFFFF",
-                        "text-light": "#9CA3AF",
+
+                        // Purples
+                        "primary-purple": "#8B5CF6",
+                        "primary-light": "#C4B5FD",
+
+                        // Pinks
+                        "primary-pink": "#9D174D",
+
+                        // Glow Effects
                         "glow-primary": "#2563EB",
                         "glow-secondary": "#6B7280",
                         "glow-accent": "#B45309",
-                        "primary-pink": "#9D174D",
-                        "primary-purple": "#8B5CF6",
-                        "primary-light": "#C4B5FD",
-                        "background-light": "#F9FAFB",
-                        "background-dark": "#111827",
-                        "card-light": "#FFFFFF",
-                        "card-dark": "#1F2937",
-                        primary: "#84cc16", // Lime-500 from Tailwind's palette
-                        "background-light": "#ffffff", // white
-                        "background-dark": "#18181b", // zinc-900
-                        "section-light": "#f8fafc", // slate-50
-                        "section-dark": "#27272a", // zinc-800
-                        "text-light": "#18181b", // zinc-900
-                        "text-dark": "#f4f4f5", // zinc-100
-                        "subtext-light": "#52525b", // zinc-600
-                        "subtext-dark": "#a1a1aa", // zinc-400
-                        "line-dark": "#3f3f46", // zinc-700
 
+                        // Backgrounds
+                        "background-light": "#ffffff",
+                        "background-dark": "#18181b",
+                        "section-light": "#f8fafc",
+                        "section-dark": "#27272a",
+
+                        // Cards
+                        "card-light": "#ffffff",
+                        "card-dark": "#1F2937",
+
+                        // Text
+                        "text-light": "#18181b",
+                        "text-dark": "#f4f4f5",
+                        "subtext-light": "#52525b",
+                        "subtext-dark": "#a1a1aa",
+
+                        // Lines / Borders
+                        "line-dark": "#3f3f46"
                     },
+
                     fontFamily: {
                         display: ["Montserrat", "sans-serif"],
                         sans: ["Roboto", "sans-serif"],
@@ -331,6 +340,16 @@
             transform: translateY(-5px) scale(1.02);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
+
+        .apply-now-button {
+            transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+
+        .apply-now-hidden {
+            transform: translateX(120%);
+            /* slides it off-screen */
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -505,6 +524,7 @@
                                     APPLY NOW
                                 </button>
                             </div>
+
                         </form>
                         <div class="text-center mt-6">
                             <a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
@@ -529,7 +549,7 @@
                 BUSINESS SCHOOL </h2>
             <div class="mt-6 mx-auto w-24 h-1.5  bg-[#9D0A4F] rounded-full"></div>
 
-            <p class="mt-8 text-lg leading-8 text-text-paragraph-light dark:text-text-paragraph-dark">
+            <p class="mt-8 text-lg leading-8 text-text-paragraph-light dark:text-text-paragraph-dark text-justify">
                 Thakur Global Business School (TGBS) is a premier business education institute under Thakur College of
                 Engineering and Technology (TCET), a deemed-to-be university and is managed by Zagdusingh Charitable
                 Trust. TGBS offers a 2-year MBA programme that develops future business leaders through experiential
@@ -659,12 +679,12 @@
                 <!-- RIGHT: content. make this exactly viewport height and allow internal scroll -->
                 <div class="lg:w-1/2 h-full flex items-stretch">
                     <!-- inner wrapper controls padding and becomes scrollable if content overflows -->
-             <div class="w-full overflow-y-auto px-6 py-6 pt-10 lg:px-16 lg:py-10 lg:pt-16">
+                    <div class="w-full overflow-y-auto px-6 py-6 pt-10 lg:px-16 lg:py-10 lg:pt-16">
 
 
                         <div class="max-w-2xl mx-auto">
                             <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-[#9D0A4F]">Core Aspects</h2>
-                            <p class="text-lg mb-8 leading-relaxed">
+                            <p class="text-lg mb-8 leading-relaxed text-justify">
                                 Our MBA is designed to develop future-ready business leaders by combining rigorous
                                 academics with practical, industry-aligned learning. The programme prepares students to
                                 tackle complex business challenges, make strategic decisions, and grow both
@@ -673,7 +693,7 @@
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                                 <!-- cards -->
-                              <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md leading-loose">
+                                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md leading-loose">
 
 
                                     <!-- <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Learn from the Best</h3> -->
@@ -688,7 +708,7 @@
                                         </ul>
                                     </p>
                                 </div>
-                               <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md leading-loose">
+                                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md leading-loose">
 
                                     <!-- <h3 class="text-xl font-semibold mb-3 text-[#9D0A4F]">Learn from the Best</h3> -->
                                     <p class="text-sm" ul
@@ -733,12 +753,102 @@
             </div>
 
             <!-- Enquire Now Button -->
-            <a href="#mba-form">
-                <div
-                    class="w-16 h-40 bg-[#9D0A4F] flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
+            <style>
+                /* Enables smooth scrolling for all anchor links */
+                html {
+                    scroll-behavior: smooth;
+                }
+
+                /* Optional small hover transition */
+                .apply-now-button {
+                    transition: transform 0.25s ease;
+                }
+            </style>
+
+            <!-- APPLY NOW button (always visible) -->
+            <a href="#mba-form" id="applyNowLink">
+                <div id="applyNowBtn"
+                    class="apply-now-button w-16 h-40 bg-[#9D0A4F] flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
                     <p class="text-white font-semibold tracking-widest text-lg enquire-now">APPLY NOW</p>
                 </div>
             </a>
+
+
+
+<script>
+  // Returns the height in px of any fixed/sticky header (best-effort)
+  function getStickyHeaderHeight() {
+    const candidates = [
+      'header[role="banner"]',
+      'header.site-header',
+      '.site-header',
+      '.main-header',
+      '.navbar',
+      '.navbar-fixed-top',
+      '.sticky',
+      '.fixed-top',
+      'nav[role="navigation"]'
+    ];
+
+    let maxH = 0;
+    candidates.forEach(sel => {
+      const el = document.querySelector(sel);
+      if (!el) return;
+      const style = window.getComputedStyle(el);
+      // count it only if it's fixed/sticky and at or near top
+      const pos = style.position;
+      const rect = el.getBoundingClientRect();
+      const nearTop = Math.abs(rect.top) < 5 || rect.top === 0;
+      if ((pos === 'fixed' || pos === 'sticky') && nearTop) {
+        maxH = Math.max(maxH, Math.ceil(rect.height));
+      } else if (pos === 'relative' || pos === 'static') {
+        // sometimes theme uses sticky via wrapper; include if it sits at top
+        if (rect.top === 0) maxH = Math.max(maxH, Math.ceil(rect.height));
+      }
+    });
+
+    // If nothing found, try to detect any element covering the top pixel
+    if (maxH === 0) {
+      const elAtTop = document.elementFromPoint(1, 1);
+      if (elAtTop) {
+        const el = elAtTop.closest('header, .site-header, nav, .navbar');
+        if (el) maxH = Math.max(maxH, Math.ceil(el.getBoundingClientRect().height));
+      }
+    }
+
+    // sensible default for common headers (adjust if your header is taller)
+    if (maxH === 0) maxH = 80;
+
+    return maxH;
+  }
+
+  // Attach to your apply-now link
+  const applyLink = document.getElementById('applyNowLink');
+  if (applyLink) {
+    applyLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.getElementById('mba-form');
+      if (!target) return;
+
+      // measure header each time (handles responsive header height)
+      const headerHeight = getStickyHeaderHeight();
+
+      // exact Y position of the target relative to document
+      const targetY = target.getBoundingClientRect().top + window.scrollY;
+
+      // subtract header height (plus optional extra spacing)
+      const extra = 8; // small gap so section isn't glued to header
+      const scrollToY = Math.max(0, Math.floor(targetY - headerHeight - extra));
+
+      window.scrollTo({
+        top: scrollToY,
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>
+
+
 
             <!-- Main Content -->
             <div class="relative z-20 flex items-center justify-end h-screen p-8 md:p-20 text-white">
@@ -746,7 +856,7 @@
                     <div class="flex flex-col justify-center">
                         <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-primary ">Why TCET-MBA
                         </h1>
-                        <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-white">
+                        <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-white text-justify">
                             Our MBA programme combines core management disciplines with real-world business practices,
                             ensuring learning is practical, relevant, and industry-aligned.<br /> Students engage in
                             internships, live projects, case studies, industrial visits, and corporate collaborations
@@ -963,133 +1073,156 @@
             <!-- Single authoritative tab script -->
             <script>
                 (function () {
-                    const TABS_SELECTOR = '#specializations nav [data-tab]';
-                    const PANEL_PREFIX = 'panel-';
-                    const CONTAINER_ATTR = 'data-tabs-initialized';
-                    const ACTIVE_TAB_CLASSES = [
+                    const ACTIVE = [
                         'flex', 'justify-between', 'items-center', 'bg-[#D19A9A]',
                         'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4'
                     ];
-                    const INACTIVE_TAB_CLASSES = [
+                    const INACTIVE = [
                         'block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700',
                         'hover:bg-gray-100', 'dark:hover:bg-gray-800'
                     ];
+                    const PANEL_PREFIX = 'panel-';
 
-                    function queryTabs() { return Array.from(document.querySelectorAll(TABS_SELECTOR)); }
-                    function queryPanels() { return Array.from(document.querySelectorAll('#specializations .tab-panel')); }
+                    function initSection(section) {
+                        if (!section || section.dataset.tabsInitialized === 'true') return;
+                        section.dataset.tabsInitialized = 'true';
 
-                    function setActiveTabEl(tabEl) {
-                        tabEl.classList.remove(...INACTIVE_TAB_CLASSES);
-                        tabEl.classList.add(...ACTIVE_TAB_CLASSES);
-                        tabEl.setAttribute('aria-selected', 'true');
-                        tabEl.setAttribute('tabindex', '0');
+                        const nav = section.querySelector('nav');
+                        if (!nav) return;
 
-                        const name = tabEl.getAttribute('data-tab');
-                        const panel = document.getElementById(PANEL_PREFIX + name);
-                        if (panel) {
-                            panel.classList.remove('hidden');
-                            panel.setAttribute('aria-hidden', 'false');
+                        const tabs = Array.from(nav.querySelectorAll('[data-tab]'));
+                        const panels = Array.from(section.querySelectorAll('.tab-panel'));
+                        if (!tabs.length || !panels.length) return;
+
+                        function setInactive(tabEl) {
+                            tabEl.classList.remove(...ACTIVE);
+                            tabEl.classList.add(...INACTIVE);
+                            tabEl.setAttribute('aria-selected', 'false');
+                            tabEl.setAttribute('tabindex', '-1');
+                            const name = tabEl.getAttribute('data-tab');
+                            const panel = section.querySelector('#' + PANEL_PREFIX + name);
+                            if (panel) {
+                                panel.classList.add('hidden');
+                                panel.setAttribute('aria-hidden', 'true');
+                            }
                         }
-                    }
 
-                    function setInactiveTabEl(tabEl) {
-                        tabEl.classList.remove(...ACTIVE_TAB_CLASSES);
-                        tabEl.classList.add(...INACTIVE_TAB_CLASSES);
-                        tabEl.setAttribute('aria-selected', 'false');
-                        tabEl.setAttribute('tabindex', '-1');
+                        function setActive(tabEl) {
+                            // defensively ensure arg is valid
+                            if (!tabEl || !tabEl.getAttribute) return;
+                            tabs.forEach(t => {
+                                if (t !== tabEl) setInactive(t);
+                            });
 
-                        const name = tabEl.getAttribute('data-tab');
-                        const panel = document.getElementById(PANEL_PREFIX + name);
-                        if (panel) {
-                            panel.classList.add('hidden');
-                            panel.setAttribute('aria-hidden', 'true');
+                            tabEl.classList.remove(...INACTIVE);
+                            tabEl.classList.add(...ACTIVE);
+                            tabEl.setAttribute('aria-selected', 'true');
+                            tabEl.setAttribute('tabindex', '0');
+
+                            const name = tabEl.getAttribute('data-tab');
+                            panels.forEach(p => { p.classList.add('hidden'); p.setAttribute('aria-hidden', 'true'); });
+                            const panel = section.querySelector('#' + PANEL_PREFIX + name);
+                            if (panel) {
+                                panel.classList.remove('hidden');
+                                panel.setAttribute('aria-hidden', 'false');
+                            }
                         }
-                    }
 
-                    function applyStateTo(tabEl) {
-                        const tabs = queryTabs();
-                        tabs.forEach(setInactiveTabEl);
-                        setActiveTabEl(tabEl);
-                    }
-
-                    function findInitialTab(tabs) {
-                        if (location.hash) {
-                            const hashName = location.hash.replace('#', '');
-                            const fromHash = tabs.find(t => t.getAttribute('data-tab') === hashName);
-                            if (fromHash) return fromHash;
+                        function findInitial() {
+                            // 1) URL hash (global) mapped to a tab in this section
+                            if (location.hash) {
+                                const hashName = location.hash.replace('#', '');
+                                const fromHash = tabs.find(t => t.getAttribute('data-tab') === hashName);
+                                if (fromHash) return fromHash;
+                            }
+                            // 2) section data-default-tab
+                            const defaultTabName = section.dataset.defaultTab;
+                            if (defaultTabName) {
+                                const def = tabs.find(t => t.getAttribute('data-tab') === defaultTabName);
+                                if (def) return def;
+                            }
+                            // 3) existing markup aria-selected
+                            const preselected = tabs.find(t => t.getAttribute('aria-selected') === 'true');
+                            if (preselected) return preselected;
+                            // 4) fallback to first
+                            return tabs[0];
                         }
-                        // Always default to marketing
-                        const marketing = tabs.find(t => t.getAttribute('data-tab') === 'marketing');
-                        if (marketing) return marketing;
-                        return tabs[0];
-                    }
 
-                    function onTabClick(e) {
-                        e.preventDefault();
-                        applyStateTo(this);
-                        if (window.innerWidth < 1024) {
-                            setTimeout(() => this.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+                        function ensureActive() {
+                            const anyActive = tabs.some(t => t.getAttribute('aria-selected') === 'true' && !t.classList.contains('hidden'));
+                            if (!anyActive) {
+                                const initial = findInitial();
+                                setActive(initial);
+                            }
                         }
-                        const name = this.getAttribute('data-tab');
-                        history.replaceState(null, '', '#' + name);
-                    }
 
-                    function onTabKeydown(e) {
-                        const tabs = queryTabs();
-                        const idx = tabs.indexOf(this);
-                        if (idx === -1) return;
-
-                        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                            e.preventDefault();
-                            const prev = tabs[(idx - 1 + tabs.length) % tabs.length];
-                            prev.focus();
-                            applyStateTo(prev);
-                        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                            e.preventDefault();
-                            const next = tabs[(idx + 1) % tabs.length];
-                            next.focus();
-                            applyStateTo(next);
-                        } else if (e.key === 'Home') {
-                            e.preventDefault();
-                            tabs[0].focus();
-                            applyStateTo(tabs[0]);
-                        } else if (e.key === 'End') {
-                            e.preventDefault();
-                            tabs[tabs.length - 1].focus();
-                            applyStateTo(tabs[tabs.length - 1]);
-                        }
-                    }
-
-                    function initTabsOnce() {
-                        const container = document.querySelector('section#specializations');
-                        if (!container || container.getAttribute(CONTAINER_ATTR) === 'true') return;
-                        container.setAttribute(CONTAINER_ATTR, 'true');
-
-                        const tabs = queryTabs();
-                        if (!tabs.length) return;
-
-                        tabs.forEach(tab => {
+                        // attach events & roles
+                        tabs.forEach((tab) => {
                             tab.setAttribute('role', 'tab');
-                            tab.addEventListener('click', onTabClick);
-                            tab.addEventListener('keydown', onTabKeydown);
+                            tab.setAttribute('aria-controls', PANEL_PREFIX + tab.getAttribute('data-tab'));
+
+                            tab.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                setActive(tab);
+                                // update URL hash (non-invasive)
+                                try { history.replaceState(null, '', '#' + tab.getAttribute('data-tab')); } catch (err) { }
+                                if (window.innerWidth < 1024) {
+                                    setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+                                }
+                            });
+
+                            tab.addEventListener('keydown', function (e) {
+                                const idx = tabs.indexOf(this);
+                                if (idx === -1) return;
+                                if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                                    e.preventDefault();
+                                    const prev = tabs[(idx - 1 + tabs.length) % tabs.length];
+                                    prev.focus(); setActive(prev);
+                                } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                                    e.preventDefault();
+                                    const next = tabs[(idx + 1) % tabs.length];
+                                    next.focus(); setActive(next);
+                                } else if (e.key === 'Home') {
+                                    e.preventDefault(); tabs[0].focus(); setActive(tabs[0]);
+                                } else if (e.key === 'End') {
+                                    e.preventDefault(); tabs[tabs.length - 1].focus(); setActive(tabs[tabs.length - 1]);
+                                }
+                            });
+
+                            // ensure panels have role
+                            const panel = section.querySelector('#' + PANEL_PREFIX + tab.getAttribute('data-tab'));
+                            if (panel) panel.setAttribute('role', 'tabpanel');
                         });
 
-                        const panels = queryPanels();
-                        panels.forEach(p => {
-                            p.setAttribute('role', 'tabpanel');
+                        // initialize
+                        const initial = findInitial();
+                        setActive(initial);
+
+                        // re-check on load (defensive)
+                        window.addEventListener('load', () => {
+                            setTimeout(ensureActive, 120);
                         });
 
-                        const initial = findInitialTab(tabs);
-                        applyStateTo(initial);
+                        // watch for mutations (other scripts changing classes/attributes)
+                        let debounce;
+                        const observer = new MutationObserver(() => {
+                            clearTimeout(debounce);
+                            debounce = setTimeout(ensureActive, 80);
+                        });
+                        observer.observe(nav, { attributes: true, attributeFilter: ['class', 'aria-selected', 'hidden', 'tabindex'], subtree: true, childList: true });
+
+                        // also ensure immediately after init
+                        setTimeout(ensureActive, 50);
                     }
 
-                    if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', initTabsOnce, { once: true });
-                    } else {
-                        initTabsOnce();
-                    }
+                    // init all sections flagged explicitly
+                    document.addEventListener('DOMContentLoaded', () => {
+                        document.querySelectorAll('section[data-tabs="true"]').forEach(initSection);
+                    });
                 })();
             </script>
+
+
         </section>
 
 
@@ -1587,11 +1720,11 @@
                             </h2>
                             <h1 class="text-7xl font-bold font-display text-text-dark mb-8 leading-tight animate-fade-in-up"
                                 style="animation-delay: 0.2s;">SUCCESS STORIES</h1>
-                            <p class="text-lg text-text-light mb-10 animate-fade-in-up" style="animation-delay: 0.4s;">
+                            <!-- <p class="text-lg text-text-light mb-10 animate-fade-in-up" style="animation-delay: 0.4s;">
                                 Discover the inspiring journeys of our alumni and how their experiences at University
                                 have
                                 shaped their successful careers.
-                            </p>
+                            </p> -->
                             <div class="flex gap-4 justify-center lg:justify-start animate-fade-in-up"
                                 style="animation-delay: 0.6s;">
                                 <button
@@ -1675,7 +1808,8 @@
                             <div class="flex items-center justify-center absolute left-1/2 -translate-x-1/2 -top-2">
                                 <div
                                     class="timeline-dot relative w-12 h-12 rounded-full bg-card-light dark:bg-card-dark border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300">
-                                    <span class="material-symbols-outlined text-3xl">edit_document</span>
+                                    <span class="material-symbols-outlined text-3xl text-[#8B5CF6]">edit_document</span>
+
                                 </div>
                             </div>
                             <div class="timeline-line absolute left-1/2 -translate-x-1/2 top-12 h-full w-1"></div>
