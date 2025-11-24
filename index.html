@@ -768,94 +768,96 @@
             <!-- APPLY NOW button (always visible) -->
             <a href="#mba-form" id="applyNowLink">
                 <div id="applyNowBtn"
-                    class="apply-now-button w-16 h-40 bg-[#9D0A4F] flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
+                    class="apply-now-button w-16 h-40 bg-primary flex items-center justify-center cursor-pointer fixed top-1/2 -translate-y-1/2 right-0 shadow-lg z-30">
                     <p class="text-white font-semibold tracking-widest text-lg enquire-now">APPLY NOW</p>
                 </div>
             </a>
 
 
 
-<script>
-  // Returns the height in px of any fixed/sticky header (best-effort)
-  function getStickyHeaderHeight() {
-    const candidates = [
-      'header[role="banner"]',
-      'header.site-header',
-      '.site-header',
-      '.main-header',
-      '.navbar',
-      '.navbar-fixed-top',
-      '.sticky',
-      '.fixed-top',
-      'nav[role="navigation"]'
-    ];
+            <script>
+                // Returns the height in px of any fixed/sticky header (best-effort)
+                function getStickyHeaderHeight() {
+                    const candidates = [
+                        'header[role="banner"]',
+                        'header.site-header',
+                        '.site-header',
+                        '.main-header',
+                        '.navbar',
+                        '.navbar-fixed-top',
+                        '.sticky',
+                        '.fixed-top',
+                        'nav[role="navigation"]'
+                    ];
 
-    let maxH = 0;
-    candidates.forEach(sel => {
-      const el = document.querySelector(sel);
-      if (!el) return;
-      const style = window.getComputedStyle(el);
-      // count it only if it's fixed/sticky and at or near top
-      const pos = style.position;
-      const rect = el.getBoundingClientRect();
-      const nearTop = Math.abs(rect.top) < 5 || rect.top === 0;
-      if ((pos === 'fixed' || pos === 'sticky') && nearTop) {
-        maxH = Math.max(maxH, Math.ceil(rect.height));
-      } else if (pos === 'relative' || pos === 'static') {
-        // sometimes theme uses sticky via wrapper; include if it sits at top
-        if (rect.top === 0) maxH = Math.max(maxH, Math.ceil(rect.height));
-      }
-    });
+                    let maxH = 0;
+                    candidates.forEach(sel => {
+                        const el = document.querySelector(sel);
+                        if (!el) return;
+                        const style = window.getComputedStyle(el);
+                        // count it only if it's fixed/sticky and at or near top
+                        const pos = style.position;
+                        const rect = el.getBoundingClientRect();
+                        const nearTop = Math.abs(rect.top) < 5 || rect.top === 0;
+                        if ((pos === 'fixed' || pos === 'sticky') && nearTop) {
+                            maxH = Math.max(maxH, Math.ceil(rect.height));
+                        } else if (pos === 'relative' || pos === 'static') {
+                            // sometimes theme uses sticky via wrapper; include if it sits at top
+                            if (rect.top === 0) maxH = Math.max(maxH, Math.ceil(rect.height));
+                        }
+                    });
 
-    // If nothing found, try to detect any element covering the top pixel
-    if (maxH === 0) {
-      const elAtTop = document.elementFromPoint(1, 1);
-      if (elAtTop) {
-        const el = elAtTop.closest('header, .site-header, nav, .navbar');
-        if (el) maxH = Math.max(maxH, Math.ceil(el.getBoundingClientRect().height));
-      }
-    }
+                    // If nothing found, try to detect any element covering the top pixel
+                    if (maxH === 0) {
+                        const elAtTop = document.elementFromPoint(1, 1);
+                        if (elAtTop) {
+                            const el = elAtTop.closest('header, .site-header, nav, .navbar');
+                            if (el) maxH = Math.max(maxH, Math.ceil(el.getBoundingClientRect().height));
+                        }
+                    }
 
-    // sensible default for common headers (adjust if your header is taller)
-    if (maxH === 0) maxH = 80;
+                    // sensible default for common headers (adjust if your header is taller)
+                    if (maxH === 0) maxH = 80;
 
-    return maxH;
-  }
+                    return maxH;
+                }
 
-  // Attach to your apply-now link
-  const applyLink = document.getElementById('applyNowLink');
-  if (applyLink) {
-    applyLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.getElementById('mba-form');
-      if (!target) return;
+                // Attach to your apply-now link
+                const applyLink = document.getElementById('applyNowLink');
+                if (applyLink) {
+                    applyLink.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.getElementById('mba-form');
+                        if (!target) return;
 
-      // measure header each time (handles responsive header height)
-      const headerHeight = getStickyHeaderHeight();
+                        // measure header each time (handles responsive header height)
+                        const headerHeight = getStickyHeaderHeight();
 
-      // exact Y position of the target relative to document
-      const targetY = target.getBoundingClientRect().top + window.scrollY;
+                        // exact Y position of the target relative to document
+                        const targetY = target.getBoundingClientRect().top + window.scrollY;
 
-      // subtract header height (plus optional extra spacing)
-      const extra = 8; // small gap so section isn't glued to header
-      const scrollToY = Math.max(0, Math.floor(targetY - headerHeight - extra));
+                        // subtract header height (plus optional extra spacing)
+                        const extra = 8; // small gap so section isn't glued to header
+                        const scrollToY = Math.max(0, Math.floor(targetY - headerHeight - extra));
 
-      window.scrollTo({
-        top: scrollToY,
-        behavior: 'smooth'
-      });
-    });
-  }
-</script>
+                        window.scrollTo({
+                            top: scrollToY,
+                            behavior: 'smooth'
+                        });
+                    });
+                }
+            </script>
 
 
 
             <!-- Main Content -->
             <div class="relative z-20 flex items-center justify-end h-screen p-8 md:p-20 text-white">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-screen-2xl mx-auto min-h-[400px]">
+
                     <div class="flex flex-col justify-center">
-                        <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-primary ">Why TCET-MBA
-                        </h1>
+                        <h1 class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg  ">Why <span
+                                class="text-5xl md:text-7xl font-black  mb-6 drop-shadow-lg text-primary ">TCET-MBA
+                            </span></h1>
                         <p class="text-lg md:text-xl leading-relaxed drop-shadow-md text-white text-justify">
                             Our MBA programme combines core management disciplines with real-world business practices,
                             ensuring learning is practical, relevant, and industry-aligned.<br /> Students engage in
@@ -869,77 +871,98 @@
 
                         </p>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900 " style="font-size: 36px;">groups</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+                        <div
+                            class="bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 p-6 md:p-8 rounded-lg flex items-start gap-6">
+                            <div
+                                class="bg-white p-3 md:p-4 rounded-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-2xl md:text-3xl text-slate-700">groups</span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Global Alumni Network</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100,000</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">Alumni Across Globe</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900"
-                                    style="font-size: 36px;">business_center</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Extensive Industry Reach
-                                </h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">1600+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">companies visited for placement</p>
+                            <div class="min-w-0">
+                                <p class="text-base md:text-lg font-medium text-slate-300">Highest CTC</p>
+                                <p class="text-3xl md:text-4xl font-extrabold text-white">₹15 LPA</p>
+                                <p class="text-sm md:text-base text-slate-400">Lakhs Per Annum</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">location_on</span>
+
+                        <div
+                            class="bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 p-6 md:p-8 rounded-lg flex items-start gap-6">
+                            <div
+                                class="bg-white p-3 md:p-4 rounded-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-2xl md:text-3xl text-slate-700">work</span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Nationwide Presence</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">20000+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">students across states</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">public</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Diverse Global Community
-                                </h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">45+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">countries represented on campus</p>
+                            <div class="min-w-0">
+                                <p class="text-base md:text-lg font-medium text-slate-300">Average CTC</p>
+                                <p class="text-3xl md:text-4xl font-extrabold text-white">₹7 LPA</p>
+                                <p class="text-sm md:text-base text-slate-400">Lakhs Per Annum</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">lightbulb</span>
+
+                        <div
+                            class="bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 p-6 md:p-8 rounded-lg flex items-start gap-6">
+                            <div
+                                class="bg-white p-3 md:p-4 rounded-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-2xl md:text-3xl text-slate-700">location_on</span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Fueled by Innovation</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">100+</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">professional student clubs</p>
+                            <div class="min-w-0">
+                                <p class="text-base md:text-lg font-medium text-slate-300">Placement Opportunities</p>
+                                <p class="text-3xl md:text-4xl font-extrabold text-white">300+</p>
+                                <p class="text-sm md:text-base text-slate-400">Total offers made</p>
                             </div>
                         </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white bg-opacity-20 rounded-lg backdrop-blur-sm">
-                            <div class="bg-white p-3 rounded-lg shadow-md">
-                                <span class="material-icons text-blue-900" style="font-size: 36px;">science</span>
+
+                        <div
+                            class="bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 p-6 md:p-8 rounded-lg flex items-start gap-6">
+                            <div
+                                class="bg-white p-3 md:p-4 rounded-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-2xl md:text-3xl text-slate-700">public</span>
                             </div>
-                            <div>
-                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Pioneering Research</h3>
-                                <p class="text-3xl font-bold text-gray-900 dark:text-white">Top 2%</p>
-                                <p class="text-sm text-gray-700 dark:text-gray-300">most influential scientists</p>
+                            <div class="min-w-0">
+                                <p class="text-base md:text-lg font-medium text-slate-300">Power Brands</p>
+                                <p class="text-3xl md:text-4xl font-extrabold text-white">90+</p>
+                                <p class="text-sm md:text-base text-slate-400">Companies visited campus</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 p-6 md:p-8 rounded-lg flex items-start gap-6">
+                            <div
+                                class="bg-white p-3 md:p-4 rounded-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-2xl md:text-3xl text-slate-700">lightbulb</span>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-base md:text-lg font-medium text-slate-300">YoY Increment in Avg. CTC</p>
+                                <p class="text-3xl md:text-4xl font-extrabold text-white">14%+</p>
+                                <p class="text-sm md:text-base text-slate-400">Year-over-year growth</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-slate-800/70 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-700/50 p-6 md:p-8 rounded-lg flex items-start gap-6">
+                            <div
+                                class="bg-white p-3 md:p-4 rounded-lg flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-2xl md:text-3xl text-slate-700">verified</span>
+                            </div>
+                            <div class="min-w-0">
+                                <p class="text-base md:text-lg font-medium text-slate-300">% of eligible Students Placed
+                                </p>
+                                <p class="text-3xl md:text-4xl font-extrabold text-white">100%</p>
+                                <p class="text-sm md:text-base text-slate-400">Placement success rate</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
         <!-- Merged Specializations section directly below -->
         <!-- Specializations -->
-        <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+        <section id="specializations" data-tabs="true" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
             <div class="container mx-auto px-4 py-16">
                 <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Specializations</h1>
 
@@ -988,31 +1011,27 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a id="tab-entrepreneurship" href="#" data-tab="entrepreneurship"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-entrepreneurship"
-                                    tabindex="-1">
-                                    MBA Entrepreneurship And Family Business Management
-                                </a>
-                            </li>
+
                         </ul>
                     </nav>
 
                     <!-- RIGHT PANEL -->
-                    <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700">
+                    <article
+                        class="lg:w-2/3 lg:pl-12 lg:pr-24 lg:border-l border-gray-200 dark:border-gray-700 text-justify">
+
+
 
                         <!-- MARKETING PANEL (default visible) -->
                         <div id="panel-marketing" class="tab-panel" role="tabpanel" aria-labelledby="tab-marketing"
                             aria-hidden="false">
                             <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Marketing is the most important function for every business. TCET offers a two-year
-                                specialisation in Marketing for candidates interested in learning about Marketing
-                                Strategies, Brand Management, Retail Management, Consumer and Sales Management,
-                                Advertising, and Product Management.
+                                Explore how brands are built, how customers make decisions, and how digital marketing
+                                works. This specialisation leads to careers in brand strategy, digital marketing,
+                                advertising, or starting your own marketing agency. You’ll learn how to create marketing
+                                plans that attract customers and build strong brands.
                             </p>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
+                            <!-- <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a> -->
                         </div>
 
                         <!-- HR -->
@@ -1020,8 +1039,11 @@
                             aria-hidden="true">
                             <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Human Resource Management</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                HR specialization covers talent acquisition, organisational behaviour, performance
-                                management, and HR analytics.
+                                Human Resource Management (HR)
+                                Learn how to hire the right people, help employees grow, and create a healthy workplace
+                                culture. This specialisation prepares you for careers in HR leadership, talent
+                                acquisition, employee development, or launching your own HR consulting firm. You’ll
+                                understand how to connect people strategies with business goals.
                             </p>
                         </div>
 
@@ -1030,16 +1052,25 @@
                             aria-hidden="true">
                             <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Finance</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Corporate finance, valuation, investments, banking and risk management.
+                                Build strong skills in managing money, studying investments, and understanding how
+                                companies make financial decisions. This specialisation prepares you for roles in
+                                investment banking, financial consulting, corporate finance, or even starting your own
+                                finance-related business. You’ll learn how to analyse numbers, make smart financial
+                                choices, and guide a company’s financial growth.
+
                             </p>
                         </div>
 
                         <!-- OPERATIONS -->
                         <div id="panel-operations" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-operations" aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Operations</h2>
+                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA
+                                Operations & Supply Chain</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Supply chain, logistics, procurement and operations strategy.
+                                Learn how products are made, moved, and delivered efficiently. This specialisation
+                                prepares you for roles in operations management, supply chain planning, logistics, or
+                                starting your own consulting business. You’ll gain the skills to improve processes and
+                                manage daily business operations smoothly.
                             </p>
                         </div>
 
@@ -1048,12 +1079,15 @@
                             aria-labelledby="tab-analytics" aria-hidden="true">
                             <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Business Analytics</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Predictive modelling, statistics, data visualisation, and business analytics tools.
+                                Develop the ability to understand data and use it to solve business problems. This
+                                specialisation is ideal for careers in business analysis, data analytics, data science,
+                                or building your own data-focused business. You’ll learn how to turn information into
+                                useful insights that support better decisions.
                             </p>
                         </div>
 
                         <!-- ENTREPRENEURSHIP -->
-                        <div id="panel-entrepreneurship" class="tab-panel hidden" role="tabpanel"
+                        <!-- <div id="panel-entrepreneurship" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-entrepreneurship" aria-hidden="true">
                             <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Entrepreneurship And Family Business
                                 Management</h2>
@@ -1064,7 +1098,7 @@
                                 entrepreneurial ventures.
                             </p>
                             <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div>
+                        </div> -->
 
                     </article>
                 </div>
@@ -1081,7 +1115,7 @@
                         'block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700',
                         'hover:bg-gray-100', 'dark:hover:bg-gray-800'
                     ];
-                    const PANEL_PREFIX = 'panel-';
+                    const PANEL_PREFIX = 'panel-'; // original expected prefix in markup (used to find panels initially)
 
                     function initSection(section) {
                         if (!section || section.dataset.tabsInitialized === 'true') return;
@@ -1094,13 +1128,45 @@
                         const panels = Array.from(section.querySelectorAll('.tab-panel'));
                         if (!tabs.length || !panels.length) return;
 
+                        // create a stable scope prefix using section.id if present, otherwise a random token
+                        const scope = section.id ? section.id + '-' : ('scope-' + Math.random().toString(36).slice(2, 8) + '-');
+
+                        // map from data-tab name -> actual (unique) panel id in this section
+                        const panelIdMap = new Map();
+
+                        // ensure unique ids for tabs & panels and set aria relationships
+                        tabs.forEach(tabEl => {
+                            const name = tabEl.getAttribute('data-tab');
+                            if (!name) return;
+
+                            // create unique ids
+                            const uniqueTabId = scope + 'tab-' + name;
+                            const originalPanelSelector = '#' + PANEL_PREFIX + name;
+                            const panelEl = section.querySelector(originalPanelSelector) || section.querySelector('.tab-panel[id$="' + name + '"]');
+
+                            // assign unique ids (only overwrite if conflicting or missing)
+                            tabEl.id = uniqueTabId;
+                            if (panelEl) {
+                                const uniquePanelId = scope + 'panel-' + name;
+                                panelEl.id = uniquePanelId;
+                                panelEl.setAttribute('aria-labelledby', uniqueTabId);
+                                panelIdMap.set(name, uniquePanelId);
+                            } else {
+                                // fallback: still set a predictable id mapping (panel may be created later)
+                                panelIdMap.set(name, scope + 'panel-' + name);
+                            }
+
+                            // ensure aria-controls points to the unique panel id (will match above)
+                            tabEl.setAttribute('aria-controls', panelIdMap.get(name));
+                        });
+
                         function setInactive(tabEl) {
                             tabEl.classList.remove(...ACTIVE);
                             tabEl.classList.add(...INACTIVE);
                             tabEl.setAttribute('aria-selected', 'false');
                             tabEl.setAttribute('tabindex', '-1');
                             const name = tabEl.getAttribute('data-tab');
-                            const panel = section.querySelector('#' + PANEL_PREFIX + name);
+                            const panel = section.querySelector('#' + panelIdMap.get(name));
                             if (panel) {
                                 panel.classList.add('hidden');
                                 panel.setAttribute('aria-hidden', 'true');
@@ -1108,11 +1174,8 @@
                         }
 
                         function setActive(tabEl) {
-                            // defensively ensure arg is valid
                             if (!tabEl || !tabEl.getAttribute) return;
-                            tabs.forEach(t => {
-                                if (t !== tabEl) setInactive(t);
-                            });
+                            tabs.forEach(t => { if (t !== tabEl) setInactive(t); });
 
                             tabEl.classList.remove(...INACTIVE);
                             tabEl.classList.add(...ACTIVE);
@@ -1120,8 +1183,9 @@
                             tabEl.setAttribute('tabindex', '0');
 
                             const name = tabEl.getAttribute('data-tab');
+                            // hide all panels for this section
                             panels.forEach(p => { p.classList.add('hidden'); p.setAttribute('aria-hidden', 'true'); });
-                            const panel = section.querySelector('#' + PANEL_PREFIX + name);
+                            const panel = section.querySelector('#' + panelIdMap.get(name));
                             if (panel) {
                                 panel.classList.remove('hidden');
                                 panel.setAttribute('aria-hidden', 'false');
@@ -1144,7 +1208,7 @@
                             // 3) existing markup aria-selected
                             const preselected = tabs.find(t => t.getAttribute('aria-selected') === 'true');
                             if (preselected) return preselected;
-                            // 4) fallback to first
+                            // 4) fallback to first tab (guarantee)
                             return tabs[0];
                         }
 
@@ -1159,12 +1223,10 @@
                         // attach events & roles
                         tabs.forEach((tab) => {
                             tab.setAttribute('role', 'tab');
-                            tab.setAttribute('aria-controls', PANEL_PREFIX + tab.getAttribute('data-tab'));
-
+                            // aria-controls already set above to unique panel id
                             tab.addEventListener('click', (e) => {
                                 e.preventDefault();
                                 setActive(tab);
-                                // update URL hash (non-invasive)
                                 try { history.replaceState(null, '', '#' + tab.getAttribute('data-tab')); } catch (err) { }
                                 if (window.innerWidth < 1024) {
                                     setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
@@ -1190,7 +1252,8 @@
                             });
 
                             // ensure panels have role
-                            const panel = section.querySelector('#' + PANEL_PREFIX + tab.getAttribute('data-tab'));
+                            const name = tab.getAttribute('data-tab');
+                            const panel = section.querySelector('#' + panelIdMap.get(name));
                             if (panel) panel.setAttribute('role', 'tabpanel');
                         });
 
@@ -1199,9 +1262,7 @@
                         setActive(initial);
 
                         // re-check on load (defensive)
-                        window.addEventListener('load', () => {
-                            setTimeout(ensureActive, 120);
-                        });
+                        window.addEventListener('load', () => { setTimeout(ensureActive, 120); });
 
                         // watch for mutations (other scripts changing classes/attributes)
                         let debounce;
@@ -1223,426 +1284,386 @@
             </script>
 
 
-        </section>
 
 
+            <!-- Inserted Programme Highlights block (merged directly below the existing one) -->
+            <!-- Programme Highlights (Dark) -->
+            <section id="programme-highlights" class="bg-[#1A1A1A] font-[Poppins] text-[#E0E0E0]">
+                <div class="relative min-h-screen flex items-center justify-center py-16">
+                    <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+                        <div class="lg:w-1/2 z-10 text-center lg:text-left">
+                            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#9D0A4F] tracking-tight">Programme</h1>
+                            <h2 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight"> Value Additions</h2>
+                            <p class="text-lg mb-12 text-gray-300 leading-relaxed">Experience an MBA that combines
+                                rigorous
+                                academics with practical, industry-focused learning. Hands-on projects, expert
+                                mentorship,
+                                and modern learning tools develop strategic thinking, foster innovation, and create
+                                measurable impact in real business environments..</p>
 
-        <!-- <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-        <h1 class="text-4xl md:text-6xl font-bold mb-12 text-gray-900 dark:text-white">Specializations</h1>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div
+                                    class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
 
-        <div class="border-b border-gray-200 dark:border-gray-700 mb-8">
-            <nav class="flex overflow-x-auto space-x-4 pb-2">
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Marketing</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Digital Marketing</a>
-                <a class="px-6 py-3 text-lg font-medium text-primary dark:text-primary border-b-2 border-primary dark:border-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Business Analytics</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Operations And Supply Chain Management</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Human Resource Management</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Finance</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Banking And Financial Services</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA International Business</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Dual</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Healthcare Management</a>
-                <a class="px-6 py-3 text-lg font-medium text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary transition-colors duration-200 whitespace-nowrap"
-                    href="#">MBA Entrepreneurship And Family Business Management</a>
-            </nav>
-        </div>
+                                    <p class="text-sm text-gray-300">
+                                    <ul class="mt-4 list-disc list-inside text-gray-300 text-sm space-y-1">
+                                        <li>NISM Module</li>
+                                        <li>Customer Value Management</li>
+                                        <li>Human Capital Appreciation</li>
+                                        <li>Contemporary Cases & Trends</li>
+                                        <li>Operations Analytics</li>
+                                        <li>Artificial Intelligence</li>
+                                        <li>Python</li>
+                                        <li>Campus to Corporate Training</li>
+                                        <li>Design Thinking</li>
+                                        <li>HR Dashboards using Power BI</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                                <div
+                                    class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
 
-        <div class="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold text-primary mb-6">MBA Business Analytics</h2>
-            <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, amet quos ullam et maiores itaque enim
-                culpa dignissimos harum corporis rem repudiandae. Laudantium cum, officia doloremque earum voluptates
-                mollitia magni dolores soluta ab, assumenda quia reiciendis corporis quidem culpa nostrum iure, animi
-                suscipit recusandae eius perferendis. Sequi veniam, autem tempore delectus harum saepe ut commodi,
-                obcaecati exercitationem itaque impedit rem dolorum quia dicta voluptatum vel nihil et minus ipsam!
-                Blanditiis accusamus voluptatem quisquam in ipsam, suscipit dolor porro numquam omnis modi non explicabo
-                totam animi magni, incidunt perspiciatis. Aliquid cumque, unde sunt quibusdam quae explicabo doloribus
-                placeat quas adipisci nobis eius iste eveniet, aut dolore. Harum laborum odit inventore. Eveniet
-                voluptate dolores, optio minus eaque consequatur repellat reiciendis voluptas consequuntur.
-            </p>
-            <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea repudiandae inventore expedita eveniet
-                minima, officiis nam, nulla error neque ut voluptas illo voluptatem, delectus labore! Quo non, officia
-                ipsum, quaerat ex itaque inventore dolor harum necessitatibus voluptatum culpa deserunt natus ipsa
-                accusantium aliquam quos perferendis similique doloribus praesentium ipsam illum.
-            </p>
-            <button class="text-primary font-semibold hover:underline mb-8" onclick="toggleReadMore(this)">Read
-                More</button>
+                                    <p class="text-sm text-gray-300">
+                                    <ul class="mt-4 list-disc list-inside text-gray-300 text-sm space-y-1">
+                                        <li>FinTech</li>
+                                        <li>Innovative Finance</li>
+                                        <li>HR Compliance</li>
+                                        <li>Learning with Legend</li>
+                                        <li>Leadership Lab</li>
+                                        <li>Master Class & Power BI</li>
+                                        <li>Advanced Excel</li>
+                                        <li>Financial Modeling</li>
+                                        <li>Virtual Internships</li>
+                                        <li>Google Analytics</li>
+                                        <li>ERP & Six Sigma</li>
+                                    </ul>
+                                    </p>
+                                </div>
 
-            <div id="careerOutcomesAccordion" class="mt-6">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 cursor-pointer flex justify-between items-center"
-                    onclick="toggleAccordion(this)">
-                    Career outcomes
-                    <span class="material-icons">expand_more</span>
-                </h3>
-                <div class="accordion-content active p-4 pt-0">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-primary">check_circle_outline</span>
-                            <span class="text-gray-800 dark:text-gray-200">Business analyst</span>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-primary">check_circle_outline</span>
-                            <span class="text-gray-800 dark:text-gray-200">Marketing analyst</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-primary">check_circle_outline</span>
-                            <span class="text-gray-800 dark:text-gray-200">Financial analyst</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-primary">check_circle_outline</span>
-                            <span class="text-gray-800 dark:text-gray-200">Operations and supply chain analyst</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="material-icons text-primary">check_circle_outline</span>
-                            <span class="text-gray-800 dark:text-gray-200">Data analyst</span>
+
+                        <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end">
+                            <img src="/student working.png "
+                                alt="Professional working on a modern digital interface on a tablet"
+                                class="max-w-full h-auto rounded-lg shadow-2xl">
                         </div>
                     </div>
+
+
                 </div>
-            </div>
-        </div>
-    </section> -->
+            </section>
 
-        <!-- No JS needed for header -->
-        <script>
-            function toggleAccordion(element) {
-                const content = element.nextElementSibling;
-                content.classList.toggle('active');
-                const icon = element.querySelector('.material-icons');
-                if (content.classList.contains('active')) {
-                    icon.textContent = 'expand_less';
-                } else {
-                    icon.textContent = 'expand_more';
+            <style>
+                /* animations + hover */
+                .card-hover:hover {
+                    transform: translateY(-5px) scale(1.02);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
                 }
-            }
+            </style>
 
-            function toggleReadMore(button) {
-                const parentDiv = button.parentElement;
-                const paragraphs = parentDiv.querySelectorAll('p:not(:first-of-type)');
-                const isExpanded = button.textContent === 'Read Less';
+            <!-- Admission details -->
+            <section id="admissions" data-tabs="true" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+                <div class="container mx-auto px-4 py-16">
+                    <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details</h1>
 
-                paragraphs.forEach(p => {
-                    p.classList.toggle('hidden');
-                });
+                    <div class="flex flex-col lg:flex-row gap-12">
+                        <!-- Left rail -->
+                        <nav class="lg:w-1/3" aria-label="Admission tabs">
+                            <ul class="space-y-2">
 
-                if (isExpanded) {
-                    button.textContent = 'Read More';
-                } else {
-                    button.textContent = 'Read Less';
-                }
-            }
-        </script>
+                                <li>
+                                    <a href="#" data-tab="eligibility"
+                                        class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
+                                        role="tab" aria-selected="true">Eligibility Criteria</a>
+                                </li>
 
+                                <li>
+                                    <a href="#" data-tab="selection"
+                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                        role="tab" aria-selected="false">Selection Criteria</a>
+                                </li>
 
+                                <li>
+                                    <a href="#" data-tab="fees"
+                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                        role="tab" aria-selected="false">Fees </a>
+                                </li>
 
-        <!-- Inserted Programme Highlights block (merged directly below the existing one) -->
-        <!-- Programme Highlights (Dark) -->
-        <section id="programme-highlights" class="bg-[#1A1A1A] font-[Poppins] text-[#E0E0E0]">
-            <div class="relative min-h-screen flex items-center justify-center py-16">
-                <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2 z-10 text-center lg:text-left">
-                        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#9D0A4F] tracking-tight">Programme</h1>
-                        <h2 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight"> Value Additions</h2>
-                        <p class="text-lg mb-12 text-gray-300 leading-relaxed">Experience an MBA that combines rigorous
-                            academics with practical, industry-focused learning. Hands-on projects, expert mentorship,
-                            and modern learning tools develop strategic thinking, foster innovation, and create
-                            measurable impact in real business environments..</p>
+                                <li>
+                                    <a href="#" data-tab="duration"
+                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                        role="tab" aria-selected="false">Duration</a>
+                                </li>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div
-                                class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
+                                <li>
+                                    <a href="#" data-tab="scholarships"
+                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                        role="tab" aria-selected="false">Scholarships</a>
+                                </li>
 
-                                <p class="text-sm text-gray-300">
-                                <ul class="mt-4 list-disc list-inside text-gray-300 text-sm space-y-1">
-                                    <li>NISM Module</li>
-                                    <li>Customer Value Management</li>
-                                    <li>Human Capital Appreciation</li>
-                                    <li>Contemporary Cases & Trends</li>
-                                    <li>Operations Analytics</li>
-                                    <li>Artificial Intelligence</li>
-                                    <li>Python</li>
-                                    <li>Campus to Corporate Training</li>
-                                    <li>Design Thinking</li>
-                                    <li>HR Dashboards using Power BI</li>
-                                </ul>
+                                <!-- <li>
+                                    <a href="#" data-tab="entrepreneurship"
+                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                                        role="tab" aria-selected="false">MBA Entrepreneurship And Family Business
+                                        Management</a>
+                                </li> -->
+
+                            </ul>
+                        </nav>
+
+                        <!-- Detail panel -->
+                        <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700"
+                            role="tabpanel">
+                            <!-- ELIGIBILITY (default visible) -->
+                            <div id="panel-eligibility" class="tab-panel">
+                                <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Eligibility
+                                    Criteria
+                                </h2>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                    Candidates must hold a 3- or 4-year undergraduate degree from a UGC-recognized
+                                    university. Minimum
+                                    aggregate marks of 50% (45% for reserved categories where applicable). Final year
+                                    students awaiting results
+                                    are eligible to apply subject to meeting the minimum criteria at the time of
+                                    admission.
                                 </p>
-                            </div>
-                            <div
-                                class="card-hover p-6 rounded-lg bg-[#2D2D2D] shadow-lg transition duration-300 ease-in-out">
-
-                                <p class="text-sm text-gray-300">
-                                <ul class="mt-4 list-disc list-inside text-gray-300 text-sm space-y-1">
-                                    <li>FinTech</li>
-                                    <li>Innovative Finance</li>
-                                    <li>HR Compliance</li>
-                                    <li>Learning with Legend</li>
-                                    <li>Leadership Lab</li>
-                                    <li>Master Class & Power BI</li>
-                                    <li>Advanced Excel</li>
-                                    <li>Financial Modeling</li>
-                                    <li>Virtual Internships</li>
-                                    <li>Google Analytics</li>
-                                    <li>ERP & Six Sigma</li>
-                                </ul>
-                                </p>
+                                <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                                    <li>UG degree (3/4 years) from a recognized university.</li>
+                                    <li>Minimum aggregate 50% (relaxation as per category rules).</li>
+                                    <li>English as a subject in Class 10 or 12 preferred.</li>
+                                </ol>
+                                <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
                             </div>
 
-                        </div>
-                    </div>
+                            <!-- SELECTION -->
+                            <div id="panel-selection" class="tab-panel hidden">
+                                   <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Selection Criteria
+                                </h2>
+                                <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                                    <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream
+                                        from
+                                        UGC-approved university; 55% for reserved Maharashtra category).</li>
+                                    <li>Minimum 50% in Class 12 and Class 10 (English as a subject).</li>
+                                    <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT.</li>
+                                    <li>Shortlisted candidates may be called for GD/PI as per programme rules.</li>
+                                </ol>
+                                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                                    Admissions are merit-driven using standardized test scores; additional weightage may
+                                    be
+                                    given for academic
+                                    performance, relevant work experience and performance in subsequent rounds where
+                                    applicable.
+                                </p>
+                            </div>
 
-                    <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end">
-                        <img src="/student working.png "
-                            alt="Professional working on a modern digital interface on a tablet"
-                            class="max-w-full h-auto rounded-lg shadow-2xl">
+                            <!-- FEES -->
+                            <div id="panel-fees" class="tab-panel hidden">
+                                   <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Fees</h2>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                    Tuition and fees vary by campus and specialization. Typical full-time MBA tuition
+                                    ranges
+                                    are provided on the
+                                    official fee schedule. Fees can be paid semester-wise; scholarship awards will be
+                                    reflected in the invoice.
+                                </p>
+                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                    <li>Application fee: as published for the intake.</li>
+                                    <li>Tuition: Refer to campus-specific fee schedule.</li>
+                                    <li>Payment plans and instalments available.</li>
+                                </ul>
+                                <a href="#" class="text-[#D19A9A] font-medium hover:underline">View fee schedule</a>
+                            </div>
+
+                            <!-- DURATION -->
+                            <div id="panel-duration" class="tab-panel hidden">
+                                  <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Duration</h2>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                    The standard MBA programme duration is two academic years (four semesters) for
+                                    full-time
+                                    students. Certain
+                                    executive or part-time variants have different durations; please check the specific
+                                    programme page.
+                                </p>
+                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                    <li>Full-time MBA: 2 years (4 semesters).</li>
+                                    <li>Executive/Part-time MBA: programme-specific durations.</li>
+                                </ul>
+                            </div>
+
+                            <!-- SCHOLARSHIPS -->
+                            <div id="panel-scholarships" class="tab-panel hidden">
+                                    <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Scholarships</h2>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                    Scholarships are merit- and need-based. CUCET scholarships cover a range of awards
+                                    including partial tuition
+                                    waivers and full scholarships for exceptional candidates. Scholarship decisions are
+                                    made
+                                    after assessing
+                                    academic records and qualifying scores.
+                                </p>
+                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                    <li>Merit-based scholarships up to 100% for top performers.</li>
+                                    <li>Special awards for candidate profiles matching industry needs.</li>
+                                </ul>
+                                <!-- <a href="#" class="text-[#D19A9A] font-medium hover:underline">Scholarship details</a> -->
+                            </div>
+
+                            <!-- ENTREPRENEURSHIP -->
+                     
+                        </article>
                     </div>
                 </div>
 
-                <!-- <button class="absolute bottom-8 right-8 bg-[#9D0A4F] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300">
-      <span class="font-bold tracking-wider text-lg">ENQUIRE</span>
-    </button> -->
-            </div>
-        </section>
+                <!-- script: toggles panels and active tab styling (default: eligibility) -->
+                <script>
+                    (function () {
+                        const ACTIVE = [
+                            'flex', 'justify-between', 'items-center', 'bg-[#D19A9A]',
+                            'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4'
+                        ];
+                        const INACTIVE = [
+                            'block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700',
+                            'hover:bg-gray-100', 'dark:hover:bg-gray-800'
+                        ];
+                        const PANEL_PREFIX = 'panel-'; // expected prefix in your markup
 
-        <style>
-            /* animations + hover */
-            .card-hover:hover {
-                transform: translateY(-5px) scale(1.02);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            }
-        </style>
+                        function initSection(section) {
+                            if (!section || section.dataset.tabsInitialized === 'true') return;
+                            section.dataset.tabsInitialized = 'true';
 
-        <!-- Admission details -->
-        <section id="specializations" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
-            <div class="container mx-auto px-4 py-16">
-                <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details</h1>
+                            const nav = section.querySelector('nav');
+                            if (!nav) return;
 
-                <div class="flex flex-col lg:flex-row gap-12">
-                    <!-- Left rail -->
-                    <nav class="lg:w-1/3" aria-label="Admission tabs">
-                        <ul class="space-y-2">
+                            const tabs = Array.from(nav.querySelectorAll('[data-tab]'));
+                            const panels = Array.from(section.querySelectorAll('.tab-panel'));
+                            if (!tabs.length || !panels.length) return;
 
-                            <li>
-                                <a href="#" data-tab="eligibility"
-                                    class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
-                                    role="tab" aria-selected="true">Eligibility Criteria</a>
-                            </li>
+                            // stable scope prefix: use section.id if present, otherwise random
+                            const scope = section.id ? section.id + '-' : ('scope-' + Math.random().toString(36).slice(2, 8) + '-');
 
-                            <li>
-                                <a href="#" data-tab="selection"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false">Selection Criteria</a>
-                            </li>
+                            const panelIdMap = new Map();
 
-                            <li>
-                                <a href="#" data-tab="fees"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false">Fees</a>
-                            </li>
+                            // assign unique ids and aria-controls (scoped)
+                            tabs.forEach(tabEl => {
+                                const name = tabEl.getAttribute('data-tab');
+                                if (!name) return;
+                                const uniqueTabId = scope + 'tab-' + name;
+                                const originalPanelSelector = '#' + PANEL_PREFIX + name;
+                                const panelEl = section.querySelector(originalPanelSelector) || section.querySelector('.tab-panel[id$="' + name + '"]');
 
-                            <li>
-                                <a href="#" data-tab="duration"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false">Duration</a>
-                            </li>
+                                tabEl.id = uniqueTabId;
+                                if (panelEl) {
+                                    const uniquePanelId = scope + 'panel-' + name;
+                                    panelEl.id = uniquePanelId;
+                                    panelEl.setAttribute('aria-labelledby', uniqueTabId);
+                                    panelIdMap.set(name, uniquePanelId);
+                                } else {
+                                    panelIdMap.set(name, scope + 'panel-' + name);
+                                }
 
-                            <li>
-                                <a href="#" data-tab="scholarships"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false">Scholarships</a>
-                            </li>
+                                tabEl.setAttribute('aria-controls', panelIdMap.get(name));
+                            });
 
-                            <li>
-                                <a href="#" data-tab="entrepreneurship"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false">MBA Entrepreneurship And Family Business
-                                    Management</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-
-                    <!-- Detail panel -->
-                    <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700" role="tabpanel">
-                        <!-- ELIGIBILITY (default visible) -->
-                        <div id="panel-eligibility" class="tab-panel">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Eligibility Criteria
-                            </h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Candidates must hold a 3- or 4-year undergraduate degree from a UGC-recognized
-                                university. Minimum
-                                aggregate marks of 50% (45% for reserved categories where applicable). Final year
-                                students awaiting results
-                                are eligible to apply subject to meeting the minimum criteria at the time of admission.
-                            </p>
-                            <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
-                                <li>UG degree (3/4 years) from a recognized university.</li>
-                                <li>Minimum aggregate 50% (relaxation as per category rules).</li>
-                                <li>English as a subject in Class 10 or 12 preferred.</li>
-                            </ol>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div>
-
-                        <!-- SELECTION -->
-                        <div id="panel-selection" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Selection Criteria</h2>
-                            <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
-                                <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream from
-                                    UGC-approved university; 55% for reserved Maharashtra category).</li>
-                                <li>Minimum 50% in Class 12 and Class 10 (English as a subject).</li>
-                                <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT.</li>
-                                <li>Shortlisted candidates may be called for GD/PI as per programme rules.</li>
-                            </ol>
-                            <p class="text-gray-600 dark:text-gray-400 mb-6">
-                                Admissions are merit-driven using standardized test scores; additional weightage may be
-                                given for academic
-                                performance, relevant work experience and performance in subsequent rounds where
-                                applicable.
-                            </p>
-                        </div>
-
-                        <!-- FEES -->
-                        <div id="panel-fees" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Fees</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Tuition and fees vary by campus and specialization. Typical full-time MBA tuition ranges
-                                are provided on the
-                                official fee schedule. Fees can be paid semester-wise; scholarship awards will be
-                                reflected in the invoice.
-                            </p>
-                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
-                                <li>Application fee: as published for the intake.</li>
-                                <li>Tuition: Refer to campus-specific fee schedule.</li>
-                                <li>Payment plans and instalments available.</li>
-                            </ul>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">View fee schedule</a>
-                        </div>
-
-                        <!-- DURATION -->
-                        <div id="panel-duration" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Duration</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                The standard MBA programme duration is two academic years (four semesters) for full-time
-                                students. Certain
-                                executive or part-time variants have different durations; please check the specific
-                                programme page.
-                            </p>
-                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
-                                <li>Full-time MBA: 2 years (4 semesters).</li>
-                                <li>Executive/Part-time MBA: programme-specific durations.</li>
-                            </ul>
-                        </div>
-
-                        <!-- SCHOLARSHIPS -->
-                        <div id="panel-scholarships" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">Scholarships</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Scholarships are merit- and need-based. CUCET scholarships cover a range of awards
-                                including partial tuition
-                                waivers and full scholarships for exceptional candidates. Scholarship decisions are made
-                                after assessing
-                                academic records and qualifying scores.
-                            </p>
-                            <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
-                                <li>Merit-based scholarships up to 100% for top performers.</li>
-                                <li>Special awards for candidate profiles matching industry needs.</li>
-                            </ul>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Scholarship details</a>
-                        </div>
-
-                        <!-- ENTREPRENEURSHIP -->
-                        <div id="panel-entrepreneurship" class="tab-panel hidden">
-                            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">MBA Entrepreneurship
-                                And Family Business Management</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                This specialisation focuses on venture creation, family business governance, scaling,
-                                fundraising and
-                                entrepreneurial finance. Practical learning through incubator projects, mentorship and
-                                industry connect
-                                prepares students to start or lead family-owned and entrepreneurial ventures.
-                            </p>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- script: toggles panels and active tab styling (default: eligibility) -->
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    // scope tabs to the left rail to avoid unrelated matches elsewhere on page
-                    const tabs = Array.from(document.querySelectorAll('nav [data-tab]'));
-                    const panels = Array.from(document.querySelectorAll('.tab-panel'));
-
-                    if (!tabs.length || !panels.length) return;
-
-                    const ACTIVE = ['flex', 'justify-between', 'items-center', 'bg-[#D19A9A]', 'text-gray-800', 'dark:text-gray-900', 'rounded-lg', 'py-3', 'px-4'];
-                    const INACTIVE = ['block', 'py-3', 'px-4', 'border-b', 'border-gray-200', 'dark:border-gray-700', 'hover:bg-gray-100', 'dark:hover:bg-gray-800'];
-
-                    function setActive(tabEl) {
-                        tabs.forEach(t => {
-                            t.classList.remove(...ACTIVE);
-                            t.classList.add(...INACTIVE);
-                            t.setAttribute('aria-selected', 'false');
-                        });
-                        tabEl.classList.remove(...INACTIVE);
-                        tabEl.classList.add(...ACTIVE);
-                        tabEl.setAttribute('aria-selected', 'true');
-                    }
-
-                    function showPanel(name) {
-                        panels.forEach(p => {
-                            p.classList.add('hidden');
-                            p.setAttribute('aria-hidden', 'true');
-                        });
-                        const el = document.getElementById('panel-' + name);
-                        if (el) {
-                            el.classList.remove('hidden');
-                            el.setAttribute('aria-hidden', 'false');
-                        }
-                    }
-
-                    // explicit default: eligibility
-                    const defaultTab = tabs.find(t => t.getAttribute('data-tab') === 'eligibility') || tabs[0];
-                    const defaultName = defaultTab.getAttribute('data-tab');
-
-                    // initialize UI (runs after DOM ready)
-                    setActive(defaultTab);
-                    showPanel(defaultName);
-
-                    // click handlers
-                    tabs.forEach(tab => {
-                        tab.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const name = tab.getAttribute('data-tab');
-                            setActive(tab);
-                            showPanel(name);
-
-                            if (window.innerWidth < 1024) {
-                                setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+                            function setInactive(tabEl) {
+                                tabEl.classList.remove(...ACTIVE);
+                                tabEl.classList.add(...INACTIVE);
+                                tabEl.setAttribute('aria-selected', 'false');
+                                tabEl.setAttribute('tabindex', '-1');
+                                const name = tabEl.getAttribute('data-tab');
+                                const panel = section.querySelector('#' + panelIdMap.get(name));
+                                if (panel) {
+                                    panel.classList.add('hidden');
+                                    panel.setAttribute('aria-hidden', 'true');
+                                }
                             }
-                        });
-                    });
 
-                    // defensive re-apply after a short delay to win over other scripts that may run later
-                    window.addEventListener('load', () => {
-                        setTimeout(() => {
-                            setActive(defaultTab);
-                            showPanel(defaultName);
-                        }, 120);
-                    });
-                });
-            </script>
-        </section>
+                            function setActive(tabEl) {
+                                if (!tabEl || !tabEl.getAttribute) return;
+                                tabs.forEach(t => { if (t !== tabEl) setInactive(t); });
+
+                                tabEl.classList.remove(...INACTIVE);
+                                tabEl.classList.add(...ACTIVE);
+                                tabEl.setAttribute('aria-selected', 'true');
+                                tabEl.setAttribute('tabindex', '0');
+
+                                const name = tabEl.getAttribute('data-tab');
+                                panels.forEach(p => { p.classList.add('hidden'); p.setAttribute('aria-hidden', 'true'); });
+                                const panel = section.querySelector('#' + panelIdMap.get(name));
+                                if (panel) {
+                                    panel.classList.remove('hidden');
+                                    panel.setAttribute('aria-hidden', 'false');
+                                }
+                            }
+
+                            function findInitial() {
+                                // 1) URL hash for this section (global tab name)
+                                if (location.hash) {
+                                    const hashName = location.hash.replace('#', '');
+                                    const fromHash = tabs.find(t => t.getAttribute('data-tab') === hashName);
+                                    if (fromHash) return fromHash;
+                                }
+                                // 2) section data-default-tab
+                                const defaultTabName = section.dataset.defaultTab;
+                                if (defaultTabName) {
+                                    const def = tabs.find(t => t.getAttribute('data-tab') === defaultTabName);
+                                    if (def) return def;
+                                }
+                                // 3) markup aria-selected
+                                const preselected = tabs.find(t => t.getAttribute('aria-selected') === 'true');
+                                if (preselected) return preselected;
+                                // 4) fallback to first
+                                return tabs[0];
+                            }
+
+                            function ensureActive() {
+                                const anyActive = tabs.some(t => t.getAttribute('aria-selected') === 'true' && !t.classList.contains('hidden'));
+                                if (!anyActive) setActive(findInitial());
+                            }
+
+                            // attach events & roles
+                            tabs.forEach((tab) => {
+                                tab.setAttribute('role', 'tab');
+                                tab.addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    setActive(tab);
+                                    try { history.replaceState(null, '', '#' + tab.getAttribute('data-tab')); } catch (err) { }
+                                    if (window.innerWidth < 1024) setTimeout(() => tab.scrollIntoView({ behavior: 'smooth', inline: 'center' }), 80);
+                                });
+
+                                tab.addEventListener('keydown', function (e) {
+                                    const idx = tabs.indexOf(this);
+                                    if (idx === -1) return;
+                                    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); const prev = tabs[(idx - 1 + tabs.length) % tabs.length]; prev.focus(); setActive(prev); }
+                                    else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); const next = tabs[(idx + 1) % tabs.length]; next.focus(); setActive(next); }
+                                    else if (e.key === 'Home') { e.preventDefault(); tabs[0].focus(); setActive(tabs[0]); }
+                                    else if (e.key === 'End') { e.preventDefault(); tabs[tabs.length - 1].focus(); setActive(tabs[tabs.length - 1]); }
+                                });
+
+                                const name = tab.getAttribute('data-tab');
+                                const panel = section.querySelector('#' + panelIdMap.get(name));
+                                if (panel) panel.setAttribute('role', 'tabpanel');
+                            });
+
+                            // initial activation
+                            setActive(findInitial());
+
+                            // defensive reapply and mutation observer
+                            window.addEventListener('load', () => setTimeout(ensureActive, 120));
+                            let debounce;
+                            const observer = new MutationObserver(() => { clearTimeout(debounce); debounce = setTimeout(ensureActive, 80); });
+                            observer.observe(nav, { attributes: true, attributeFilter: ['class', 'aria-selected', 'hidden', 'tabindex'], subtree: true, childList: true });
+                            setTimeout(ensureActive, 50);
+                        }
+
+                        // initialize every section marked with data-tabs="true"
+                        document.addEventListener('DOMContentLoaded', () => {
+                            document.querySelectorAll('section[data-tabs="true"]').forEach(initSection);
+                        });
+                    })();
+                </script>
+
+            </section>
 
         </section>
 
