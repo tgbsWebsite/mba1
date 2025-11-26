@@ -690,52 +690,55 @@
             <div class="min-h-[70vh] sm:min-h-[80vh] lg:h-screen flex flex-col lg:flex-row">
 
                 <!-- LEFT: your original image block but responsive -->
-         <div class="lg:w-1/2 relative h-auto lg:h-full">
+                <div class="lg:w-1/2 relative h-auto lg:h-full">
 
-  <!-- MOBILE/TABLET IMAGE (visible only below lg) -->
-  <div class="block lg:hidden relative w-full">
-    <img src="./Girl in pink suit (1).png"
+                    <!-- MOBILE/TABLET IMAGE (visible only below lg) -->
+<div class="block lg:hidden relative w-full">
+
+    <img src="./Girl in pink suit (1).png" 
          alt="MBA Programme Image"
-         class="w-full h-[60vh] object-contain bg-white" />
+         class="w-full h-[60vh] object-contain object-bottom bg-white" />
 
-    <!-- mobile overlay text -->
- <div class="absolute bottom-0 left-0 w-full px-6 py-8
-            bg-gradient-to-t from-black/70 via-black/40 to-transparent">
+    <!-- mobile overlay text stays at bottom with gradient -->
+    <div class="absolute bottom-0 left-0 w-full px-6 py-8
+                bg-gradient-to-t from-black/70 via-black/40 to-transparent">
 
-      <h1 class="text-3xl sm:text-4xl font-bold text-white drop-shadow-lg">
-        MBA Programme
-      </h1>
-      <p class="mt-2 text-base sm:text-lg text-white drop-shadow-lg">
-        Your gateway to transformative business leadership.
-      </p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-white drop-shadow-lg">
+            MBA Programme
+        </h1>
+
+        <p class="mt-2 text-base sm:text-lg text-white drop-shadow-lg">
+            Your gateway to transformative business leadership.
+        </p>
+
     </div>
-  </div>
+</div>
 
-  <!-- DESKTOP VIEW (your original untouched) -->
-  <div class="absolute inset-0 hidden lg:block">
-    <img src="./Girl in pink suit (1).png"
-         alt="MBA Programme Image"
-         class="w-full h-full object-cover object-center" />
-  </div>
 
-  <div class="relative lg:absolute inset-0 
+                    <!-- DESKTOP VIEW (your original untouched) -->
+                    <div class="absolute inset-0 hidden lg:block">
+                        <img src="./Girl in pink suit (1).png" alt="MBA Programme Image"
+                            class="w-full h-full object-cover object-center" />
+                    </div>
+
+                    <div class="relative lg:absolute inset-0 
               hidden lg:flex items-center 
               px-6 lg:px-0">
 
-    <div class="text-left text-white px-6 py-8 
+                        <div class="text-left text-white px-6 py-8 
                 bg-black/40 backdrop-blur-sm 
                 rounded-r-2xl max-w-xl">
-      <h1 class="text-6xl font-bold mb-4">
-        MBA Programme
-      </h1>
-      <p class="text-xl">
-        Your gateway to transformative business leadership.
-      </p>
-    </div>
+                            <h1 class="text-6xl font-bold mb-4">
+                                MBA Programme
+                            </h1>
+                            <p class="text-xl">
+                                Your gateway to transformative business leadership.
+                            </p>
+                        </div>
 
-  </div>
+                    </div>
 
-</div>
+                </div>
 
 
                 <!-- RIGHT: same view, only format-adjusted -->
