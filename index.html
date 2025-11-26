@@ -481,6 +481,7 @@
                         <!-- replaced original form with nopaperforms widget -->
                         <!-- ===================== FORM SECTION (UPDATED) ===================== -->
 
+                        <!-- widget (no data-height) -->
                         <div class="npf_wgts" data-w="3161dad8e26b7ac51061b90c16309269"></div>
 
                         <script type="text/javascript">
@@ -489,6 +490,95 @@
                             s.async = true;
                             s.src = "https://widgets.in8.nopaperforms.com/emwgts.js";
                             document.body.appendChild(s);
+                        </script>
+
+                        <!-- CSS override: allows natural height and removes inner scrollbars -->
+                        <style>
+                            /* make sure parent containers don't clamp height */
+                            .npf_wgts,
+                            .npf_wgts * {
+                                box-sizing: border-box;
+                            }
+
+                            .npf_wgts {
+                                width: 100% !important;
+                                height: auto !important;
+                                overflow: visible !important;
+                                min-height: 480px;
+                                /* sensible starting height — adjust if needed */
+                            }
+
+                            /* target the injected iframe (some widgets nest iframe directly under .npf_wgts) */
+                            .npf_wgts iframe {
+                                width: 100% !important;
+                                height: auto !important;
+                                min-height: 480px !important;
+                                border: 0 !important;
+                                overflow: visible !important;
+                                display: block;
+                            }
+
+                            /* if your page's layout adds overflow or max-height on the card, override it */
+                            .lg\\:col-span-4,
+                            .lg\\:col-span-4>div,
+                            .card,
+                            .form-card {
+                                max-height: none !important;
+                                overflow: visible !important;
+                            }
+                        </style>
+
+                        <!-- JS: listen for messages from the widget and set iframe height if provided -->
+                        <script>
+                            (function () {
+                                function setIframeHeight(h) {
+                                    var iframe = document.querySelector('.npf_wgts iframe');
+                                    if (!iframe) return;
+                                    iframe.style.height = (parseInt(h, 10) || 0) + 'px';
+                                    // ensure container also grows
+                                    var container = document.querySelector('.npf_wgts');
+                                    if (container) container.style.height = (parseInt(h, 10) || 0) + 'px';
+                                }
+
+                                window.addEventListener('message', function (ev) {
+                                    // ev.data can be string or object; try to parse safely
+                                    var d = ev.data;
+                                    if (typeof d === 'string') {
+                                        try { d = JSON.parse(d); } catch (e) { /* not JSON; ignore */ }
+                                    }
+
+                                    if (!d) return;
+
+                                    // common possible payload shapes — check and apply
+                                    if (d.height && !isNaN(d.height)) {
+                                        setIframeHeight(d.height);
+                                        return;
+                                    }
+                                    if (d.widgetHeight && !isNaN(d.widgetHeight)) {
+                                        setIframeHeight(d.widgetHeight);
+                                        return;
+                                    }
+                                    if (d.nopaperforms && d.nopaperforms.height && !isNaN(d.nopaperforms.height)) {
+                                        setIframeHeight(d.nopaperforms.height);
+                                        return;
+                                    }
+
+                                    // fallback: if widget posts 'resize' with numeric value
+                                    if (d.type === 'resize' && d.value && !isNaN(d.value)) {
+                                        setIframeHeight(d.value);
+                                    }
+                                }, false);
+
+                                // small defensive poll: if iframe exists and stays tiny after 1s, bump min-height
+                                setTimeout(function () {
+                                    var iframe = document.querySelector('.npf_wgts iframe');
+                                    if (!iframe) return;
+                                    var h = iframe.clientHeight;
+                                    if (h < 300) {
+                                        iframe.style.minHeight = '700px';
+                                    }
+                                }, 1000);
+                            }());
                         </script>
 
                         <!-- ================================================================ -->
