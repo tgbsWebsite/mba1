@@ -350,6 +350,51 @@
             /* slides it off-screen */
             opacity: 0;
         }
+
+        .npf_wgts,
+        .npf_wgts * {
+            box-sizing: border-box;
+        }
+
+        .npf_wgts {
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+            min-height: 480px;
+            /* sensible starting height — adjust if needed */
+        }
+
+        /* target the injected iframe (some widgets nest iframe directly under .npf_wgts) */
+        .npf_wgts iframe {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 480px !important;
+            border: 0 !important;
+            overflow: visible !important;
+            display: block;
+        }
+
+        /* if your page's layout adds overflow or max-height on the card, override it */
+        .lg\\:col-span-4,
+        .lg\\:col-span-4>div,
+        .card,
+        .form-card {
+            max-height: none !important;
+            overflow: visible !important;
+        }
+        /* kill the blue outline/border inside the NPF form */
+.npf_wgts iframe {
+  border: none !important;
+}
+
+.npf_wgts iframe html,
+.npf_wgts iframe body,
+.npf_wgts iframe * {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
     </style>
 </head>
 
@@ -493,40 +538,7 @@
                         </script>
 
                         <!-- CSS override: allows natural height and removes inner scrollbars -->
-                        <style>
-                            /* make sure parent containers don't clamp height */
-                            .npf_wgts,
-                            .npf_wgts * {
-                                box-sizing: border-box;
-                            }
-
-                            .npf_wgts {
-                                width: 100% !important;
-                                height: auto !important;
-                                overflow: visible !important;
-                                min-height: 480px;
-                                /* sensible starting height — adjust if needed */
-                            }
-
-                            /* target the injected iframe (some widgets nest iframe directly under .npf_wgts) */
-                            .npf_wgts iframe {
-                                width: 100% !important;
-                                height: auto !important;
-                                min-height: 480px !important;
-                                border: 0 !important;
-                                overflow: visible !important;
-                                display: block;
-                            }
-
-                            /* if your page's layout adds overflow or max-height on the card, override it */
-                            .lg\\:col-span-4,
-                            .lg\\:col-span-4>div,
-                            .card,
-                            .form-card {
-                                max-height: none !important;
-                                overflow: visible !important;
-                            }
-                        </style>
+                 
 
                         <!-- JS: listen for messages from the widget and set iframe height if provided -->
                         <script>
