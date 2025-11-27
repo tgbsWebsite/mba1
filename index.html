@@ -1153,145 +1153,117 @@
         <!-- Specializations -->
         <section id="specializations" data-tabs="true" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
             <div class="container mx-auto px-4 py-16">
-                <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Specializations</h1>
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-800 dark:text-gray-200">
+                    Specializations
+                </h1>
 
-                <div class="flex flex-col lg:flex-row gap-12">
-
-                    <!-- LEFT RAIL -->
+                <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                    <!-- LEFT RAIL / Tablist -->
                     <nav class="lg:w-1/3" aria-label="Specializations">
-                        <ul class="space-y-2" role="tablist" aria-orientation="vertical">
-                            <li>
-                                <a id="tab-marketing" href="#" data-tab="marketing"
-                                    class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
-                                    role="tab" aria-selected="true" aria-controls="panel-marketing" tabindex="0">
-                                    MBA Marketing
-                                </a>
-                            </li>
+                        <!-- On small screens tabs are horizontal scrollable, on lg they are vertical -->
+                        <div class="overflow-x-auto lg:overflow-visible -mx-4 px-4 lg:px-0">
+                            <ul id="tabs" class="flex space-x-3 lg:flex-col lg:space-x-0 lg:space-y-2" role="tablist"
+                                aria-orientation="horizontal">
+                                <li class="flex-none lg:flex-auto">
+                                    <button id="tab-marketing" data-tab="marketing" role="tab"
+                                        aria-controls="panel-marketing" aria-selected="true" tabindex="0"
+                                        class="w-full text-left py-3 px-4 rounded-lg bg-[#D19A9A] text-gray-800 dark:text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D19A9A]">
+                                        MBA Marketing
+                                    </button>
+                                </li>
 
-                            <li>
-                                <a id="tab-hr" href="#" data-tab="hr"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-hr" tabindex="-1">
-                                    MBA Human Resource Management
-                                </a>
-                            </li>
+                                <li class="flex-none lg:flex-auto">
+                                    <button id="tab-hr" data-tab="hr" role="tab" aria-controls="panel-hr"
+                                        aria-selected="false" tabindex="-1"
+                                        class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                        MBA Human Resource Management
+                                    </button>
+                                </li>
 
-                            <li>
-                                <a id="tab-finance" href="#" data-tab="finance"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-finance" tabindex="-1">
-                                    MBA Finance
-                                </a>
-                            </li>
+                                <li class="flex-none lg:flex-auto">
+                                    <button id="tab-finance" data-tab="finance" role="tab" aria-controls="panel-finance"
+                                        aria-selected="false" tabindex="-1"
+                                        class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                        MBA Finance
+                                    </button>
+                                </li>
 
-                            <li>
-                                <a id="tab-operations" href="#" data-tab="operations"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-operations" tabindex="-1">
-                                    MBA Operations
-                                </a>
-                            </li>
+                                <li class="flex-none lg:flex-auto">
+                                    <button id="tab-operations" data-tab="operations" role="tab"
+                                        aria-controls="panel-operations" aria-selected="false" tabindex="-1"
+                                        class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                        MBA Operations & Supply Chain
+                                    </button>
+                                </li>
 
-                            <li>
-                                <a id="tab-analytics" href="#" data-tab="analytics"
-                                    class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                    role="tab" aria-selected="false" aria-controls="panel-analytics" tabindex="-1">
-                                    MBA Business Analytics
-                                </a>
-                            </li>
-
-
-                        </ul>
+                                <li class="flex-none lg:flex-auto">
+                                    <button id="tab-analytics" data-tab="analytics" role="tab"
+                                        aria-controls="panel-analytics" aria-selected="false" tabindex="-1"
+                                        class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                        MBA Business Analytics
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
 
                     <!-- RIGHT PANEL -->
-                    <article
-                        class="lg:w-2/3 lg:pl-12 lg:pr-24 lg:border-l border-gray-200 dark:border-gray-700 text-justify">
-
-
-
-                        <!-- MARKETING PANEL (default visible) -->
-                        <div id="panel-marketing" class="tab-panel" role="tabpanel" aria-labelledby="tab-marketing"
+                    <article class="lg:w-2/3 lg:pl-8 lg:pr-6 lg:border-l border-gray-200 dark:border-gray-700">
+                        <!-- Panels: keep them stacked; JS toggles hidden -->
+                        <section id="panel-marketing" class="tab-panel" role="tabpanel" aria-labelledby="tab-marketing"
                             aria-hidden="false">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Marketing</h2>
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">MBA Marketing</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
                                 Explore how brands are built, how customers make decisions, and how digital marketing
-                                works. This specialisation leads to careers in brand strategy, digital marketing,
+                                works. This specialization leads to careers in brand strategy, digital marketing,
                                 advertising, or starting your own marketing agency. You’ll learn how to create marketing
                                 plans that attract customers and build strong brands.
                             </p>
-                            <!-- <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a> -->
-                        </div>
+                        </section>
 
-                        <!-- HR -->
-                        <div id="panel-hr" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-hr"
+                        <section id="panel-hr" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-hr"
                             aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Human Resource Management</h2>
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">MBA Human Resource Management
+                            </h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Human Resource Management (HR)
                                 Learn how to hire the right people, help employees grow, and create a healthy workplace
-                                culture. This specialisation prepares you for careers in HR leadership, talent
-                                acquisition, employee development, or launching your own HR consulting firm. You’ll
-                                understand how to connect people strategies with business goals.
+                                culture. Prepares you for HR leadership, talent acquisition, employee development, and
+                                HR consulting.
                             </p>
-                        </div>
+                        </section>
 
-                        <!-- FINANCE -->
-                        <div id="panel-finance" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-finance"
-                            aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Finance</h2>
+                        <section id="panel-finance" class="tab-panel hidden" role="tabpanel"
+                            aria-labelledby="tab-finance" aria-hidden="true">
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">MBA Finance</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Build strong skills in managing money, studying investments, and understanding how
-                                companies make financial decisions. This specialisation prepares you for roles in
-                                investment banking, financial consulting, corporate finance, or even starting your own
-                                finance-related business. You’ll learn how to analyse numbers, make smart financial
-                                choices, and guide a company’s financial growth.
-
+                                Build skills in managing money, investments and company financial decisions. Ideal for
+                                investment banking, corporate finance, or financial consulting careers.
                             </p>
-                        </div>
+                        </section>
 
-                        <!-- OPERATIONS -->
-                        <div id="panel-operations" class="tab-panel hidden" role="tabpanel"
+                        <section id="panel-operations" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-operations" aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA
-                                Operations & Supply Chain</h2>
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">MBA Operations & Supply Chain
+                            </h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Learn how products are made, moved, and delivered efficiently. This specialisation
-                                prepares you for roles in operations management, supply chain planning, logistics, or
-                                starting your own consulting business. You’ll gain the skills to improve processes and
-                                manage daily business operations smoothly.
+                                Learn how products are made, moved and delivered efficiently. Prepares you for
+                                operations management, logistics, and supply chain planning roles.
                             </p>
-                        </div>
+                        </section>
 
-                        <!-- ANALYTICS -->
-                        <div id="panel-analytics" class="tab-panel hidden" role="tabpanel"
+                        <section id="panel-analytics" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-analytics" aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Business Analytics</h2>
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">MBA Business Analytics</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Develop the ability to understand data and use it to solve business problems. This
-                                specialisation is ideal for careers in business analysis, data analytics, data science,
-                                or building your own data-focused business. You’ll learn how to turn information into
-                                useful insights that support better decisions.
+                                Develop the ability to understand data and use it to solve business problems. Ideal for
+                                business analysis, data analytics, and data science careers.
                             </p>
-                        </div>
-
-                        <!-- ENTREPRENEURSHIP -->
-                        <!-- <div id="panel-entrepreneurship" class="tab-panel hidden" role="tabpanel"
-                            aria-labelledby="tab-entrepreneurship" aria-hidden="true">
-                            <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">MBA Entrepreneurship And Family Business
-                                Management</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                This specialisation focuses on venture creation, family business governance, scaling,
-                                fundraising and entrepreneurial finance. Practical learning through incubator projects,
-                                mentorship and industry connect prepares students to start or lead family-owned and
-                                entrepreneurial ventures.
-                            </p>
-                            <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                        </div> -->
-
+                        </section>
                     </article>
                 </div>
             </div>
+
 
             <!-- Single authoritative tab script -->
             <script>
@@ -1553,156 +1525,150 @@
 
             <!-- Admission details -->
             <section id="admissions" data-tabs="true" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
-                <div class="container mx-auto px-4 py-16">
-                    <h1 class="text-6xl font-bold mb-12 text-gray-800 dark:text-gray-200">Admission details</h1>
+           <!-- Admission details — responsive tabs (Tailwind + minimal JS) -->
+                <div class="container mx-auto px-4 py-12">
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-800 dark:text-gray-200">
+                        Admission details
+                    </h1>
 
-                    <div class="flex flex-col lg:flex-row gap-12">
-                        <!-- Left rail -->
+                    <div class="flex flex-col lg:flex-row gap-6 lg:gap-12">
+                        <!-- Left rail / tablist -->
                         <nav class="lg:w-1/3" aria-label="Admission tabs">
-                            <ul class="space-y-2">
+                            <div class="overflow-x-auto lg:overflow-visible -mx-4 px-4 lg:px-0">
+                                <ul id="admission-tabs" role="tablist" aria-orientation="horizontal"
+                                    class="flex space-x-3 lg:flex-col lg:space-x-0 lg:space-y-2">
+                                    <li class="flex-none lg:flex-auto">
+                                        <button id="tab-eligibility" data-tab="eligibility" role="tab"
+                                            aria-controls="panel-eligibility" aria-selected="true" tabindex="0"
+                                            class="w-full text-left py-3 px-4 rounded-lg bg-[#D19A9A] text-gray-800 dark:text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D19A9A]">
+                                            Eligibility Criteria
+                                        </button>
+                                    </li>
 
-                                <li>
-                                    <a href="#" data-tab="eligibility"
-                                        class="flex justify-between items-center py-3 px-4 bg-[#D19A9A] text-gray-800 dark:text-gray-900 rounded-lg"
-                                        role="tab" aria-selected="true">Eligibility Criteria</a>
-                                </li>
+                                    <li class="flex-none lg:flex-auto">
+                                        <button id="tab-selection" data-tab="selection" role="tab"
+                                            aria-controls="panel-selection" aria-selected="false" tabindex="-1"
+                                            class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                            Selection Criteria
+                                        </button>
+                                    </li>
 
-                                <li>
-                                    <a href="#" data-tab="selection"
-                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                        role="tab" aria-selected="false">Selection Criteria</a>
-                                </li>
+                                    <li class="flex-none lg:flex-auto">
+                                        <button id="tab-fees" data-tab="fees" role="tab" aria-controls="panel-fees"
+                                            aria-selected="false" tabindex="-1"
+                                            class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                            Fees
+                                        </button>
+                                    </li>
 
-                                <li>
-                                    <a href="#" data-tab="fees"
-                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                        role="tab" aria-selected="false">Fees </a>
-                                </li>
+                                    <li class="flex-none lg:flex-auto">
+                                        <button id="tab-duration" data-tab="duration" role="tab"
+                                            aria-controls="panel-duration" aria-selected="false" tabindex="-1"
+                                            class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                            Duration
+                                        </button>
+                                    </li>
 
-                                <li>
-                                    <a href="#" data-tab="duration"
-                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                        role="tab" aria-selected="false">Duration</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" data-tab="scholarships"
-                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                        role="tab" aria-selected="false">Scholarships</a>
-                                </li>
-
-                                <!-- <li>
-                                    <a href="#" data-tab="entrepreneurship"
-                                        class="block py-3 px-4 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                        role="tab" aria-selected="false">MBA Entrepreneurship And Family Business
-                                        Management</a>
-                                </li> -->
-
-                            </ul>
+                                    <li class="flex-none lg:flex-auto">
+                                        <button id="tab-scholarships" data-tab="scholarships" role="tab"
+                                            aria-controls="panel-scholarships" aria-selected="false" tabindex="-1"
+                                            class="w-full text-left py-3 px-4 rounded-lg border border-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300">
+                                            Scholarships
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </nav>
 
                         <!-- Detail panel -->
-                        <article class="lg:w-2/3 lg:pl-12 lg:border-l border-gray-200 dark:border-gray-700"
-                            role="tabpanel">
-                            <!-- ELIGIBILITY (default visible) -->
-                            <div id="panel-eligibility" class="tab-panel">
-                                <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Eligibility
-                                    Criteria
-                                </h2>
+                        <article class="lg:w-2/3 lg:pl-6 lg:border-l border-gray-200 dark:border-gray-700">
+                            <!-- ELIGIBILITY -->
+                            <section id="panel-eligibility" role="tabpanel" aria-labelledby="tab-eligibility"
+                                class="tab-panel">
+                                <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Eligibility Criteria</h2>
                                 <p class="text-gray-600 dark:text-gray-400 mb-4">
                                     Candidates must hold a 3- or 4-year undergraduate degree from a UGC-recognized
-                                    university. Minimum
-                                    aggregate marks of 50% (45% for reserved categories where applicable). Final year
-                                    students awaiting results
-                                    are eligible to apply subject to meeting the minimum criteria at the time of
-                                    admission.
+                                    university. Minimum aggregate marks of 50% (45% for reserved categories where
+                                    applicable). Final year students awaiting results are eligible to apply subject to
+                                    meeting the minimum criteria at the time of admission.
                                 </p>
-                                <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                                <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-7">
                                     <li>UG degree (3/4 years) from a recognized university.</li>
                                     <li>Minimum aggregate 50% (relaxation as per category rules).</li>
                                     <li>English as a subject in Class 10 or 12 preferred.</li>
                                 </ol>
                                 <a href="#" class="text-[#D19A9A] font-medium hover:underline">Read More</a>
-                            </div>
+                            </section>
 
                             <!-- SELECTION -->
-                            <div id="panel-selection" class="tab-panel hidden">
-                                <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Selection Criteria
-                                </h2>
-                                <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-8">
+                            <section id="panel-selection" role="tabpanel" aria-labelledby="tab-selection"
+                                class="tab-panel hidden" aria-hidden="true">
+                                <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Selection Criteria</h2>
+                                <ol class="text-gray-600 dark:text-gray-400 mb-4 list-decimal list-inside leading-7">
                                     <li>Minimum 50% aggregate in Graduation (3/4-year full-time degree in any stream
-                                        from
-                                        UGC-approved university; 55% for reserved Maharashtra category).</li>
+                                        from UGC-approved university; 55% for reserved Maharashtra category).</li>
                                     <li>Minimum 50% in Class 12 and Class 10 (English as a subject).</li>
                                     <li>Valid score in CAT, XAT, NMAT, GMAT, CMAT, MAH-CET, or MAT.</li>
                                     <li>Shortlisted candidates may be called for GD/PI as per programme rules.</li>
                                 </ol>
                                 <p class="text-gray-600 dark:text-gray-400 mb-6">
                                     Admissions are merit-driven using standardized test scores; additional weightage may
-                                    be
-                                    given for academic
-                                    performance, relevant work experience and performance in subsequent rounds where
-                                    applicable.
+                                    be given for academic performance, relevant work experience and performance in
+                                    subsequent rounds where applicable.
                                 </p>
-                            </div>
+                            </section>
 
                             <!-- FEES -->
-                            <div id="panel-fees" class="tab-panel hidden">
-                                <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Fees</h2>
+                            <section id="panel-fees" role="tabpanel" aria-labelledby="tab-fees" class="tab-panel hidden"
+                                aria-hidden="true">
+                                <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Fees</h2>
                                 <p class="text-gray-600 dark:text-gray-400 mb-4">
                                     Tuition and fees vary by campus and specialization. Typical full-time MBA tuition
-                                    ranges
-                                    are provided on the
-                                    official fee schedule. Fees can be paid semester-wise; scholarship awards will be
-                                    reflected in the invoice.
+                                    ranges are provided on the official fee schedule. Fees can be paid semester-wise;
+                                    scholarship awards will be reflected in the invoice.
                                 </p>
-                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-7 mb-4">
                                     <li>Application fee: as published for the intake.</li>
                                     <li>Tuition: Refer to campus-specific fee schedule.</li>
                                     <li>Payment plans and instalments available.</li>
                                 </ul>
-                                <!-- <a href="#" class="text-[#D19A9A] font-medium hover:underline">View fee schedule</a> -->
-                            </div>
+                            </section>
 
                             <!-- DURATION -->
-                            <div id="panel-duration" class="tab-panel hidden">
-                                <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Duration</h2>
+                            <section id="panel-duration" role="tabpanel" aria-labelledby="tab-duration"
+                                class="tab-panel hidden" aria-hidden="true">
+                                <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Duration</h2>
                                 <p class="text-gray-600 dark:text-gray-400 mb-4">
                                     The standard MBA programme duration is two academic years (four semesters) for
-                                    full-time
-                                    students. Certain
-                                    executive or part-time variants have different durations; please check the specific
-                                    programme page.
+                                    full-time students. Certain executive or part-time variants have different
+                                    durations; please check the specific programme page.
                                 </p>
-                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-7 mb-4">
                                     <li>Full-time MBA: 2 years (4 semesters).</li>
                                     <li>Executive/Part-time MBA: programme-specific durations.</li>
                                 </ul>
-                            </div>
+                            </section>
 
                             <!-- SCHOLARSHIPS -->
-                            <div id="panel-scholarships" class="tab-panel hidden">
-                                <h2 class="text-3xl font-bold mb-6 text-[#9D0A4F]">Scholarships</h2>
+                            <section id="panel-scholarships" role="tabpanel" aria-labelledby="tab-scholarships"
+                                class="tab-panel hidden" aria-hidden="true">
+                                <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Scholarships</h2>
                                 <p class="text-gray-600 dark:text-gray-400 mb-4">
                                     Scholarships are merit- and need-based. CUCET scholarships cover a range of awards
-                                    including partial tuition
-                                    waivers and full scholarships for exceptional candidates. Scholarship decisions are
-                                    made
-                                    after assessing
-                                    academic records and qualifying scores.
+                                    including partial tuition waivers and full scholarships for exceptional candidates.
+                                    Scholarship decisions are made after assessing academic records and qualifying
+                                    scores.
                                 </p>
-                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-8 mb-4">
+                                <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-7 mb-4">
                                     <li>Merit-based scholarships up to 100% for top performers.</li>
                                     <li>Special awards for candidate profiles matching industry needs.</li>
                                 </ul>
-                                <!-- <a href="#" class="text-[#D19A9A] font-medium hover:underline">Scholarship details</a> -->
-                            </div>
-
-                            <!-- ENTREPRENEURSHIP -->
-
+                            </section>
                         </article>
                     </div>
                 </div>
+
 
                 <!-- script: toggles panels and active tab styling (default: eligibility) -->
                 <script>
