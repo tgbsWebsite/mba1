@@ -9,7 +9,7 @@
     <title>Header</title>
 
     <!-- Tailwind and fonts -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script> 
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Roboto -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Material Icons -->
@@ -394,61 +394,64 @@
     <div class="min-h-screen flex flex-col">
         <header class="bg-white dark:bg-gray-900/50 backdrop-blur-sm fixed top-0 left-0 w-full z-50 shadow-sm">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="flex items-center justify-between h-20">
+                <!-- top row: flexible and responsive -->
+                <div class="flex items-center justify-between py-3 sm:py-4">
 
-                    <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <!-- responsive logo height: mobile smaller, desktop as before -->
-                        <img alt="MBA logo" class="h-10 sm:h-12 md:h-14 lg:h-18" src="./logo.webp" />
+                    <!-- left side: logo -->
+                    <div class="flex items-center flex-shrink-0">
+                        <a href="/" class="flex items-center">
+                            <!-- mobile larger, keep smaller on sm+ -->
+                            <img alt="MBA logo" src="./logo.webp"
+                                class="block h-16 sm:h-12 md:h-14 lg:h-18 object-contain" />
+                        </a>
                     </div>
 
-                    <!-- Desktop nav + icons (visible md+) -->
-                    <div class="hidden md:flex items-center space-x-8 w-full">
-                        <nav class="flex-1 flex justify-center items-center space-x-8">
-                            <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="#tcet-mba">WHY MBA</a>
-                            <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="#welcome">ABOUT US</a>
-                            <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="#specializations">SPECIALIZATIONS</a>
-                            <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="#">HOW TO APPLY</a>
-                            <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="#admission">ADMISSIONS DETAILS</a>
-                            <a class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                                href="#">CONTACT US</a>
-                        </nav>
+                    <!-- center nav (desktop only) -->
+                    <nav class="hidden md:flex flex-1 justify-center items-center space-x-6">
+                        <a href="#tcet-mba"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">WHY
+                            MBA</a>
+                        <a href="#welcome"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">ABOUT
+                            US</a>
+                        <a href="#specializations"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">SPECIALIZATIONS</a>
+                        <a href="#apply"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">HOW
+                            TO APPLY</a>
+                        <a href="#admission"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">ADMISSIONS</a>
+                        <a href="#contact"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">CONTACT</a>
+                    </nav>
 
-                        <!-- Social Icons -->
-                        <div class="flex items-center space-x-4 pl-8">
-                            <a href="tel:+91XXXXXXXXXX" class="transition duration-200 hover:opacity-80"
-                                aria-label="Call">
-                                <img src="./phone.webp" class="w-6 h-6 object-contain" />
+                    <!-- right controls -->
+                    <div class="flex items-center space-x-3">
+                        <!-- desktop icons -->
+                        <div class="hidden md:flex items-center space-x-4">
+                            <a href="tel:+91XXXXXXXXXX" aria-label="Call" class="transition-opacity hover:opacity-80">
+                                <img src="./phone.webp" class="w-6 h-6 object-contain" alt="call icon" />
                             </a>
-                            <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
-                                class="transition duration-200 hover:opacity-80" aria-label="WhatsApp">
-                                <img src="./whatsapp.webp" class="w-6 h-6 object-contain" />
+                            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" aria-label="WhatsApp"
+                                class="transition-opacity hover:opacity-80">
+                                <img src="./whatsapp.webp" class="w-6 h-6 object-contain" alt="whatsapp icon" />
                             </a>
-                            <a href="mailto:example@college.edu" class="transition duration-200 hover:opacity-80"
-                                aria-label="Email">
-                                <img src="./mail.webp" class="w-6 h-6 object-contain" />
+                            <a href="mailto:example@college.edu" aria-label="Email"
+                                class="transition-opacity hover:opacity-80">
+                                <img src="./mail.webp" class="w-6 h-6 object-contain" alt="email icon" />
                             </a>
                         </div>
-                    </div>
 
-                    <!-- Mobile controls (visible below md) -->
-                    <div class="flex items-center md:hidden">
-                        <!-- optional small contact icon on mobile -->
-                        <a href="tel:+91XXXXXXXXXX" class="mr-3 transition duration-200 hover:opacity-80"
+                        <!-- mobile: phone icon then hamburger -->
+                        <a href="tel:+91XXXXXXXXXX" class="md:hidden mr-2 transition-opacity hover:opacity-80"
                             aria-label="Call">
-                            <img src="./phone.webp" class="w-6 h-6 object-contain" />
+                            <img src="./phone.webp" class="w-6 h-6 object-contain" alt="call icon" />
                         </a>
 
-                        <!-- hamburger button -->
-                        <button id="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false"
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary transition">
+                        <button id="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-nav"
+                            class="inline-flex md:hidden items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary transition">
                             <span class="sr-only">Open main menu</span>
-                            <!-- hamburger icon -->
+                            <!-- hamburger -->
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -456,44 +459,45 @@
                             </svg>
                         </button>
                     </div>
-
                 </div>
             </div>
 
             <!-- Mobile menu (hidden on md+) -->
             <div id="mobile-nav" class="md:hidden hidden">
-                <div class="px-4 pt-4 pb-6 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900/60">
-                    <nav class="space-y-3">
-                        <a class="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition"
-                            href="#tcet-mba">WHY MBA</a>
-                        <a class="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition"
-                            href="#welcome">ABOUT US</a>
-                        <a class="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition"
-                            href="#specializations">SPECIALIZATIONS</a>
-                        <a class="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition"
-                            href="#">HOW TO APPLY</a>
-                        <a class="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition"
-                            href="#admission">ADMISSIONS DETAILS</a>
-                        <a class="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition"
-                            href="#">CONTACT US</a>
+                <div
+                    class="px-4 pb-6 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900/90 backdrop-blur-sm">
+                    <nav class="space-y-2 pt-4">
+                        <a href="#tcet-mba"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">WHY
+                            MBA</a>
+                        <a href="#welcome"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">ABOUT
+                            US</a>
+                        <a href="#specializations"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">SPECIALIZATIONS</a>
+                        <a href="#apply"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">HOW
+                            TO APPLY</a>
+                        <a href="#admission"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">ADMISSIONS</a>
+                        <a href="#contact"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">CONTACT</a>
                     </nav>
 
-                    <div
-                        class="mt-4 border-t border-gray-100 dark:border-gray-800 pt-4 flex items-center justify-start space-x-4">
+                    <!-- contact shortcuts -->
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center space-x-4">
                         <a href="tel:+91XXXXXXXXXX"
-                            class="transition duration-200 hover:opacity-80 flex items-center text-gray-700 dark:text-gray-200"
-                            aria-label="Call">
-                            <img src="./phone.webp" class="w-5 h-5 object-contain mr-2" /> Call
+                            class="flex items-center text-gray-700 dark:text-gray-200 hover:text-primary">
+                            <img src="./phone.webp" class="w-5 h-5 object-contain mr-2" alt="call icon" /> Call
                         </a>
                         <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
-                            class="transition duration-200 hover:opacity-80 flex items-center text-gray-700 dark:text-gray-200"
-                            aria-label="WhatsApp">
-                            <img src="./whatsapp.webp" class="w-5 h-5 object-contain mr-2" /> WhatsApp
+                            class="flex items-center text-gray-700 dark:text-gray-200 hover:text-primary">
+                            <img src="./whatsapp.webp" class="w-5 h-5 object-contain mr-2" alt="whatsapp icon" />
+                            WhatsApp
                         </a>
                         <a href="mailto:example@college.edu"
-                            class="transition duration-200 hover:opacity-80 flex items-center text-gray-700 dark:text-gray-200"
-                            aria-label="Email">
-                            <img src="./mail.webp" class="w-5 h-5 object-contain mr-2" /> Email
+                            class="flex items-center text-gray-700 dark:text-gray-200 hover:text-primary">
+                            <img src="./mail.webp" class="w-5 h-5 object-contain mr-2" alt="email icon" /> Email
                         </a>
                     </div>
                 </div>
@@ -505,13 +509,17 @@
                     var menu = document.getElementById('mobile-nav');
                     if (!btn || !menu) return;
 
-                    btn.addEventListener('click', function () {
+                    btn.addEventListener('click', function (e) {
                         var expanded = btn.getAttribute('aria-expanded') === 'true';
                         btn.setAttribute('aria-expanded', String(!expanded));
                         menu.classList.toggle('hidden');
+                        // simple animation class (optional)
+                        if (!menu.classList.contains('hidden')) {
+                            menu.style.animation = 'slideDown 220ms ease forwards';
+                        }
                     });
 
-                    // close mobile menu when clicking outside
+                    // close on outside click
                     document.addEventListener('click', function (ev) {
                         var target = ev.target;
                         if (!menu.classList.contains('hidden') && !menu.contains(target) && !btn.contains(target)) {
@@ -519,18 +527,41 @@
                             btn.setAttribute('aria-expanded', 'false');
                         }
                     });
+
+                    // keyboard: Esc closes menu
+                    document.addEventListener('keydown', function (ev) {
+                        if (ev.key === 'Escape' && !menu.classList.contains('hidden')) {
+                            menu.classList.add('hidden');
+                            btn.setAttribute('aria-expanded', 'false');
+                        }
+                    });
                 }());
             </script>
+
+            <style>
+                /* small slide animation for mobile menu (optional) */
+                @keyframes slideDown {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-6px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            </style>
         </header>
+
 
 
         <main id="mba-form" class="min-h-screen flex flex-col">
             <div class="flex-grow">
-               <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-12
- sm:pt-12 md:pt-20">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-12 md:pt-20">
 
 
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 items-start mt-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-10 items-start mt-10">
 
 
 
@@ -644,7 +675,10 @@
             <div class="mt-6 mx-auto w-24 h-1.5  bg-[#9D0A4F] rounded-full"></div>
 
             <p class="mt-8 text-lg leading-8 text-text-paragraph-light dark:text-text-paragraph-dark text-justify">
-               Thakur Global Business School (TGBS), managed by Zagdusingh Charitable Trust. Post Graduate Diploma in Management (PGDM) is TGBS's 2-year flagship program approved by AICTE, DTE & Govt. of Maharashtra. It is designed to impart learners from diverse backgrounds to mould them into mindful leaders ready to take on the challenges in the VUCA world and manage in a global dimension.
+                Thakur Global Business School (TGBS), managed by Zagdusingh Charitable Trust. Post Graduate Diploma in
+                Management (PGDM) is TGBS's 2-year flagship program approved by AICTE, DTE & Govt. of Maharashtra. It is
+                designed to impart learners from diverse backgrounds to mould them into mindful leaders ready to take on
+                the challenges in the VUCA world and manage in a global dimension.
             </p>
         </div>
     </section>
@@ -677,8 +711,10 @@
                             <div class="text-center md:text-left">
                                 <h2 class="text-3xl font-bold text-gray-900">Vision</h2>
                                 <p class="mt-2 text-base text-gray-700 text-justify">
-                                   To emerge as an institution renowned for imparting global management education to excel as mindful leaders.
+                                    To emerge as an institution renowned for imparting global management education to
+                                    excel as mindful leaders.
                                 </p>
+
                             </div>
 
                         </div>
@@ -703,20 +739,22 @@
                     </div>
 
                     <!-- TEXT -->
-                    <div class="text-center md:text-right px-4 md:px-0">
+                    <div class="px-4 md:px-0 text-center md:text-right">
 
-                        <h2 class="text-3xl font-bold text-text-light dark:text-text-dark text-center md:text-right">
+                        <h2 class="text-3xl font-bold text-text-light dark:text-text-dark">
                             Mission
                         </h2>
 
-                        <p class="mt-2 text-base text-subtext-light dark:text-subtext-dark
-        max-w-[320px] mx-auto md:max-w-xl md:ml-auto
-        text-justify md:text-right leading-relaxed">
-                             To provide holistic education for students by imbibing self-management to bring in social transformation.
-                             To develop the capability of continuous learning, innovative business practices with ethical values
+                        <p class="mt-3 text-base text-subtext-light dark:text-subtext-dark 
+               max-w-2xl mx-auto md:ml-auto leading-relaxed text-center md:text-right text-justify">
+                            To provide holistic education for students by imbibing self-management to bring in social
+                            transformation. To develop the capability of continuous learning, innovative business
+                            practices with ethical
+                            values.
                         </p>
 
                     </div>
+
 
 
 
@@ -738,32 +776,32 @@
                 <div class="lg:w-1/2 relative h-auto lg:h-full">
 
                     <!-- MOBILE/TABLET IMAGE (visible only below lg) -->
-   <div class="block lg:hidden relative w-full">
+                    <div class="block lg:hidden relative w-full">
 
-    <!-- smaller height ONLY on mobile -->
-    <img src="./Girl in pink suit (1).png" alt="MBA Programme Image"
-        class="w-full h-[40vh] object-contain object-bottom bg-white" />
+                        <!-- smaller height ONLY on mobile -->
+                        <img src="./Girl in pink suit (1).png" alt="MBA Programme Image"
+                            class="w-full h-[40vh] object-contain object-bottom bg-white" />
 
-    <!-- overlay -->
-    <div class="absolute bottom-0 left-0 w-full 
+                        <!-- overlay -->
+                        <div class="absolute bottom-0 left-0 w-full 
                 px-4 py-6   /* smaller padding for mobile */
                 sm:px-6 sm:py-8 
                 bg-gradient-to-t from-black/70 via-black/40 to-transparent">
 
-        <!-- smaller title ONLY on mobile -->
-        <h1 class="text-2xl font-bold text-white drop-shadow-lg
+                            <!-- smaller title ONLY on mobile -->
+                            <h1 class="text-2xl font-bold text-white drop-shadow-lg
                    sm:text-3xl">
-            MBA Programme
-        </h1>
+                                MBA Programme
+                            </h1>
 
-        <!-- smaller subtitle ONLY on mobile -->
-        <p class="mt-1 text-sm text-white drop-shadow-lg
+                            <!-- smaller subtitle ONLY on mobile -->
+                            <p class="mt-1 text-sm text-white drop-shadow-lg
                   sm:text-base">
-            Your gateway to transformative business leadership.
-        </p>
+                                Your gateway to transformative business leadership.
+                            </p>
 
-    </div>
-</div>
+                        </div>
+                    </div>
 
 
 
@@ -2313,81 +2351,87 @@
 
 
         <!-- Managerial Program Section -->
-<div class="relative py-10 sm:py-14 md:py-16 flex items-center justify-center bg-[#fdf8fa]">
+        <div class="relative py-10 sm:py-14 md:py-16 flex items-center justify-center bg-[#fdf8fa]">
 
-  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
+            <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-32 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-32 items-center">
 
-      <!-- LEFT TEXT -->
-      <div class="text-center lg:text-left">
-        <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-dark dark:text-white leading-snug">
-          Aspiring to become a top-class manager with a
-          <span class="text-pink">world-class management degree?</span>
-        </h1>
+                    <!-- LEFT TEXT -->
+                    <div class="text-center lg:text-left">
+                        <h1
+                            class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-dark dark:text-white leading-snug">
+                            Aspiring to become a top-class manager with a
+                            <span class="text-pink">world-class management degree?</span>
+                        </h1>
 
-        <p class="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0">
-          Join a community of future leaders and take the next step into a world of ideas,
-          opportunities and growth at TCET Deemed to be University.
-        </p>
-      </div>
+                        <p
+                            class="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto lg:mx-0">
+                            Join a community of future leaders and take the next step into a world of ideas,
+                            opportunities and growth at TCET Deemed to be University.
+                        </p>
+                    </div>
 
-      <!-- RIGHT FORM CARD -->
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-6 sm:p-8 lg:p-12 w-full max-w-sm sm:max-w-md mx-auto lg:mx-0"
-           id="enrollment-form">
+                    <!-- RIGHT FORM CARD -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-6 sm:p-8 lg:p-12 w-full max-w-sm sm:max-w-md mx-auto lg:mx-0"
+                        id="enrollment-form">
 
-        <div id="form-content">
-          <div class="step-transition" id="step-1">
+                        <div id="form-content">
+                            <div class="step-transition" id="step-1">
 
-            <h2 class="text-xl sm:text-2xl font-bold text-primary">Join Our Program</h2>
-            <p class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
-              Answer a few quick questions to get started on your journey.
-            </p>
+                                <h2 class="text-xl sm:text-2xl font-bold text-primary">Join Our Program</h2>
+                                <p class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                                    Answer a few quick questions to get started on your journey.
+                                </p>
 
-            <a href="#mba-form" id="start-btn"
-               class="mt-6 sm:mt-8 w-full bg-primary text-white font-semibold py-2.5 sm:py-3 px-5 rounded-lg
+                                <a href="#mba-form" id="start-btn" class="mt-6 sm:mt-8 w-full bg-primary text-white font-semibold py-2.5 sm:py-3 px-5 rounded-lg
                       hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
                       dark:focus:ring-offset-gray-800 transition-all duration-300 flex items-center justify-center">
-              Let's Begin
-              <img src="./right.svg" class="w-5 h-5 sm:w-6 sm:h-6 ml-2" alt="">
-            </a>
+                                    Let's Begin
+                                    <img src="./right.svg" class="w-5 h-5 sm:w-6 sm:h-6 ml-2" alt="">
+                                </a>
 
-            <!-- Smooth scrolling CSS -->
-            <style>
-              html { scroll-behavior: smooth; }
-              #mba-form { scroll-margin-top: 5.5rem; }
-            </style>
+                                <!-- Smooth scrolling CSS -->
+                                <style>
+                                    html {
+                                        scroll-behavior: smooth;
+                                    }
 
-            <!-- JS fallback (unchanged) -->
-            <script>
-              (function () {
-                var anchor = document.getElementById('start-btn');
-                if (!anchor) return;
+                                    #mba-form {
+                                        scroll-margin-top: 5.5rem;
+                                    }
+                                </style>
 
-                anchor.addEventListener('click', function (e) {
-                  if (e.metaKey || e.ctrlKey || e.button === 1) return;
+                                <!-- JS fallback (unchanged) -->
+                                <script>
+                                    (function () {
+                                        var anchor = document.getElementById('start-btn');
+                                        if (!anchor) return;
 
-                  e.preventDefault();
-                  var target = document.querySelector('#mba-form');
-                  if (!target) return;
+                                        anchor.addEventListener('click', function (e) {
+                                            if (e.metaKey || e.ctrlKey || e.button === 1) return;
 
-                  var header = document.querySelector('header');
-                  var headerHeight = header ? header.getBoundingClientRect().height : 0;
+                                            e.preventDefault();
+                                            var target = document.querySelector('#mba-form');
+                                            if (!target) return;
 
-                  var rect = target.getBoundingClientRect();
-                  var targetY = window.scrollY + rect.top - headerHeight - 16;
-                  window.scrollTo({ top: Math.max(0, Math.round(targetY)), behavior: 'smooth' });
-                });
-              }());
-            </script>
+                                            var header = document.querySelector('header');
+                                            var headerHeight = header ? header.getBoundingClientRect().height : 0;
 
-          </div>
+                                            var rect = target.getBoundingClientRect();
+                                            var targetY = window.scrollY + rect.top - headerHeight - 16;
+                                            window.scrollTo({ top: Math.max(0, Math.round(targetY)), behavior: 'smooth' });
+                                        });
+                                    }());
+                                </script>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
