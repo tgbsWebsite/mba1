@@ -398,33 +398,35 @@
         <header class="bg-white dark:bg-gray-900/50 backdrop-blur-sm fixed top-0 left-0 w-full z-50 shadow-sm">
             <div class="container mx-auto px-4 sm:px-6">
                 <!-- top row: flexible and responsive -->
-                <div class="flex items-center justify-between py-3 sm:py-4">
+                <div class="flex items-center justify-between py-1 sm:py-2">
+
 
                     <!-- left side: logo -->
                     <div class="flex items-center flex-shrink-0">
                         <a href="/" class="flex items-center">
-                            <!-- mobile larger, keep smaller on sm+ -->
                             <img alt="PGDM logo" src="./Images/Icons/logo.webp"
-                                class="block h-16 sm:h-12 md:h-14 lg:h-18 object-contain" />
+                                class="block h-22 sm:h-18 md:h-20 lg:h-22 object-contain" />
+
                         </a>
                     </div>
 
                     <!-- center nav (desktop only) -->
-                    <nav class="hidden md:flex flex-1 justify-center items-center space-x-6">
+                    <nav class="hidden md:flex flex-1 justify-center items-center space-x-6 ml-17">
+
                         <a href="#TGBS-PGDM"
                             class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">WHY
                             PGDM</a>
                         <a href="#welcome"
                             class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">ABOUT
                             US</a>
-                        <a href="#specializations"
-                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">SPECIALIZATIONS</a>
+                        <a href="#specialisation"
+                            class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">SPECIALISATIONS</a>
                         <a href="#apply"
                             class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">HOW
                             TO APPLY</a>
                         <a href="#admission"
                             class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">ADMISSIONS</a>
-                        <a href="#contact"
+                        <a href="#footer"
                             class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">CONTACT</a>
                     </nav>
 
@@ -449,10 +451,10 @@
 
 
                         <!-- mobile: phone icon then hamburger -->
-                        <a href="tel:+91XXXXXXXXXX" class="md:hidden mr-2 transition-opacity hover:opacity-80"
+                        <!-- <a href="tel:+91XXXXXXXXXX" class="md:hidden mr-2 transition-opacity hover:opacity-80"
                             aria-label="Call">
-                            <img src="./phone.webp" class="w-6 h-6 object-contain" alt="call icon" />
-                        </a>
+                            <img src="./Images/Icons/phone.webp" class="w-6 h-6 object-contain" alt="call icon" />
+                        </a> -->
 
                         <button id="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-nav"
                             class="inline-flex md:hidden items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary transition">
@@ -477,14 +479,14 @@
                         <a href="#welcome"
                             class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">ABOUT
                             US</a>
-                        <a href="#specializations"
-                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">SPECIALIZATIONS</a>
+                        <a href="#specialisation"
+                            class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">SPECIALISATIONS</a>
                         <a href="#apply"
                             class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">HOW
                             TO APPLY</a>
                         <a href="#admission"
                             class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">ADMISSIONS</a>
-                        <a href="#contact"
+                        <a href="#footer"
                             class="block px-2 py-2 rounded text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">CONTACT</a>
                     </nav>
 
@@ -492,17 +494,20 @@
                     <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center space-x-4">
                         <a href="tel:+919920214191"
                             class="flex items-center text-gray-700 dark:text-gray-200 hover:text-primary">
-                            <img src="./phone.webp" class="w-5 h-5 object-contain mr-2" alt="call icon" /> Call
+                            <img src="./Images/Icons/phone.webp" class="w-5 h-5 object-contain mr-2" alt="call icon" />
+                            Call
                         </a>
                         <a href="https://wa.me/919920214191?text=I%20have%20queries%20regarding%20admissions.%20Can%20you%20help%20me%20out?%20"
                             target="_blank"
                             class="flex items-center text-gray-700 dark:text-gray-200 hover:text-primary">
-                            <img src="./whatsapp.webp" class="w-5 h-5 object-contain mr-2" alt="whatsapp icon" />
+                            <img src="./Images/Icons/whatsapp.webp" class="w-5 h-5 object-contain mr-2"
+                                alt="whatsapp icon" />
                             WhatsApp
                         </a>
                         <a href="mailto:tgbs@thakureducation.org"
                             class="flex items-center text-gray-700 dark:text-gray-200 hover:text-primary">
-                            <img src="./mail.webp" class="w-5 h-5 object-contain mr-2" alt="email icon" /> Email
+                            <img src="./Images/Icons/mail.webp" class="w-5 h-5 object-contain mr-2" alt="email icon" />
+                            Email
                         </a>
                     </div>
                 </div>
@@ -582,21 +587,35 @@
 
 
                                 <h2
-                                    class="text-center sm:text-left font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 dark:text-gray-300 mt-3">
+                                    class="text-center sm:text-left font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 dark:text-gray-300 mt-3 pb-6">
                                     Join India’s Top PGDM Programme
                                 </h2>
 
 
-                                <p
-                                    class="text-center sm:text-left mt-6 sm:mt-8 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-lg">
-                                    Learn from Industry Experts<br />
-                                    Enhance Strategic Skills<br />
-                                    Expand Your Global Horizons
-                                </p>
-
 
                                 <div
-                                    class="max-w-7xl mx-auto px-0 sm:px-1 lg:px-2 pt-14 sm:pt-10 md:pt-12 pb-10 sm:pb-16">
+                                    class="border border-gray-200 dark:border-gray-700 rounded-lg p-6 w-full sm:w-4/6 md:w-3/6">
+
+                                    <ul class="space-y-4 text-base sm:text-lg text-gray-800 dark:text-gray-200">
+                                        <li class="flex items-center whitespace-nowrap">
+                                            <span class="material-icons text-lime-500 mr-3">check_circle</span>
+                                            Learn from Industry Experts
+                                        </li>
+                                        <li class="flex items-center whitespace-nowrap">
+                                            <span class="material-icons text-lime-500 mr-3">check_circle</span>
+                                            Enhance Strategic Skills
+                                        </li>
+                                        <li class="flex items-center whitespace-nowrap">
+                                            <span class="material-icons text-lime-500 mr-3">check_circle</span>
+                                            Expand Your Global Horizons
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="max-w-7xl mx-auto px-0 sm:px-1 lg:px-2 pt-8 sm:pt-6 md:pt-8 pb-10 sm:pb-16
+">
 
 
                                     <div
@@ -628,14 +647,14 @@
                             </div>
 
                             <!-- DECOR IMAGE -->
-                     <div
-    class="absolute bottom-[-60px] sm:bottom-[-80px] md:bottom-[-100px]
-           right-[-100px] sm:right-[-140px] md:right-[-200px] lg:right-[-180px]
+                            <div class="absolute bottom-[-40px] lg:bottom-[-50px]
+           right-[-100px] sm:right-[-140px] md:right-[-200px] lg:right-[-170px]
            hidden lg:block z-[-1]">
 
-    <img alt="student" class="max-w-lg xl:max-w-xl"
-        src="./Images/Icons/freepik_br_48143541-294c-4fae-b087-d50803b03e3d.png" />
-</div>
+                                <img alt="student" class="max-w-lg xl:max-w-xl"
+                                    src="./Images/Icons/freepik_br_48143541-294c-4fae-b087-d50803b03e3d copy.png" />
+                            </div>
+
 
 
 
@@ -698,6 +717,13 @@
                                 s.src = "https://widgets.in8.nopaperforms.com/emwgts.js";
                                 document.body.appendChild(s);
                             </script>
+
+                            <script>
+    document.addEventListener("npf.form.submit.success", function () {
+        window.location.href = "ThankYou.html"; 
+    });
+</script>
+
                         </div>
 
                     </div>
@@ -1278,8 +1304,11 @@
                     <div class="mt-4 flex justify-center">
                         <div class="h-1.5 w-24 bg-[#9D0A4F] rounded-full mx-auto"></div>
                     </div>
-                    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
-                        We are proud to partner with a diverse range of leading companies who trust our talent.
+                    <p class="mt-6 max-w-4xl mx-auto text-lg text-gray-600 dark:text-gray-400 text-justify">
+
+                        We are proud to partner with a diverse range of leading companies who place their trust in our
+                        talent. By leveraging deep industry insight, rigorous assessment, and a bespoke approach, we
+                        facilitate connections that drive organisational success and empower individual growth.
                     </p>
                 </div>
 
@@ -1492,15 +1521,15 @@
 
         <!-- Merged Specializations section directly below -->
         <!-- Specializations -->
-        <section id="specializations" data-tabs="true" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
+        <section id="specialisation" data-tabs="true" class="bg-white dark:bg-[#1A1A1A] text-black dark:text-white">
             <div class="container mx-auto px-4 py-16">
                 <h1
                     class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-800 dark:text-gray-200">
-                    Specializations
+                    Specialisation
                 </h1>
 
                 <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                    <nav class="lg:w-1/3  pb-2" aria-label="Specializations">
+                    <nav class="lg:w-1/3  pb-2" aria-label="Specialisation">
                         <div class="px-0">
                             <ul id="tabs" class="flex flex-col space-y-2" role="tablist" aria-orientation="vertical">
 
@@ -1525,7 +1554,7 @@
                                     <button id="tab-operations" data-tab="operations" role="tab"
                                         aria-controls="panel-operations" aria-selected="false" tabindex="-1"
                                         class="w-full text-left py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 border-b border-gray-300 dark:border-gray-700">
-                                        PGDM Operations & Supply Chain
+                                        PGDM Operations
                                     </button>
                                 </li>
 
@@ -1555,11 +1584,79 @@
                             aria-hidden="false">
                             <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">PGDM Marketing</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Explore how brands are built, how customers make decisions, and how digital marketing
-                                works. This specialization leads to careers in brand strategy, digital marketing,
-                                advertising, or starting your own marketing agency. You’ll learn how to create marketing
-                                plans that attract customers and build strong brands.
+                                Dive into digital marketing, brand management, and consumer behaviour. Understand markets through research, analytics, and strategy to influence brand decisions and drive value creation.
                             </p>
+                            <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-left border-collapse border border-slate-200 dark:border-slate-700">
+                                        <tbody>
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top w-40 border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Overview:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Services Marketing</li>
+                                                        <li>Product & Brand Management</li>
+                                                        <li>Sales Management</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 3):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Retail & Distribution Management</li>
+                                                        <li>International Marketing</li>
+                                                        <li>Integrated Marketing Communication</li>
+                                                        <li>Consumer Behaviour</li>
+                                                        <li>Rural Marketing</li>
+                                                        <li>Media Planning & Management</li>
+                                                        <li>Marketing of Financial Products & Services</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Advanced Semester III:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Digital Marketing</li>
+                                                        <li>Marketing Decision Strategies & Models</li>
+                                                        <li>Market Analytics</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 2):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Customer Relationship Management</li>
+                                                        <li>B2B Marketing</li>
+                                                        <li>Luxury Marketing</li>
+                                                        <li>Consultancy Management</li>
+                                                        <li>Real Estate Management</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="panel-hr" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-hr"
@@ -1568,40 +1665,294 @@
                                 Management
                             </h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Learn how to hire the right people, help employees grow, and create a healthy workplace
-                                culture. Prepares you for HR leadership, talent acquisition, employee development, and
-                                HR consulting.
+                                Master talent management and strategic HRM. Gain insights into workforce dynamics,
+                                organisational behaviour, and leadership to effectively manage and develop human
+                                capital.
                             </p>
+                            <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-left border-collapse border border-slate-200 dark:border-slate-700">
+                                        <tbody>
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top w-40 border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Overview:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Human Resource Management</li>
+                                                        <li>Compensation & Benefits</li>
+                                                        <li>Organisation Development & Change Management</li>
+                                                        <li>Organisational Theory & Practice</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 3):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Human Resource Audit</li>
+                                                        <li>Industrial Psychology</li>
+                                                        <li>Employer Branding</li>
+                                                        <li>Diversity & Inclusion in HR</li>
+                                                        <li>Conflict Management & Resolution</li>
+                                                        <li>Learning & Development</li>
+                                                        <li>Employee Engagement</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Advanced Semester III:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Labour Laws & Industrial Relations</li>
+                                                        <li>Competency & Performance Management</li>
+                                                        <li>Strategic & Global HR Management</li>
+                                                        <li>Talent Management & Development</li>
+                                                        <li>HR Planning & Development</li>
+                                                        <li>Human Resource Information System</li>
+                                                        <li>Generative AI in HR</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+
+                                    </table>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="panel-finance" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-finance" aria-hidden="true">
                             <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">PGDM Finance</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Build skills in managing money, investments and company financial decisions. Ideal for
-                                investment banking, corporate finance, or financial consulting careers.
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                             Specialise in financial management, investment analysis, and corporate finance. Develop analytical and quantitative skills to understand complex financial systems, instruments, and decision-making frameworks.
                             </p>
+                            </p>
+                            <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-left border-collapse border border-slate-200 dark:border-slate-700">
+                                        <tbody>
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top w-40 border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Overview:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Financial Statement Analysis</li>
+                                                        <li>Financial Markets, Services & Institutions</li>
+                                                        <li>Financial Management</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 3):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Alternative Investment</li>
+                                                        <li>International Finance</li>
+                                                        <li>Financial Derivatives</li>
+                                                        <li>Management of Banks</li>
+                                                        <li>Rural & Micro Finance</li>
+                                                        <li>Blockchain & FinTech</li>
+                                                        <li>Marketing of Financial Services</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Advanced Semester III:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Corporate Valuation & Restructuring</li>
+                                                        <li>Security Analysis & Portfolio Management</li>
+                                                        <li>Financial Analytics</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 2):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Project Finance in Emerging Economies</li>
+                                                        <li>Commodities Market</li>
+                                                        <li>Behavioural Finance & Fixed Income Securities</li>
+                                                        <li>Financial Risk Management</li>
+                                                        <li>Econometrics for Finance</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="panel-operations" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-operations" aria-hidden="true">
-                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">PGDM Operations & Supply
-                                Chain
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">PGDM Operations
                             </h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Learn how products are made, moved and delivered efficiently. Prepares you for
-                                operations management, logistics, and supply chain planning roles.
+                                Refine your skills in supply chain management and logistics. Learn to optimise
+                                operations, improve processes, and integrate technology to enhance organisational
+                                efficiency.
                             </p>
+                            <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-left border-collapse border border-slate-200 dark:border-slate-700">
+                                        <tbody>
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top w-40 border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Overview:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Logistics & Supply Chain Management</li>
+                                                        <li>Enterprise Resource Planning</li>
+                                                        <li>Six Sigma, Quality & Maintenance Management</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 3):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Service Operations Management</li>
+                                                        <li>Strategic Sourcing & Procurement Management</li>
+                                                        <li>Operational Effectiveness</li>
+                                                        <li>Techno Business</li>
+                                                        <li>New Product Development</li>
+                                                        <li>World Class Manufacturing</li>
+                                                        <li>E-Commerce</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Advanced Semester III:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Operations Strategy</li>
+                                                        <li>Project Management</li>
+                                                        <li>Supply Chain Analytics</li>
+                                                        <li>Supply Chain Digital Transformation</li>
+                                                        <li>Benchmarking & Business Process Design</li>
+                                                        <li>Logistics Policies & Supply Chain Finance</li>
+                                                        <li>Revenue Analytics in Operations</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+
+
+                                    </table>
+                                </div>
+                            </div>
                         </section>
 
                         <section id="panel-analytics" class="tab-panel hidden" role="tabpanel"
                             aria-labelledby="tab-analytics" aria-hidden="true">
                             <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">PGDM Business Analytics
                             </h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                Develop the ability to understand data and use it to solve business problems. Ideal for
-                                business analysis, data analytics, and data science careers.
+                           <p class="text-gray-600 dark:text-gray-400 mb-4">
+                               Curious? Details are on the way
                             </p>
+                            <!-- <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                                <div class="overflow-x-auto">
+                                    <table
+                                        class="w-full text-left border-collapse border border-slate-200 dark:border-slate-700">
+                                        <tbody>
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top w-40 border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Overview:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Human Resource Management</li>
+                                                        <li>Compensation & Benefits</li>
+                                                        <li>Organisation Development & Change Management</li>
+                                                        <li>Organisational Theory & Practice</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Electives (Choose Any 3):
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Human Resource Audit</li>
+                                                        <li>Industrial Psychology</li>
+                                                        <li>Employer Branding</li>
+                                                        <li>Diversity & Inclusion in HR</li>
+                                                        <li>Conflict Management & Resolution</li>
+                                                        <li>Learning & Development</li>
+                                                        <li>Employee Engagement</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-b border-slate-200 dark:border-slate-700">
+                                                <td
+                                                    class="py-4 pr-6 font-semibold text-slate-700 dark:text-slate-300 align-top border-r border-slate-200 dark:border-slate-700 p-3">
+                                                    Advanced Semester III:
+                                                </td>
+                                                <td class="py-4 text-slate-600 dark:text-slate-400 p-3">
+                                                    <ul class="list-disc ml-5 space-y-1">
+                                                        <li>Labour Laws & Industrial Relations</li>
+                                                        <li>Competency & Performance Management</li>
+                                                        <li>Strategic & Global HR Management</li>
+                                                        <li>Talent Management & Development</li>
+                                                        <li>HR Planning & Development</li>
+                                                        <li>Human Resource Information System</li>
+                                                        <li>Generative AI in HR</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+
+                                    </table>
+                                </div>
+                            </div> -->
                         </section>
                     </article>
                 </div>
@@ -1665,7 +2016,7 @@
 
                         <!-- IMAGE BLOCK -->
                         <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-start lg:justify-end">
-                            <img src="./Images/student working.png" alt="Professional working"
+                            <img src="./Images/student working.jpg" alt="Professional working"
                                 class="max-w-full h-auto rounded-lg shadow-2xl">
                         </div>
 
@@ -1726,17 +2077,32 @@
                         </nav>
 
 
-                        <article class="lg:w-2/3 lg:pl-6 lg:border-l border-gray-200 dark:border-gray-700">
+                        <article class="lg:w-2/3 lg:pl-8 lg:pr-6 lg:border-l border-gray-200 dark:border-gray-700">
                             <section id="panel-eligibility" role="tabpanel" aria-labelledby="tab-eligibility"
                                 class="tab-panel">
                                 <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Eligibility Criteria</h2>
 
 
-
                                 <ul class="text-gray-600 dark:text-gray-400 list-disc list-inside leading-7 mb-4">
-                                    <li>Graduation with minimum 50% aggregate.</li>
-                                    <li>Valid entrance exam score (CAT, GMAT, MAT, XAT, ATMA, CET).</li>
+                                    <li>
+                                        Graduate in any discipline with minimum 50% aggregate marks (45% for reserved
+                                        category) from a university
+                                        recognized by UGC / AIU / AICTE.
+                                    </li>
+                                    <li>
+                                        Final-year students appearing for exams in April–May 2025 may apply for the
+                                        2025–2026 academic year.
+                                        They must submit proof of passing with required minimum aggregate once results
+                                        are declared,
+                                        failing which the admission will be cancelled.
+                                    </li>
+                                    <li>
+                                        Admission to the PGDM programme requires a valid score in CAT, MAT, XAT, ATMA,
+                                        GMAT, CMAT, or
+                                        the Common Entrance Examination conducted by Maharashtra State CET Cell.
+                                    </li>
                                 </ul>
+
 
                             </section>
 
@@ -1748,7 +2114,7 @@
                                 <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Fees</h2>
 
                                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                    To be announced.
+                                    Information will be available soon.
                                 </p>
 
 
@@ -1773,8 +2139,13 @@
                                 class="tab-panel hidden" aria-hidden="true">
                                 <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#9D0A4F]">Scholarships</h2>
                                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                    To be announced.
+                                    Scholarships are open to eligible students. Apply through the
+                                    <a href="#PGDM-form" class="text-primary underline hover:opacity-80">
+                                        form link
+                                    </a>
+                                    below.
                                 </p>
+
                             </section>
                         </article>
                     </div>
@@ -1923,8 +2294,8 @@
             </section>
 
         </section>
-        <div class="container mx-auto px-4 py-16 sm:py-24">
-            <div class="text-center max-w-2xl mx-auto">
+        <div class="container mx-auto px-4 py-12 sm:py-20">
+            <div class="text-center max-w-5xl mx-auto">
                 <!-- <div class="flex items-center justify-center gap-2 mb-4">
                     <span class="material-icons text-primary" style="font-size: 20px;">collections</span>
                     <p class="font-semibold text-primary tracking-widest">GALLERY</p>
@@ -1932,10 +2303,13 @@
                 <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">
                     Campus <span class="text-primary">Life</span>
                 </h1>
-                <p class="text-gray-600 dark:text-gray-400">
-                    Our campus culture inspires curiosity, collaboration and critical thinking, guiding students to
-                    grow
-                    as confident professionals and empowered individuals.
+                <p class="mt-6 max-w-4xl mx-auto text-lg text-gray-600 dark:text-gray-400 text-justify">
+                    Our campus culture inspires curiosity, collaboration, and personal growth, guiding students to
+                    become confident professionals and empowered individuals. Learning extends beyond the classroom
+                    through a wide range of experiences, including workshops, industry visits, global immersion
+                    programmes, and interactive events. Experiential learning allows students to apply knowledge in
+                    real-world contexts, work together on projects, and develop practical skills that prepare them for
+                    successful careers, all within a supportive and dynamic community.
                 </p>
             </div>
             <!-- ===== replace your existing section with this block ===== -->
@@ -1946,7 +2320,7 @@
                     <div class="col-span-12 md:col-span-4 space-y-4">
 
                         <div class="h-52 md:h-64">
-                            <div class="carousel h-full w-full overflow-hidden relative rounded-2xl bg-gray-100">
+                            <div class="carousel h-full w-full overflow-hidden relative  bg-gray-100">
                                 <div class="slides absolute inset-0 flex transition-transform duration-700">
                                     <img src="./Images/Campus Life/IMG20240822150258.jpg">
                                     <img src="./Images/Campus Life/IMG20250910172538.jpg">
@@ -1967,7 +2341,7 @@
                         </div>
 
                         <div class="h-64 md:h-72">
-                            <div class="carousel h-full w-full overflow-hidden relative rounded-2xl bg-gray-100">
+                            <div class="carousel h-full w-full overflow-hidden relative bg-gray-100">
                                 <div class="slides absolute inset-0 flex transition-transform duration-700">
 
                                     <img src="./Images/Campus Life/DSC05657.JPG">
@@ -1993,7 +2367,7 @@
                     <div class="col-span-12 md:col-span-5 space-y-4">
 
                         <div class="h-72 md:h-80">
-                            <div class="carousel h-full w-full overflow-hidden relative rounded-2xl bg-gray-100">
+                            <div class="carousel h-full w-full overflow-hidden relative  bg-gray-100">
                                 <div class="slides absolute inset-0 flex transition-transform duration-700">
                                     <img src="./Images/Campus Life/WhatsApp Image 2023-10-27 at 11.55.34.jpeg">
                                     <img src="./Images/Campus Life/DSC01215.JPG">
@@ -2013,7 +2387,7 @@
                         </div>
 
                         <div class="h-48 md:h-52">
-                            <div class="carousel h-full w-full overflow-hidden relative rounded-2xl bg-gray-100">
+                            <div class="carousel h-full w-full overflow-hidden relative  bg-gray-100">
                                 <div class="slides absolute inset-0 flex transition-transform duration-700">
 
                                     <img src="./Images/Campus Life/IMG20250912161033.jpg">
@@ -2039,7 +2413,7 @@
                     <div class="col-span-12 md:col-span-3 space-y-4">
 
                         <div class="h-56 md:h-64">
-                            <div class="carousel h-full w-full overflow-hidden relative rounded-2xl bg-gray-100">
+                            <div class="carousel h-full w-full overflow-hidden relative  bg-gray-100">
                                 <div class="slides absolute inset-0 flex transition-transform duration-700">
                                     <img src="./Images/Campus Life/DSC08720.JPG">
                                     <img src="./Images/Campus Life/DSC09934.JPG">
@@ -2059,7 +2433,7 @@
                         </div>
 
                         <div class="h-64 md:h-72">
-                            <div class="carousel h-full w-full overflow-hidden relative rounded-2xl bg-gray-100">
+                            <div class="carousel h-full w-full overflow-hidden relative  bg-gray-100">
                                 <div class="slides absolute inset-0 flex transition-transform duration-700">
                                     <img src="./Images/Campus Life/IMG_9666.JPG">
                                     <img src="./Images/Campus Life/IMG20240816123753.jpg">
@@ -2212,7 +2586,7 @@
 
                                 <img alt="   Anand Pandey"
                                     class="w-24 h-24 rounded-full mb-6 border-4 border-glow-primary object-cover"
-                                    src="./Images/testimonial/testimonial2.webp" />
+                                    src="./Images/testimonial/testimonial2 .jpg" />
 
                                 <h3 class="font-bold font-display text-xl text-text-dark mb-1">
                                     Anand Pandey
@@ -2236,7 +2610,7 @@
 
                                 <img alt="Ritesh Patil"
                                     class="w-24 h-24 rounded-full mb-6 border-4 border-glow-primary object-cover"
-                                    src="./Images/testimonial/testimonial1.webp" />
+                                    src="./Images/testimonial/testimonial1 (2).jpg" />
 
                                 <h3 class="font-bold font-display text-xl text-text-dark mb-1">
                                     Ritesh Patil
@@ -2544,7 +2918,7 @@
 
 
         <!-- Footer -->
-        <footer class="bg-gray-800 dark:bg-gray-900 text-gray-400 dark:text-gray-500 text-sm">
+        <footer class="bg-gray-800 dark:bg-gray-900 text-gray-400 dark:text-gray-500 text-sm" id="footer">
             <!-- thin accent bar (keeps same on all sizes) -->
             <!-- <div class="w-full bg-primary h-1"></div> -->
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Form Submission Success</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: {   primary: "#84cc16",          "background-light": "#84cc16", "background-dark": "#84cc16", "text-warm": "#374151", "icon-warm": "#f7a544", "light-beige": "#FBF8F5" }, fontFamily: { display: "Inter" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" } } } };</script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      body {
+        @apply font-display;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-light-beige dark:bg-background-dark text-text-warm dark:text-gray-200">
+    <div class="flex min-h-screen flex-col items-center justify-center p-4">
+        <div class="w-full max-w-md text-center bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8">
+            <div class="mb-6 inline-block">
+                <span class="material-symbols-outlined text-primary text-7xl font-light leading-none">
+                    check
+                </span>
+            </div>
+            <h1 class="text-3xl font-bold text-text-warm text-[#a32356] mb-4">
+                Success!
+            </h1>
+            <p class="text-lg mb-8 leading-relaxed text-gray-700 dark:text-gray-300">
+                Thank you! The form has been submitted successfully.
+                <br />
+                We will reply to you soon!
+            </p>
+
+            <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-xl font-bold rounded-lg shadow-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200 w-full"
+                href="https://tgbsmumbai.in/">
+                Visit Our Main Site
+            </a>
+        </div>
+    </div>
+</body>
+
+
+</html>
